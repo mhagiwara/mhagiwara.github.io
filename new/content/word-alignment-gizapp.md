@@ -21,30 +21,34 @@ compute this word alignment automatically.
 
 ## Solution
 
-[GIZA++](https://github.com/moses-smt/giza-pp) is a toolkit to train word alignment models. GIZA++ supports IBM Model 1 to 5, now classic but most widely used unsupervised word alignment models to date.
-
-[Tatoeba.org preprocessing script](https://github.com/mhagiwara/nlproc-cookbook/blob/master/preprocessors/tatoeba/create_bitext.py)
+[GIZA++](https://github.com/moses-smt/giza-pp) is a toolkit to train word alignment models. GIZA++ supports IBM Model 1 to 5, now classic but most widely used unsupervised word alignment models to date. Let's use bilingual sentences from [Tatoeba project](http://tatoeba.org/) to begin with. We can use the [Tatoeba.org preprocessing script](https://github.com/mhagiwara/nlproc-cookbook/blob/master/preprocessors/tatoeba/create_bitext.py) to extract bilingual sentences from sentence and link dumps downloaded from their [downlaod page](http://tatoeba.org/eng/downloads):
 
 ```
 python preprocessors/tatoeba/create_bitext.py --languages spa_eng --sentences sentences.csv --links links.csv > tatoeba_es_en.tsv
 ```
+
+We extract bilingual sentences in Spanish (source language) and English (target language). We use the script bundled with [Moses machine translation system](http://www.statmt.org/moses/) to tokenize text in each language (We'll cover Moses in another article):
 
 ```
 cut -f3 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l es > tatoeba_es_en.tsv.es
 cut -f6 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l en > tatoeba_es_en.tsv.en
 ```
 
-under giza-pp/GIZA++-v2
+Then go to directory `giza-pp/GIZA++-v2` and run:
 
-./plain2snt.out ~/duolingo/duolingo-2/masato/failure-rate/tatoeba_es_en.tsv.es ~/duolingo/duolingo-2/masato/failure-rate/tatoeba_es_en.tsv.en
+```
+./plain2snt.out tatoeba_es_en.tsv.es tatoeba_es_en.tsv.en
+```
 
-vcb -> vocabulary file (word id, word, freq)
+which will generate vcb (vocabulary) files and snt (sentence) files, containing the list of vocabulary and aligned sentences, respectively.
 
-
+IBM Model 4 and 5 use word classes to model *distortion* - a concept to model how word order changes across languages, as shown
 under giza-pp/mkcls-v2
-./mkcls -p/Users/masato/duolingo/duolingo-2/masato/failure-rate/tatoeba_es_en.tsv.es -V/Users/masato/duolingo/duolingo-2/masato/failure-rate/tatoeba_es_en.tsv.es.vcb.classes
 
-./mkcls -p/Users/masato/duolingo/duolingo-2/masato/failure-rate/tatoeba_es_en.tsv.en -V/Users/masato/duolingo/duolingo-2/masato/failure-rate/tatoeba_es_en.tsv.en.vcb.classes
+```
+./mkcls -ptatoeba_es_en.tsv.es -Vtatoeba_es_en.tsv.es.vcb.classes
+./mkcls -ptatoeba_es_en.tsv.en -Vtatoeba_es_en.tsv.en.vcb.classes
+```
 
     train word classes by using a maximum-likelihood-criterion.
 
@@ -52,7 +56,7 @@ under giza-pp/mkcls-v2
 
 ## Discussion
 
-Change the makefile
+You may need to change the makefile to compile GIZA++. 
 
 Before:
 ```

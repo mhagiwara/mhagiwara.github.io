@@ -69,4 +69,4 @@ Category: Personal
 * Paper Award at the 3rd NLP Symposium for Young Researchers. Presentation: “A Unified Approach to Japanese Query Alteration based on Semantic Similarity”
 * Paper Award at the 22nd IMI Seminar of the 21st Century COE Program. Presentation: “Utilization of Probabilistic Latent Semantics for Automatic Thesaurus Construction”
 * Program Committee at SANCL 2012, the Student Research Workshop (SRW) at ACL-IJCNLP 2009 and ACL 2012.
-* Program Committee at ACL 2014 (morphology) and COLING 2014 (machine translation).s
+* Program Committee at ACL 2014 (morphology) and COLING 2014 (machine translation).

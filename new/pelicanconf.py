@@ -60,10 +60,42 @@ var agyqxso = [12,18,33,28,22,55,30,50,17,13,31,7,69,51,42,47,3,2,34,16,11,29,61
 // --></script>
 <noscript>Please enable Javascript to see the email address</noscript>.
 
+<p>I love learning languages. I speak Chinese, Japanese, and English fluently, and am
+learning Korean, Lojban, and French.</a>
+
 <ul>
+    <li><a href="/publications.html">Publications</a>
     <li><a href="/work-experience-and-education.html">Work Experience and Education</a>
 </ul>
 """
 
 LANDING_PAGE_ABOUT = {'title': 'Masato Hagiwara\'s Page',
                       'details': about_details}
+
+PROJECTS = [
+    {'name': 'Duolingo',
+     'url': 'https://www.duolingo.com/',
+     'description': 'I build the backend of Duolingo, the most popular language learning app '
+                    'in the world.'},
+    {'name': 'Rakuten MA',
+     'url': 'https://github.com/rakuten-nlp/rakutenma',
+     'description': 'Morphological analyzer for Chinese and Japanese written purely in JavaScript'},
+    {'name': 'NLTK Book',
+     'url': 'http://nltk.org/book/',
+     'description': 'I translate "Natural Language Processing in Python" into Japanese'},
+    {'name': 'NLTK Japanese Corpora',
+     'url': 'http://lilyx.net/nltk-japanese-corpus/',
+     'description':
+     'I wrote corpus readers for freely available Japanese corpora for NLTK. '
+     'I also write Python NLP libraries '
+     '<a href="http://lilyx.net/tinysegmenter-in-python/">TinySegmentor</a> and '
+     '<a href="http://lilyx.net/python-romkan/">Romaji/Kana conversion</a>.'},
+    {'name': 'Lojban',
+     'url': 'https://mw.lojban.org/',
+     'description':
+     'I\'m a big fan of the constructed logical language Lojban and build NLP tools such as '
+     '<a href="http://masatohagiwara.net/camxes.js/">JavaScript Lojban Parser camxes.js</a> and '
+     '<a href="http://lojban.lilyx.net/jufsisku/">Lojban sentence search engine jufsisku</a>.'}
+    ]
+
+GOOGLE_ANALYTICS = 'UA-175204-11'
