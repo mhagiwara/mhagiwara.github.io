@@ -37,6 +37,9 @@ DEFAULT_PAGINATION = 10
 THEME = 'pelican-elegant-1.3'
 
 about_details = """
+<img src="/face.jpg" width="128" align="right"
+style="padding: 5px; border: 1px solid #ccc; margin: 4px 16px 4px 16px;"/>
+
 <p>I currently work for <a href="http://www.duolingo.com/">Duolingo</a> as a Software Engineer.
 In the past, I have worked at Google, Microsoft Research, Baidu,
 and Rakuten Institute of Technology. My research interest is in Natural Language Processing (NLP).

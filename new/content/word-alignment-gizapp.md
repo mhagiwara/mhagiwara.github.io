@@ -8,10 +8,10 @@ Tags: Machine Translation, Word Alignment
 Word alignment is mapping of words between two sentences that have the same meaning in two different languages.
 Let's say we have an English and a Spanish sentence:
 
-```
-I saw a white bird on my way home.
+>
+I saw a white bird on my way home. <br>
 Vi un pájaro blanco camino a casa.
-```
+
 
 Then words 'I saw' <-> 'Vi', 'white' <-> 'blanco', 'bird' <-> 'pájaro', etc. correspond between two sentences.
 Notice that words do not correspond one-to-one. For example, 'on my way' in English is translated as 'camino' in Spanish.
@@ -27,7 +27,7 @@ compute this word alignment automatically.
 python preprocessors/tatoeba/create_bitext.py --languages spa_eng --sentences sentences.csv --links links.csv > tatoeba_es_en.tsv
 ```
 
-We extract bilingual sentences in Spanish (source language) and English (target language). We use the script bundled with [Moses machine translation system](http://www.statmt.org/moses/) to tokenize text in each language (We'll cover Moses in another article):
+We extract bilingual sentences in Spanish (source language) and English (target language). In all the examples in this article, please replace file names with ones with appropriate path. We recommend creating a separate `work` directory to run GIZA++. Next, we use the script bundled with [Moses machine translation system](http://www.statmt.org/moses/) to tokenize text in each language (We'll cover Moses in another article):
 
 ```
 cut -f3 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l es > tatoeba_es_en.tsv.es
@@ -42,21 +42,26 @@ Then go to directory `giza-pp/GIZA++-v2` and run:
 
 which will generate vcb (vocabulary) files and snt (sentence) files, containing the list of vocabulary and aligned sentences, respectively.
 
-IBM Model 4 and 5 use word classes to model *distortion* - a concept to model how word order changes across languages, as shown
-under giza-pp/mkcls-v2
+IBM Model 4 and 5 use word classes to model *distortion* - a concept to model how word order changes across languages, as in the 'white bird' and 'pájaro blanco' example. `mkcls` is a program to automatically infer word classes from a corpus using a maximum likelihood criterion, which can be run as follows (in the `giza-pp/mkcls-v2` directory):
 
 ```
 ./mkcls -ptatoeba_es_en.tsv.es -Vtatoeba_es_en.tsv.es.vcb.classes
 ./mkcls -ptatoeba_es_en.tsv.en -Vtatoeba_es_en.tsv.en.vcb.classes
 ```
 
-    train word classes by using a maximum-likelihood-criterion.
+See [the paper by Franz Och](http://www.aclweb.org/anthology/E99-1010) for the details of this word clustering.
 
-    See http://www.aclweb.org/anthology/E99-1010 (Section 1) for the details.
+Finally, use the following command to run GIZA++:
+
+```
+/GIZA++ -S tatoeba_es_en.tsv.es.vcb -T tatoeba_es_en.tsv.en.vcb -C tatoeba_es_en.tsv.es_tatoeba_es_en.tsv.en.snt -o [prefix] -outputpath [output]
+```
+
+Here, `[prefix]` and `[output]` are the prefix used for output files and the directory where output files are saved, respectively. This will generate a bunch of output files with cryptic names. Among them, probably the most important ones are `[prefix].A3.final` and `[prefix].ti.final`, which contain the actual Viterbi alignment and the lexical translation table, respectively.
 
 ## Discussion
 
-You may need to change the makefile to compile GIZA++. 
+If you see `ERROR: NO COOCURRENCE FILE GIVEN!` when running GIZA++, you may need to change `Makefile` to compile GIZA++
 
 Before:
 ```
@@ -68,59 +73,66 @@ CFLAGS_OPT = $(CFLAGS) -O3 -funroll-loops -DNDEBUG -DWORDINDEX_WITH_4_BYTE
 ```
 (Not sure why `-DWORDINDEX_WITH_4_BYTE` is duplicated. )
 
-http://catherinegasnier.blogspot.com/2014/04/install-giza-107-on-mac-osx-1092.html
+Also, depending on your environment, you may need to modify some of the source files as written in [this article](http://catherinegasnier.blogspot.com/2014/04/install-giza-107-on-mac-osx-1092.html):
 
-Line 321:
+```
+perl -pi -w -e 's/<tr1\//</g;' GIZA++-v2/* mkcls-v2/*
+perl -pi -w -e 's/using namespace std::tr1;//g;' GIZA++-v2/* mkcls-v2/*
+perl -pi -w -e 's/std::tr1:://g;' GIZA++-v2/* mkcls-v2/*
+sed '36d' mkcls-v2/mystl.h > mkcls-v2/mystl.h.tmp
+sed '50d' mkcls-v2/mystl.h.tmp > mkcls-v2/mystl.h
+rm mkcls-v2/mystl.h.tmp
+```
+
+Finally, if you are using an operating system with a case-insensitive file system (e.g., Windows or OS X), you may need to modify Line 321 of `model3.cpp` as follows to prevent the `.A3.final` file from being overwritten by the `.a3.final` file:
+
+```
 -      alignfile = Prefix + ".A3." + number ;
-+      alignfile = Prefix + ".VA3." + number ;
-conflicts with '.a.'
++      alignfile = Prefix + ".VA3." + number ;      // "VA" from Viterbi alignment. Can be any file name.
+```
 
 Here are some details of input/output file format for GIZA++:
 
 * vcb (vocabulary) file
-From GIZA++'s manual:'
-    Each entry is stored on one line as follows:
 
-     uniq_id1 string1 no_occurrences1
-     uniq_id2 string2 no_occurrences2
-     uniq_id3 string3 no_occurrences3
-     ....
-
-    Here is a sample from an English vocabulary file:
-
-    627 abandon 10
-    628 abandoned 17
-    629 abandoning 2
-    630 abandonment 12
-    631 abatement 8
-    632 abbotsford 2
+    - This file contains a list of (uniq_id, string, number of occurrences) for each word.
 
 * snt (entence alignment) file
 
-    Each sentence pair is stored in three lines. The first line
-    is the number of times this sentence pair occurred. The second line is
-    the source sentence where each token is replaced by its unique integer
-    id from the vocabulary file and the third is the target sentence in
-    the same format.
+    - This file contains a list of three lines - the number of times this sentence pair occurred, source sentence (with each token replaced with its uniq_id), and target sentence in the same format.
 
 * T-tables (.ti.) file
 
-T-tables (lexical translation probability) t(e|f)
-        [prefix].actual.ti.final inverse table
-        actual tokens instead of unique IDs
-        inverse -> t(f|e)  sum_f t = 1
+    - This is the final inverse T-tables (lexical translation probability) trained by the model. Lexical translation probability t(e|f) is the probability that word f in the source language is translated to word e in the target language. Since this is the inverse T-tables, it contains t(f|e). The file with `actual` in its filename contains actual word strings instead of unique IDs. This is an excerpt of the `[prefix].actual.ti.final` file trained from the Tatoeba corpus:
+
+```
+bird alimentador 3.07873e-06
+bird apariencias 0.00452353
+bird ave 0.0917504
+bird aves 0.00720495
+bird jaula 0.00635498
+bird madruga 0.00524571
+bird madrugador 0.0061525
+bird pajarito 0.00875974
+bird pájaro 0.814385
+bird pájaros 0.053743
+bird reluce 0.0018736
+bird área 3.86079e-06
+```
+
+Since it contains t(f|e), you can confirm that summing over the source (in this case, Spanish) words gives a probability 1.0.
 
 * A (.A3.) file
 
-Alignment File ([prefix].A3.final)
+    - This file contains *Viterbi Alignment*, which is the most probable alignment (the one that maximizes the alignment probability). One particular sentence pair of this file looks like:
 
-    viterbi alignment
-        the most probable alignment (the one that maximizes the alignment probability)
-    alignment source <- target
-    "These numbers represent the positions of the target words to which this source word is connected, according to the alignment."
-    alignment score (probability)
-        something called 'viterbi_score'
-        in model1, product of word_best_score (max of t(e|f))
-            -> max_a P(e, a|f)
-            I saw a white bird on my way home.
-            NULL ({ 6 }) Vi ({ 1 2 }) un ({ 3 }) pájaro ({ 5 }) blanco ({ 4 }) camino ({ 7 8 }) a ({ }) casa ({ 9 }) . ({ 10 })
+```
+# Sentence pair (8597) source length 8 target length 10 alignment score : 1.66432e-09
+I saw a white bird on my way home.
+NULL ({ 6 }) Vi ({ 1 2 }) un ({ 3 }) pájaro ({ 5 }) blanco ({ 4 }) camino ({ 7 8 }) a ({ }) casa ({ 9 }) . ({ 10 })
+```
+
+The first line shows the length (number of words) of the source (Spanish) and target (English) sentences, along with the Viterbi alignment score mentioned above.
+
+The second line is the target sentence, and the third line is the source sentence annotated with alignment information. Each source word is annotated with the set of indices of target words that are aligned to that source word. Note that in IBM Models assume that one target word is aligned at most one source word. The first `NULL ({ 6 })` means the 6th target word ('on') is not aligned to any words, and `Vi ({ 1 2 })` means the first and second target words 'I saw' are aligned to 'Vi'.
+
