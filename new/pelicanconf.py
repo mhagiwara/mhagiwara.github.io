@@ -97,8 +97,9 @@ PROJECTS = [
      'url': 'https://mw.lojban.org/',
      'description':
      'I\'m a big fan of the constructed logical language Lojban and build NLP tools such as '
-     '<a href="http://masatohagiwara.net/camxes.js/">JavaScript Lojban Parser camxes.js</a> and '
-     '<a href="http://lojban.lilyx.net/jufsisku/">Lojban sentence search engine jufsisku</a>.'}
+     '<a href="http://masatohagiwara.net/camxes.js/">JavaScript Lojban Parser camxes.js</a>, '
+     '<a href="http://lojban.lilyx.net/jufsisku/">Lojban sentence search engine jufsisku</a>, and '
+     '<a href="http://lojban.lilyx.net/zmifanva/">Lojban/English translation engine zmifanva</a>'}
     ]
 
 GOOGLE_ANALYTICS = 'UA-175204-11'
