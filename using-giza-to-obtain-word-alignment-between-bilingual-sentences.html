@@ -82,31 +82,31 @@ since Spanish adjectives are put after nouns. Given a large corpus of bilingual 
 compute this word alignment automatically.</p>
 <h2>Solution</h2>
 <p><a href="https://github.com/moses-smt/giza-pp">GIZA++</a> is a toolkit to train word alignment models. GIZA++ supports IBM Model 1 to 5, now classic but most widely used unsupervised word alignment models to date. Let's use bilingual sentences from <a href="http://tatoeba.org/">Tatoeba project</a> to begin with. We can use the <a href="https://github.com/mhagiwara/nlproc-cookbook/blob/master/preprocessors/tatoeba/create_bitext.py">Tatoeba.org preprocessing script</a> to extract bilingual sentences from sentence and link dumps downloaded from their <a href="http://tatoeba.org/eng/downloads">downlaod page</a>:</p>
-<div class="highlight"><pre>python preprocessors/tatoeba/create_bitext.py --languages spa_eng --sentences sentences.csv --links links.csv &gt; tatoeba_es_en.tsv
+<div class="highlight"><pre><span></span>python preprocessors/tatoeba/create_bitext.py --languages spa_eng --sentences sentences.csv --links links.csv &gt; tatoeba_es_en.tsv
 </pre></div>
 
 
 <p>We extract bilingual sentences in Spanish (source language) and English (target language). In all the examples in this article, please replace file names with ones with appropriate path. We recommend creating a separate <code>work</code> directory to run GIZA++. Next, we use the script bundled with <a href="http://www.statmt.org/moses/">Moses machine translation system</a> to tokenize text in each language (We'll cover Moses in another article):</p>
-<div class="highlight"><pre>cut -f3 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l es &gt; tatoeba_es_en.tsv.es
+<div class="highlight"><pre><span></span>cut -f3 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l es &gt; tatoeba_es_en.tsv.es
 cut -f6 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l en &gt; tatoeba_es_en.tsv.en
 </pre></div>
 
 
 <p>Then go to directory <code>giza-pp/GIZA++-v2</code> and run:</p>
-<div class="highlight"><pre>./plain2snt.out tatoeba_es_en.tsv.es tatoeba_es_en.tsv.en
+<div class="highlight"><pre><span></span>./plain2snt.out tatoeba_es_en.tsv.es tatoeba_es_en.tsv.en
 </pre></div>
 
 
 <p>which will generate vcb (vocabulary) files and snt (sentence) files, containing the list of vocabulary and aligned sentences, respectively.</p>
 <p>IBM Model 4 and 5 use word classes to model <em>distortion</em> - a concept to model how word order changes across languages, as in the 'white bird' and 'pájaro blanco' example. <code>mkcls</code> is a program to automatically infer word classes from a corpus using a maximum likelihood criterion, which can be run as follows (in the <code>giza-pp/mkcls-v2</code> directory):</p>
-<div class="highlight"><pre>./mkcls -ptatoeba_es_en.tsv.es -Vtatoeba_es_en.tsv.es.vcb.classes
+<div class="highlight"><pre><span></span>./mkcls -ptatoeba_es_en.tsv.es -Vtatoeba_es_en.tsv.es.vcb.classes
 ./mkcls -ptatoeba_es_en.tsv.en -Vtatoeba_es_en.tsv.en.vcb.classes
 </pre></div>
 
 
 <p>See <a href="http://www.aclweb.org/anthology/E99-1010">the paper by Franz Och</a> for the details of this word clustering.</p>
 <p>Finally, use the following command to run GIZA++:</p>
-<div class="highlight"><pre>/GIZA++ -S tatoeba_es_en.tsv.es.vcb -T tatoeba_es_en.tsv.en.vcb -C tatoeba_es_en.tsv.es_tatoeba_es_en.tsv.en.snt -o [prefix] -outputpath [output]
+<div class="highlight"><pre><span></span>/GIZA++ -S tatoeba_es_en.tsv.es.vcb -T tatoeba_es_en.tsv.en.vcb -C tatoeba_es_en.tsv.es_tatoeba_es_en.tsv.en.snt -o [prefix] -outputpath [output]
 </pre></div>
 
 
@@ -114,18 +114,18 @@ cut -f6 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l en 
 <h2>Discussion</h2>
 <p>If you see <code>ERROR: NO COOCURRENCE FILE GIVEN!</code> when running GIZA++, you may need to change <code>Makefile</code> to compile GIZA++</p>
 <p>Before:</p>
-<div class="highlight"><pre><span class="nv">CFLAGS_OPT</span> <span class="o">=</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> -O3 -funroll-loops -DNDEBUG -DWORDINDEX_WITH_4_BYTE -DBINARY_SEARCH_FOR_TTABLE -DWORDINDEX_WITH_4_BYTE
+<div class="highlight"><pre><span></span><span class="nv">CFLAGS_OPT</span> <span class="o">=</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> -O3 -funroll-loops -DNDEBUG -DWORDINDEX_WITH_4_BYTE -DBINARY_SEARCH_FOR_TTABLE -DWORDINDEX_WITH_4_BYTE
 </pre></div>
 
 
 <p>After:</p>
-<div class="highlight"><pre><span class="nv">CFLAGS_OPT</span> <span class="o">=</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> -O3 -funroll-loops -DNDEBUG -DWORDINDEX_WITH_4_BYTE
+<div class="highlight"><pre><span></span><span class="nv">CFLAGS_OPT</span> <span class="o">=</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> -O3 -funroll-loops -DNDEBUG -DWORDINDEX_WITH_4_BYTE
 </pre></div>
 
 
 <p>(Not sure why <code>-DWORDINDEX_WITH_4_BYTE</code> is duplicated. )</p>
 <p>Also, depending on your environment, you may need to modify some of the source files as written in <a href="http://catherinegasnier.blogspot.com/2014/04/install-giza-107-on-mac-osx-1092.html">this article</a>:</p>
-<div class="highlight"><pre><span class="n">perl</span> <span class="o">-</span><span class="n">pi</span> <span class="o">-</span><span class="n">w</span> <span class="o">-</span><span class="n">e</span> <span class="err">&#39;</span><span class="n">s</span><span class="o">/&lt;</span><span class="n">tr1</span><span class="err">\</span><span class="c1">//&lt;/g;&#39; GIZA++-v2/* mkcls-v2/*</span>
+<div class="highlight"><pre><span></span><span class="n">perl</span> <span class="o">-</span><span class="n">pi</span> <span class="o">-</span><span class="n">w</span> <span class="o">-</span><span class="n">e</span> <span class="err">&#39;</span><span class="n">s</span><span class="o">/&lt;</span><span class="n">tr1</span><span class="err">\</span><span class="c1">//&lt;/g;&#39; GIZA++-v2/* mkcls-v2/*</span>
 <span class="n">perl</span> <span class="o">-</span><span class="n">pi</span> <span class="o">-</span><span class="n">w</span> <span class="o">-</span><span class="n">e</span> <span class="err">&#39;</span><span class="n">s</span><span class="o">/</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">tr1</span><span class="p">;</span><span class="c1">//g;&#39; GIZA++-v2/* mkcls-v2/*</span>
 <span class="n">perl</span> <span class="o">-</span><span class="n">pi</span> <span class="o">-</span><span class="n">w</span> <span class="o">-</span><span class="n">e</span> <span class="err">&#39;</span><span class="n">s</span><span class="o">/</span><span class="n">std</span><span class="o">::</span><span class="n">tr1</span><span class="o">::</span><span class="c1">//g;&#39; GIZA++-v2/* mkcls-v2/*</span>
 <span class="n">sed</span> <span class="err">&#39;</span><span class="mi">36</span><span class="n">d</span><span class="err">&#39;</span> <span class="n">mkcls</span><span class="o">-</span><span class="n">v2</span><span class="o">/</span><span class="n">mystl</span><span class="p">.</span><span class="n">h</span> <span class="o">&gt;</span> <span class="n">mkcls</span><span class="o">-</span><span class="n">v2</span><span class="o">/</span><span class="n">mystl</span><span class="p">.</span><span class="n">h</span><span class="p">.</span><span class="n">tmp</span>
@@ -135,7 +135,7 @@ cut -f6 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l en 
 
 
 <p>Finally, if you are using an operating system with a case-insensitive file system (e.g., Windows or OS X), you may need to modify Line 321 of <code>model3.cpp</code> as follows to prevent the <code>.A3.final</code> file from being overwritten by the <code>.a3.final</code> file:</p>
-<div class="highlight"><pre>-      alignfile = Prefix + &quot;.A3.&quot; + number ;
+<div class="highlight"><pre><span></span>-      alignfile = Prefix + &quot;.A3.&quot; + number ;
 +      alignfile = Prefix + &quot;.VA3.&quot; + number ;      // &quot;VA&quot; from Viterbi alignment. Can be any file name.
 </pre></div>
 
@@ -161,7 +161,7 @@ cut -f6 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l en 
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre>bird alimentador 3.07873e-06
+<div class="highlight"><pre><span></span>bird alimentador 3.07873e-06
 bird apariencias 0.00452353
 bird ave 0.0917504
 bird aves 0.00720495
@@ -185,7 +185,7 @@ bird área 3.86079e-06
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre># Sentence pair (8597) source length 8 target length 10 alignment score : 1.66432e-09
+<div class="highlight"><pre><span></span># Sentence pair (8597) source length 8 target length 10 alignment score : 1.66432e-09
 I saw a white bird on my way home.
 NULL ({ 6 }) Vi ({ 1 2 }) un ({ 3 }) pájaro ({ 5 }) blanco ({ 4 }) camino ({ 7 8 }) a ({ }) casa ({ 9 }) . ({ 10 })
 </pre></div>

@@ -77,31 +77,31 @@ Given a large corpus of bilingual sentences (bitext), we would like to build a p
 statistical machine translation models given a parallel corpus (a large collection of bilingual sentences).</p>
 <p>Specifically, we will be building a machine translation system which translates from English to <a href="https://en.wikipedia.org/wiki/Lojban">Lojban</a> (a constructed syntactically unambiguous language).</p>
 <p>After cloning <a href="https://github.com/mhagiwara/zmifanva">zmifanva git repository</a> and installing Moses and GIZA++ under <code>mosesdecoder</code> and <code>giza-pp</code> respectively (see Moses's <a href="http://www.statmt.org/moses/?n=Development.GetStarted">Getting Started Guide</a> for instructuion), let's first prepare the training corpus by running:</p>
-<div class="highlight"><pre><span class="nv">$ </span>mkdir corpus
-<span class="nv">$ </span>mkdir lm
-<span class="nv">$ </span>python scripts/convert_solr_xml_to_bitext.py docs/aspect.xml docs/cll.xml docs/conlang.xml docs/jbowiki.xml docs/phrasebook.xml docs/tatoeba.xml docs/teris.xml docs/introduction.xml docs/crashcourse1.xml docs/crashcourse.jbo_eng_dict.xml &gt; corpus/train
+<div class="highlight"><pre><span></span>$ mkdir corpus
+$ mkdir lm
+$ python scripts/convert_solr_xml_to_bitext.py docs/aspect.xml docs/cll.xml docs/conlang.xml docs/jbowiki.xml docs/phrasebook.xml docs/tatoeba.xml docs/teris.xml docs/introduction.xml docs/crashcourse1.xml docs/crashcourse.jbo_eng_dict.xml &gt; corpus/train
 </pre></div>
 
 
 <p>This will create a file <code>corpus/train</code>, which is a collection of tab-separated lines of Lojban and English sentences. After this, we preprocess the training sentences by tokenizing and cleaning them:</p>
-<div class="highlight"><pre><span class="nv">$ </span>cat corpus/train <span class="p">|</span> cut -f <span class="m">1</span> <span class="p">|</span> python scripts/tokenize_jbo.py &gt; corpus/train.tok.jb
-<span class="nv">$ </span>cat corpus/train <span class="p">|</span> cut -f <span class="m">2</span> <span class="p">|</span> mosesdecoder/scripts/tokenizer/tokenizer.perl -l en &gt; corpus/train.tok.en
+<div class="highlight"><pre><span></span>$ cat corpus/train <span class="p">|</span> cut -f <span class="m">1</span> <span class="p">|</span> python scripts/tokenize_jbo.py &gt; corpus/train.tok.jb
+$ cat corpus/train <span class="p">|</span> cut -f <span class="m">2</span> <span class="p">|</span> mosesdecoder/scripts/tokenizer/tokenizer.perl -l en &gt; corpus/train.tok.en
 
-<span class="nv">$ </span>mosesdecoder/scripts/training/clean-corpus-n.perl corpus/train.tok jb en corpus/train.clean <span class="m">1</span> 80
+$ mosesdecoder/scripts/training/clean-corpus-n.perl corpus/train.tok jb en corpus/train.clean <span class="m">1</span> 80
 </pre></div>
 
 
 <p><code>clean-corpus-n.perl</code> is a script bundled with Moses, which filters out sentences which are either too long or too short (in this case, length is between 1 and 80 words)
 or length of Lojban/English sentences is too unbalanced (by default, filters the sentence pair if the ratio of sentence length is greater than 9). This is because sentence pairs that are too long, too short, or too unbalanced, are not suited as part of training data since they may cause some difficulties, such as inaccurate word alignment.</p>
 <p>Next, we need to build a language model. A statistical machine translation system uses a language model and a translation model to generate output in target language. A language model, as explained in <a href="/training-an-n-gram-language-model-and-estimating-sentence-probability.html">this article</a>, is what determines how likely (or fluent) a generated sentence (or a sentence that is being generated, which is called a <em>hypothesis</em>) in the target language.</p>
-<div class="highlight"><pre><span class="nv">$ </span>mosesdecoder/bin/lmplz -o <span class="m">3</span> &lt; corpus/train.clean.jb &gt; lm/train.arpa.jb
-<span class="nv">$ </span>mosesdecoder/bin/build_binary lm/train.arpa.jb lm/train.blm.jb
+<div class="highlight"><pre><span></span>$ mosesdecoder/bin/lmplz -o <span class="m">3</span> &lt; corpus/train.clean.jb &gt; lm/train.arpa.jb
+$ mosesdecoder/bin/build_binary lm/train.arpa.jb lm/train.blm.jb
 </pre></div>
 
 
 <p>We can give an arbitrary collection of text in order to build a language model. Here, we are just passing the Lojban part of the training corpus, although in practice a larger corpus separate from the training bilingual corpus is often used, which usually gives better results. Note that here we are binarizing the language model file so that Moses can load it faster.</p>
 <p>Now we are ready to run the main training script of Moses as follows:</p>
-<div class="highlight"><pre><span class="nv">$ </span>mosesdecoder/scripts/training/train-model.perl <span class="se">\</span>
+<div class="highlight"><pre><span></span>$ mosesdecoder/scripts/training/train-model.perl <span class="se">\</span>
     -root-dir train.en-jb -corpus corpus/train.clean <span class="se">\</span>
     -f en -e jb -alignment grow-diag-final-and -reordering msd-bidirectional-fe <span class="se">\</span>
     -lm 0:3:<span class="nv">$PWD</span>/lm/train.blm.jb:8 <span class="se">\</span>
@@ -111,12 +111,12 @@ or length of Lojban/English sentences is too unbalanced (by default, filters the
 
 <p>There seems to be a lot going on here, but the most important parameters are: <code>-corpus</code>, which specifies which training corpus it reads from (in this case, the preprocessed <code>corpus/train.clean.en</code> and <code>corpus/train.clean.jb</code> files), <code>-f</code> and <code>-e</code>, which determines the languages we are translating to and from (<code>f</code> means foreign, and <code>e</code> means English. In machine translation, by default we assume we are translating text in a foreign language to English, but in this case it's the other way), and <code>-root-dir</code>, which specifies the location where the output model is written.</p>
 <p>After the training is finished, we can run Moses in an interactive mode by:</p>
-<div class="highlight"><pre><span class="nv">$ </span>mosesdecoder/bin/moses -f train.en-jb/model/moses.ini
+<div class="highlight"><pre><span></span>$ mosesdecoder/bin/moses -f train.en-jb/model/moses.ini
 </pre></div>
 
 
 <p>We can type <code>Hello , everybody .</code> (note the tokenization --- Moses decoder itself is not responsible for tokenizing the text) and you can see the correct translation is generated by Moses as follows:</p>
-<div class="highlight"><pre>Hello , everybody .
+<div class="highlight"><pre><span></span>Hello , everybody .
 Translating: Hello , everybody .
 Line 0: Initialize search took 0.000 seconds total
 Line 0: Collecting options took 0.000 seconds at moses/Manager.cpp:127
@@ -171,6 +171,8 @@ As of the writing of this article (Dec. 2015), Ubuntu Server 14.04 is supported 
             <ul class="articles_timeline">
  
                 <li class="previous_article">« <a href="/training-an-n-gram-language-model-and-estimating-sentence-probability.html" title="Previous: Training an N-gram Language Model and Estimating Sentence Probability">Training an N-gram Language Model and Estimating Sentence Probability</a></li>
+ 
+                <li class="next_article"><a href="/makijita.html" title="Next: 巻き舌クリニック">巻き舌クリニック</a> »</li>
             </ul>
             </nav>
             </aside>
