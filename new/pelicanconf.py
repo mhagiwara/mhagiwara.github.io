@@ -91,7 +91,7 @@ PROJECTS = [
      'description':
      'I wrote corpus readers for freely available Japanese corpora for NLTK. '
      'I also write Python NLP libraries '
-     '<a href="http://lilyx.net/tinysegmenter-in-python/">TinySegmentor</a> and '
+     '<a href="/tinysegmenter-in-python.html">TinySegmentor</a> and '
      '<a href="http://lilyx.net/python-romkan/">Romaji/Kana conversion</a>.'},
     {'name': 'Lojban',
      'url': 'https://mw.lojban.org/',
