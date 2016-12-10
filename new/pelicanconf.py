@@ -84,7 +84,7 @@ PROJECTS = [
      'url': 'http://nltk.org/book/',
      'description': 'I translate "Natural Language Processing in Python" into Japanese'},
     {'name': 'NLTK Japanese Corpora',
-     'url': 'http://lilyx.net/nltk-japanese-corpus/',
+     'url': 'nltk-japanese-corpus.html',
      'description':
      'I wrote corpus readers for freely available Japanese corpora for NLTK. '
      'I also write Python NLP libraries '
