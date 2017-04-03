@@ -76,3 +76,5 @@ url: makijita.html
 第二のカルチャーショックは、中国語の"R"です。これは、ある意味「巻き舌」かもしれませんが、舌を思いっきり反らして、舌のほぼ裏側と上あごを摩擦させて英語の"r"と"sh"の中間のような音を出します。下手すれば"sh"や"g"に間違うような音で、中国四千年の歴史を感じさせてくれます。ベトナム語の一部の方言も、中国語の影響を受けているせいか、"r"は変な音だった気がします。
 
 これからも、他の言語で、どんなRの音に出会うかと思うと楽しみです。
+
+外国語の学習には、[Duolingo](https://www.duolingo.com/) というアプリがオススメです。Web, iPhone/iPad, Android から無料で利用でき、毎日少しずつ学習できます。ダウンロードはこちらから：[Duolingo iOS 版](https://itunes.apple.com/jp/app/duolingo-%E8%8B%B1%E8%AA%9E%E3%82%92%E5%AD%A6%E3%81%BC%E3%81%86/id570060128?mt=8), [Duolingo Android 版](https://play.google.com/store/apps/details?id=com.duolingo&hl=ja)
