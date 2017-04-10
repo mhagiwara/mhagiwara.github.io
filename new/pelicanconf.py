@@ -65,8 +65,8 @@ and <a href="http://shop.oreilly.com/product/0636920018483.do">"Machine Learning
 </ul>
 
 <p>I love learning languages. I speak Chinese, Japanese, and English fluently, and am
-learning Korean, Lojban, and French.</a>
-
+learning Korean, Lojban, and French. One of my research projects was recently
+<a href="https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/">featured on TechCrunch.</a></p>
 """
 
 LANDING_PAGE_ABOUT = {'title': 'Masato Hagiwara\'s Page',
@@ -75,7 +75,7 @@ LANDING_PAGE_ABOUT = {'title': 'Masato Hagiwara\'s Page',
 PROJECTS = [
     {'name': 'Duolingo',
      'url': 'https://www.duolingo.com/',
-     'description': 'I build the backend of Duolingo, the most popular language learning app '
+     'description': 'I build and do research for Duolingo, the most popular language learning app '
                     'in the world.'},
     {'name': 'Rakuten MA',
      'url': 'https://github.com/rakuten-nlp/rakutenma',

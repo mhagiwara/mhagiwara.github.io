@@ -46,9 +46,15 @@ i><u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. A Comparative Study 
 
 ## Press Coverage
 
-* [Aptitude doesn't matter for language learning - Interview with Masato Hagiwara, a Japanese software engineer at Duolingo](http://www.lifehacker.jp/2015/08/150825duolingo_hagiwara1.html) (Aug. 2015, Lifehacker.jp)
-* [Humans still learning languages in 30 years?](http://www.lifehacker.jp/2015/08/150826duolingo_hagiwara2.html) (Aug. 2015, Lifehacker.jp)
-* [Free language learning app Duolingo raises $45 million from Google Capital](http://itpro.nikkeibp.co.jp/atcl/ncd/14/457163/061200713/) (June 2015, Nikkei Computer)
-* [Process Emojis as 'words' - Emojis not used as defined](http://internet.watch.impress.co.jp/docs/special/20100712_380149.html) (July 2010, INTERNET Watch)
-* [Process Emojis as 'words' - algorithm to distinguish 'beers' from 'parties'](http://internet.watch.impress.co.jp/docs/special/20100714_380180.html) (July 2010, INTERNET Watch)
-* [Character encoding experts turn Baidu Emoji search episodes into an academic paper](http://internet.watch.impress.co.jp/docs/special/20100309_353586.html) (Mar. 2010, INTERNET Watch)
+* In English
+    * [3 habits of successful language learners](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) (Mar. 2017, TechCrunch)
+* In Japanese
+    * [How I work - Masato Hagiwara at Duolingo](http://www.lifehacker.jp/2017/01/170106_duolingo_hagiwara_2017.html) (Jan. 2016, Lifehacker.jp)
+    * [Why you shouldn't study at weekends - Data reveal three common traits of successful language learners](http://jp.techcrunch.com/2016/12/20/duolingo/) (Dec. 2016, TechCrunch Japan)
+    * [Difference between successful and unsuccessful language learners, according to a researcher at Duolingo](http://www.lifehacker.jp/2016/12/161205_duolingo_hagiwara_interview.html) (Dec. 2016, Lifehacker.jp)
+    * [Aptitude doesn't matter for language learning - Interview with Masato Hagiwara, a Japanese software engineer at Duolingo](http://www.lifehacker.jp/2015/08/150825duolingo_hagiwara1.html) (Aug. 2015, Lifehacker.jp)
+    * [Humans still learning languages in 30 years?](http://www.lifehacker.jp/2015/08/150826duolingo_hagiwara2.html) (Aug. 2015, Lifehacker.jp)
+    * [Free language learning app Duolingo raises $45 million from Google Capital](http://itpro.nikkeibp.co.jp/atcl/ncd/14/457163/061200713/) (June 2015, Nikkei Computer)
+    * [Process Emojis as 'words' - Emojis not used as defined](http://internet.watch.impress.co.jp/docs/special/20100712_380149.html) (July 2010, INTERNET Watch)
+    * [Process Emojis as 'words' - algorithm to distinguish 'beers' from 'parties'](http://internet.watch.impress.co.jp/docs/special/20100714_380180.html) (July 2010, INTERNET Watch)
+    * [Character encoding experts turn Baidu Emoji search episodes into an academic paper](http://internet.watch.impress.co.jp/docs/special/20100309_353586.html) (Mar. 2010, INTERNET Watch)
