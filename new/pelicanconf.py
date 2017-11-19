@@ -65,7 +65,10 @@ and <a href="http://shop.oreilly.com/product/0636920018483.do">"Machine Learning
 </ul>
 
 <p>I love learning languages. I speak Chinese, Japanese, and English fluently, and am
-learning Korean and Lojban. I helped build <a href="https://www.duolingo.com/course/ja/en/Learn-Japanese-Online">the Japanese for English speakers course</a> on Duolingo.
+learning Korean and Lojban.
+I helped launch the <a href="https://www.duolingo.com/course/ja/en/Learn-Japanese-Online">Japanese</a>,
+<a href="https://www.duolingo.com/course/ko/en/Learn-Korean-Online">Korean</a>,
+and <a href="https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online">Chinese</a> courses on Duolingo.
 One of my research projects recently <a href="https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/">appeared on TechCrunch.</a></p>
 """
 
