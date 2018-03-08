@@ -2,7 +2,7 @@
 
 <a name="about" id="about"></a>
 
-<p style="height: 160px;"></p>
+<p style="height: 80px;"></p>
 
 # Masato Hagiwara
 
@@ -12,7 +12,7 @@ I am a Researcher / Machine Learning Engineer currently working at [Duolingo](Du
 
 I love learning languages. I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects recently appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
-<p style="height: 24px;"></p>
+<p style="height: 12px;"></p>
 
 <ul class="list-inline list-social-icons mb-0">
   <li class="list-inline-item">
@@ -48,6 +48,17 @@ I love learning languages. I speak Chinese, Japanese, and English fluently, and 
     </a>
   </li>
 </ul>
+
+<p style="height: 24px;"></p>
+
+### News
+
+- **Mar. 2018**: I'm going to give a keynote talk at the [Optimizing Human Learning](https://humanlearn.io/) workshop co-located with [ITS 2018](http://its2018.its-conferences.com/) (Montréal, Canada, June 2018).
+- **Feb. 2018**: Our research project on Duolingo user behavior was featured on a [Quartz article](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
+- **Jan. 2018**: We announced [2018 Duolingo Shared Task on Second Language Acquisition Modeling (SLAM)
+](http://sharedtask.duolingo.com/).
+- **Nov. 2017**: I'm co-organizing the [Workshop for Natural Language Processing Open Source Software (NLP-OSS)](https://nlposs.github.io/), co-located with [ACL 2018](http://acl2018.org/) (Melbourne, Australia, July 2018).
+- **Nov. 2017**: We launched the [Chinese for English speakers course](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) on Duolingo.
 
 <p style="height: 120px;"></p>
 
