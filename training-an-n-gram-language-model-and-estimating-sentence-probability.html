@@ -23,6 +23,11 @@
     <!-- Custom styles for this template -->
     <link href="css/resume.css" rel="stylesheet">
 
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
     <!-- Google Analytics -->
 <script type="text/javascript">
 var _gaq = _gaq || [];
@@ -98,34 +103,29 @@ _gaq.push(['_trackPageview']);
 
 <p>First, we need to prepare a plain text corpus from which we train a language model. We use the sample corpus from <a href="http://corpus.byu.edu/coca/">COCA (Corpus of Contemporary American English)</a>, which can be downloaded from <a href="http://corpus.byu.edu/full-text/samples.asp">here</a>. After downloading 'Word: linear text' → 'COCA: 1.7m' and unzipping the archive, we can clean all the uncompressed text files (<code>w_acad_1990.txt</code>, <code>w_acad_1991.txt</code>, ..., <code>w_spok_2012.txt</code>) using a <a href="https://github.com/mhagiwara/nlproc-cookbook/blob/master/preprocessors/coca/clean.py">cleaning script</a> as follows (we assume the COCA text is unzipped under <code>text/</code> and this is run from the root directory of the Git repository):</p>
 
-<p><code>
-cat text/*.txt | python coca/clean.py &gt; text/coca_fulltext.clean.txt
-</code></p>
+<pre><code>cat text/*.txt | python coca/clean.py &gt; text/coca_fulltext.clean.txt
+</code></pre>
 
 <p>We use <a href="https://kheafield.com/code/kenlm/">KenLM Language Model Toolkit</a> to build an n-gram language model. KenLM is bundled with the latest version of <a href="http://www.statmt.org/moses/">Moses machine translation system</a>. We'll cover how to install Moses in a separate article. Let's say Moses is installed under <code>mosesdecoder</code> directory. Then we can train a trigram language model using the following command:</p>
 
-<p><code>
-mosesdecoder/bin/lmplz -o 3 &lt; text/coca_fulltext.clean.txt &gt; text/coca_fulltext.clean.lm.arpa
-</code></p>
+<pre><code>mosesdecoder/bin/lmplz -o 3 &lt; text/coca_fulltext.clean.txt &gt; text/coca_fulltext.clean.lm.arpa
+</code></pre>
 
 <p>This will create a file in the <em>ARPA format</em> for N-gram back-off models. You can compute the language model probability for any sentences by using the <code>query</code> command:</p>
 
-<p><code>
-echo "I am a boy ." | mosesdecoder/bin/query text/coca_fulltext.clean.lm.arpa
-</code></p>
+<pre><code>echo "I am a boy ." | mosesdecoder/bin/query text/coca_fulltext.clean.lm.arpa
+</code></pre>
 
 <p>which will output the result as follows (along with other information such as perplexity and time taken to analyze the input):</p>
 
-<pre>
-I=486 2 -1.7037368
+<p><pre><code>I=486 2 -1.7037368
 am=4760 3 -1.4910358
 a=27 3 -1.1888235
 boy=10140 2 -3.2120245
 .=29 3 -0.6548149
 &lt;/s&gt;=2 2 -1.335156
 Total: -9.585592
-OOV: 0
-</pre>
+OOV: 0</pre></code></p>
 
 <p>The final number <code>-9.585592</code> is the <em>log</em> probability of the sentence. Since it's the logarithm, you need to compute the 10 to the power of that number, which is around 2.60 x 10<sup>-10</sup>.</p>
 
@@ -137,19 +137,18 @@ OOV: 0
 
 <p>For example, suppose an excerpt of the ARPA language model file looks like the following:</p>
 
-<pre>
-2-grams
+<p><pre><code>2-grams
 -1.7037368      &lt;s&gt; I   -0.35425213
 -3.1241505      a boy   -0.19261438
 -1.9892355      am a    -0.08787394
--1.0562452      boy .   -0.19261438
+-1.0562452      boy .   -0.19261438</p>
 
-3-grams
+<p>3-grams
 -1.4910358      &lt;s&gt; I am
 -1.1888235      I am a
 -0.6548149      a boy .
 -1.1425415      . &lt;/s&gt;  0
-</pre>
+</pre></code></p>
 
 <p>when we are looking at the trigram 'I am a' in the sentence, we can directly read off its log probability <code>-1.1888235</code> (which corresponds to log P('a' | 'I' 'am')) in the table since we do find it in the file. However, the trigram 'am a boy' is not in the table and we need to back-off to 'a boy' (notice we dropped one word from the context, i.e., the preceding words) and use its log probability <code>-3.1241505</code>. Since we backed off, we need to add the back-off weight for 'am a', which is <code>-0.08787394</code>. The sum of these two numbers is the number we saw in the analysis output next to the word 'boy' (<code>-3.2120245</code>). You can also find some explanation of the ARPA format on <a href="https://cmusphinx.github.io/wiki/tutoriallm/#building-a-grammar">the CMU Sphinx page</a>.</p>
 

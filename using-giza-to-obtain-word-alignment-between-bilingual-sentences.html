@@ -1,167 +1,209 @@
 <!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Masato Hagiwara" />
-        <meta name="copyright" content="Masato Hagiwara" />
+<html lang="en">
 
-<meta name="keywords" content="Machine Translation, Word Alignment, NLProc Cookbook, " />
-        <title>Using GIZA++ to Obtain Word Alignment Between Bilingual Sentences  · Masato Hagiwara's Page
-</title>
-        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
-        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
-        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-175204-11']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-    </head>
-    <body>
-        <div id="content-sans-footer">
-        <div class="navbar navbar-static-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="/"><span class=site-name>Masato Hagiwara's Page</span></a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav pull-right top-menu">
-                            <li ><a href="">Home</a></li>
-                            <li ><a href="/categories.html">Categories</a></li>
-                            <li ><a href="/tags.html">Tags</a></li>
-                            <li ><a href="/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span1"></div>
-                <div class="span10">
-<article>
-<div class="row-fluid">
-    <header class="page_header span10 offset2">
-    <h1><a href="/using-giza-to-obtain-word-alignment-between-bilingual-sentences.html"> Using GIZA++ to Obtain Word Alignment Between Bilingual Sentences  </a></h1>
-    </header>
-</div>
+  <head>
 
-<div class="row-fluid">
-        <div class="span8 offset2 article-content">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-            <h2>Problem</h2>
+    <title>Using GIZA++ to Obtain Word Alignment Between Bilingual Sentences</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-175204-11']);
+_gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+    <style>
+        h1 {
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+    </style>
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+  <a class="navbar-brand js-scroll-trigger" href="/#page-top">
+    <span class="d-block d-lg-none">Masato Hagiwara's Page</span>
+    <span class="d-none d-lg-block">
+      <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+    </span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#experience">Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#education">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#publications">Publications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#press">Press</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#blog">Blog</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <div class="container-fluid p-0">
+         <section class="resume-section p-3 p-lg-5 d-flex d-column">
+             <div class="my-auto">
+                 <h1>Using GIZA++ to Obtain Word Alignment Between Bilingual Sentences</h1>
+
+<h2>Problem</h2>
+
 <p>Word alignment is mapping of words between two sentences that have the same meaning in two different languages.
 Let's say we have an English and a Spanish sentence:</p>
-<blockquote>
-<p>I saw a white bird on my way home. <br>
-Vi un pájaro blanco camino a casa.</p>
-</blockquote>
-<p>Then words 'I saw' &lt;-&gt; 'Vi', 'white' &lt;-&gt; 'blanco', 'bird' &lt;-&gt; 'pájaro', etc. correspond between two sentences.
+
+<pre>
+  I saw a white bird on my way home.
+  Vi un pájaro blanco camino a casa.
+</pre>
+
+<p>Then words 'I saw' &lt;-> 'Vi', 'white' &lt;-> 'blanco', 'bird' &lt;-> 'pájaro', etc. correspond between two sentences.
 Notice that words do not correspond one-to-one. For example, 'on my way' in English is translated as 'camino' in Spanish.
 Also, word order may also be different across languages, e.g., 'white bird' in English becomes 'pájaro blanco' in Spanish
 since Spanish adjectives are put after nouns. Given a large corpus of bilingual sentences (bitext), we would like to
 compute this word alignment automatically.</p>
-<h2>Solution</h2>
-<p><a href="https://github.com/moses-smt/giza-pp">GIZA++</a> is a toolkit to train word alignment models. GIZA++ supports IBM Model 1 to 5, now classic but most widely used unsupervised word alignment models to date. Let's use bilingual sentences from <a href="http://tatoeba.org/">Tatoeba project</a> to begin with. We can use the <a href="https://github.com/mhagiwara/nlproc-cookbook/blob/master/preprocessors/tatoeba/create_bitext.py">Tatoeba.org preprocessing script</a> to extract bilingual sentences from sentence and link dumps downloaded from their <a href="http://tatoeba.org/eng/downloads">downlaod page</a>:</p>
-<div class="highlight"><pre><span></span>python preprocessors/tatoeba/create_bitext.py --languages spa_eng --sentences sentences.csv --links links.csv &gt; tatoeba_es_en.tsv
-</pre></div>
 
+<h2>Solution</h2>
+
+<p><a href="https://github.com/moses-smt/giza-pp">GIZA++</a> is a toolkit to train word alignment models. GIZA++ supports IBM Model 1 to 5, now classic but most widely used unsupervised word alignment models to date. Let's use bilingual sentences from <a href="http://tatoeba.org/">Tatoeba project</a> to begin with. We can use the <a href="https://github.com/mhagiwara/nlproc-cookbook/blob/master/preprocessors/tatoeba/create_bitext.py">Tatoeba.org preprocessing script</a> to extract bilingual sentences from sentence and link dumps downloaded from their <a href="http://tatoeba.org/eng/downloads">downlaod page</a>:</p>
+
+<pre><code>python preprocessors/tatoeba/create_bitext.py --languages spa_eng --sentences sentences.csv \
+    --links links.csv &gt; tatoeba_es_en.tsv
+</code></pre>
 
 <p>We extract bilingual sentences in Spanish (source language) and English (target language). In all the examples in this article, please replace file names with ones with appropriate path. We recommend creating a separate <code>work</code> directory to run GIZA++. Next, we use the script bundled with <a href="http://www.statmt.org/moses/">Moses machine translation system</a> to tokenize text in each language (We'll cover Moses in another article):</p>
-<div class="highlight"><pre><span></span>cut -f3 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l es &gt; tatoeba_es_en.tsv.es
-cut -f6 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l en &gt; tatoeba_es_en.tsv.en
-</pre></div>
 
+<pre><code>cut -f3 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l es \
+    &gt; tatoeba_es_en.tsv.es
+cut -f6 tatoeba_es_en.tsv | mosesdecoder/scripts/tokenizer/tokenizer.perl -l en \
+    &gt; tatoeba_es_en.tsv.en
+</code></pre>
 
 <p>Then go to directory <code>giza-pp/GIZA++-v2</code> and run:</p>
-<div class="highlight"><pre><span></span>./plain2snt.out tatoeba_es_en.tsv.es tatoeba_es_en.tsv.en
-</pre></div>
 
+<pre><code>./plain2snt.out tatoeba_es_en.tsv.es tatoeba_es_en.tsv.en
+</code></pre>
 
 <p>which will generate vcb (vocabulary) files and snt (sentence) files, containing the list of vocabulary and aligned sentences, respectively.</p>
-<p>IBM Model 4 and 5 use word classes to model <em>distortion</em> - a concept to model how word order changes across languages, as in the 'white bird' and 'pájaro blanco' example. <code>mkcls</code> is a program to automatically infer word classes from a corpus using a maximum likelihood criterion, which can be run as follows (in the <code>giza-pp/mkcls-v2</code> directory):</p>
-<div class="highlight"><pre><span></span>./mkcls -ptatoeba_es_en.tsv.es -Vtatoeba_es_en.tsv.es.vcb.classes
-./mkcls -ptatoeba_es_en.tsv.en -Vtatoeba_es_en.tsv.en.vcb.classes
-</pre></div>
 
+<p>IBM Model 4 and 5 use word classes to model <em>distortion</em> - a concept to model how word order changes across languages, as in the 'white bird' and 'pájaro blanco' example. <code>mkcls</code> is a program to automatically infer word classes from a corpus using a maximum likelihood criterion, which can be run as follows (in the <code>giza-pp/mkcls-v2</code> directory):</p>
+
+<pre><code>./mkcls -ptatoeba_es_en.tsv.es -Vtatoeba_es_en.tsv.es.vcb.classes
+./mkcls -ptatoeba_es_en.tsv.en -Vtatoeba_es_en.tsv.en.vcb.classes
+</code></pre>
 
 <p>See <a href="http://www.aclweb.org/anthology/E99-1010">the paper by Franz Och</a> for the details of this word clustering.</p>
-<p>Finally, use the following command to run GIZA++:</p>
-<div class="highlight"><pre><span></span>/GIZA++ -S tatoeba_es_en.tsv.es.vcb -T tatoeba_es_en.tsv.en.vcb -C tatoeba_es_en.tsv.es_tatoeba_es_en.tsv.en.snt -o [prefix] -outputpath [output]
-</pre></div>
 
+<p>Finally, use the following command to run GIZA++:</p>
+
+<pre><code>./GIZA++ -S tatoeba_es_en.tsv.es.vcb -T tatoeba_es_en.tsv.en.vcb \
+    -C tatoeba_es_en.tsv.es_tatoeba_es_en.tsv.en.snt -o [prefix] -outputpath [output]
+</code></pre>
 
 <p>Here, <code>[prefix]</code> and <code>[output]</code> are the prefix used for output files and the directory where output files are saved, respectively. This will generate a bunch of output files with cryptic names. Among them, probably the most important ones are <code>[prefix].A3.final</code> and <code>[prefix].ti.final</code>, which contain the actual Viterbi alignment and the lexical translation table, respectively.</p>
-<h2>Discussion</h2>
-<p>If you see <code>ERROR: NO COOCURRENCE FILE GIVEN!</code> when running GIZA++, you may need to change <code>Makefile</code> to compile GIZA++</p>
-<p>Before:</p>
-<div class="highlight"><pre><span></span><span class="nv">CFLAGS_OPT</span> <span class="o">=</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> -O3 -funroll-loops -DNDEBUG -DWORDINDEX_WITH_4_BYTE -DBINARY_SEARCH_FOR_TTABLE -DWORDINDEX_WITH_4_BYTE
-</pre></div>
 
+<h2>Discussion</h2>
+
+<p>If you see <code>ERROR: NO COOCURRENCE FILE GIVEN!</code> when running GIZA++, you may need to change <code>Makefile</code> to compile GIZA++</p>
+
+<p>Before:</p>
+
+<pre><code>CFLAGS_OPT = $(CFLAGS) -O3 -funroll-loops -DNDEBUG -DWORDINDEX_WITH_4_BYTE
+    -DBINARY_SEARCH_FOR_TTABLE -DWORDINDEX_WITH_4_BYTE
+</code></pre>
 
 <p>After:</p>
-<div class="highlight"><pre><span></span><span class="nv">CFLAGS_OPT</span> <span class="o">=</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> -O3 -funroll-loops -DNDEBUG -DWORDINDEX_WITH_4_BYTE
-</pre></div>
 
+<pre><code>CFLAGS_OPT = $(CFLAGS) -O3 -funroll-loops -DNDEBUG -DWORDINDEX_WITH_4_BYTE
+</code></pre>
 
 <p>(Not sure why <code>-DWORDINDEX_WITH_4_BYTE</code> is duplicated. )</p>
-<p>Also, depending on your environment, you may need to modify some of the source files as written in <a href="http://catherinegasnier.blogspot.com/2014/04/install-giza-107-on-mac-osx-1092.html">this article</a>:</p>
-<div class="highlight"><pre><span></span><span class="n">perl</span> <span class="o">-</span><span class="n">pi</span> <span class="o">-</span><span class="n">w</span> <span class="o">-</span><span class="n">e</span> <span class="err">&#39;</span><span class="n">s</span><span class="o">/&lt;</span><span class="n">tr1</span><span class="err">\</span><span class="c1">//&lt;/g;&#39; GIZA++-v2/* mkcls-v2/*</span>
-<span class="n">perl</span> <span class="o">-</span><span class="n">pi</span> <span class="o">-</span><span class="n">w</span> <span class="o">-</span><span class="n">e</span> <span class="err">&#39;</span><span class="n">s</span><span class="o">/</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">tr1</span><span class="p">;</span><span class="c1">//g;&#39; GIZA++-v2/* mkcls-v2/*</span>
-<span class="n">perl</span> <span class="o">-</span><span class="n">pi</span> <span class="o">-</span><span class="n">w</span> <span class="o">-</span><span class="n">e</span> <span class="err">&#39;</span><span class="n">s</span><span class="o">/</span><span class="n">std</span><span class="o">::</span><span class="n">tr1</span><span class="o">::</span><span class="c1">//g;&#39; GIZA++-v2/* mkcls-v2/*</span>
-<span class="n">sed</span> <span class="err">&#39;</span><span class="mi">36</span><span class="n">d</span><span class="err">&#39;</span> <span class="n">mkcls</span><span class="o">-</span><span class="n">v2</span><span class="o">/</span><span class="n">mystl</span><span class="p">.</span><span class="n">h</span> <span class="o">&gt;</span> <span class="n">mkcls</span><span class="o">-</span><span class="n">v2</span><span class="o">/</span><span class="n">mystl</span><span class="p">.</span><span class="n">h</span><span class="p">.</span><span class="n">tmp</span>
-<span class="n">sed</span> <span class="err">&#39;</span><span class="mi">50</span><span class="n">d</span><span class="err">&#39;</span> <span class="n">mkcls</span><span class="o">-</span><span class="n">v2</span><span class="o">/</span><span class="n">mystl</span><span class="p">.</span><span class="n">h</span><span class="p">.</span><span class="n">tmp</span> <span class="o">&gt;</span> <span class="n">mkcls</span><span class="o">-</span><span class="n">v2</span><span class="o">/</span><span class="n">mystl</span><span class="p">.</span><span class="n">h</span>
-<span class="n">rm</span> <span class="n">mkcls</span><span class="o">-</span><span class="n">v2</span><span class="o">/</span><span class="n">mystl</span><span class="p">.</span><span class="n">h</span><span class="p">.</span><span class="n">tmp</span>
-</pre></div>
 
+<p>Also, depending on your environment, you may need to modify some of the source files as written in <a href="http://catherinegasnier.blogspot.com/2014/04/install-giza-107-on-mac-osx-1092.html">this article</a>:</p>
+
+<pre><code>perl -pi -w -e 's/&lt;tr1\//&lt;/g;' GIZA++-v2/* mkcls-v2/*
+perl -pi -w -e 's/using namespace std::tr1;//g;' GIZA++-v2/* mkcls-v2/*
+perl -pi -w -e 's/std::tr1:://g;' GIZA++-v2/* mkcls-v2/*
+sed '36d' mkcls-v2/mystl.h &gt; mkcls-v2/mystl.h.tmp
+sed '50d' mkcls-v2/mystl.h.tmp &gt; mkcls-v2/mystl.h
+rm mkcls-v2/mystl.h.tmp
+</code></pre>
 
 <p>Finally, if you are using an operating system with a case-insensitive file system (e.g., Windows or OS X), you may need to modify Line 321 of <code>model3.cpp</code> as follows to prevent the <code>.A3.final</code> file from being overwritten by the <code>.a3.final</code> file:</p>
-<div class="highlight"><pre><span></span>-      alignfile = Prefix + &quot;.A3.&quot; + number ;
-+      alignfile = Prefix + &quot;.VA3.&quot; + number ;      // &quot;VA&quot; from Viterbi alignment. Can be any file name.
-</pre></div>
 
+<pre><code>-  alignfile = Prefix + ".A3." + number ;
++  alignfile = Prefix + ".VA3." + number ;   // "VA" for "Viterbi Alignment."" Can be anything.
+</code></pre>
 
 <p>Here are some details of input/output file format for GIZA++:</p>
+
 <ul>
-<li>
-<p>vcb (vocabulary) file</p>
+<li><p>vcb (vocabulary) file</p>
+
 <ul>
 <li>This file contains a list of (uniq_id, string, number of occurrences) for each word.</li>
-</ul>
-</li>
-<li>
-<p>snt (entence alignment) file</p>
+</ul></li>
+<li><p>snt (sentence alignment) file</p>
+
 <ul>
 <li>This file contains a list of three lines - the number of times this sentence pair occurred, source sentence (with each token replaced with its uniq_id), and target sentence in the same format.</li>
-</ul>
-</li>
-<li>
-<p>T-tables (.ti.) file</p>
+</ul></li>
+<li><p>T-tables (.ti.) file</p>
+
 <ul>
 <li>This is the final inverse T-tables (lexical translation probability) trained by the model. Lexical translation probability t(e|f) is the probability that word f in the source language is translated to word e in the target language. Since this is the inverse T-tables, it contains t(f|e). The file with <code>actual</code> in its filename contains actual word strings instead of unique IDs. This is an excerpt of the <code>[prefix].actual.ti.final</code> file trained from the Tatoeba corpus:</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span>bird alimentador 3.07873e-06
+
+<pre><code>bird alimentador 3.07873e-06
 bird apariencias 0.00452353
 bird ave 0.0917504
 bird aves 0.00720495
@@ -173,78 +215,41 @@ bird pájaro 0.814385
 bird pájaros 0.053743
 bird reluce 0.0018736
 bird área 3.86079e-06
-</pre></div>
-
+</code></pre>
 
 <p>Since it contains t(f|e), you can confirm that summing over the source (in this case, Spanish) words gives a probability 1.0.</p>
+
 <ul>
-<li>
-<p>A (.A3.) file</p>
+<li><p>A (.A3.) file</p>
+
 <ul>
 <li>This file contains <em>Viterbi Alignment</em>, which is the most probable alignment (the one that maximizes the alignment probability). One particular sentence pair of this file looks like:</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span># Sentence pair (8597) source length 8 target length 10 alignment score : 1.66432e-09
-I saw a white bird on my way home.
-NULL ({ 6 }) Vi ({ 1 2 }) un ({ 3 }) pájaro ({ 5 }) blanco ({ 4 }) camino ({ 7 8 }) a ({ }) casa ({ 9 }) . ({ 10 })
-</pre></div>
 
+<p><pre></code># Sentence pair (8597) source length 8 target length 10 alignment score : 1.66432e-09
+I saw a white bird on my way home.
+NULL ({ 6 }) Vi ({ 1 2 }) un ({ 3 }) pájaro ({ 5 }) blanco ({ 4 }) camino ({ 7 8 }) a ({ })
+    casa ({ 9 }) . ({ 10 })</pre></code></p>
 
 <p>The first line shows the length (number of words) of the source (Spanish) and target (English) sentences, along with the Viterbi alignment score mentioned above.</p>
+
 <p>The second line is the target sentence, and the third line is the source sentence annotated with alignment information. Each source word is annotated with the set of indices of target words that are aligned to that source word. Note that in IBM Models assume that one target word is aligned at most one source word. The first <code>NULL ({ 6 })</code> means the 6th target word ('on') is not aligned to any words, and <code>Vi ({ 1 2 })</code> means the first and second target words 'I saw' are aligned to 'Vi'.</p>
-            <aside>
-            <hr/>
-            <nav>
-            <ul class="articles_timeline">
- 
-                <li class="previous_article">« <a href="/publications.html" title="Previous: Publications">Publications</a></li>
- 
-                <li class="next_article"><a href="/training-an-n-gram-language-model-and-estimating-sentence-probability.html" title="Next: Training an N-gram Language Model and Estimating Sentence Probability">Training an N-gram Language Model and Estimating Sentence Probability</a> »</li>
-            </ul>
-            </nav>
-            </aside>
-        </div>
-        <section>
-        <div class="span2" style="float:right;font-size:0.9em;">
- 
-            <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-11-20T12:00:00-05:00">Nov 20, 2015</time>
-            <h4>Category</h4>
-            <a class="category-link" href="/categories.html#NLProc-Cookbook-ref">NLProc Cookbook</a> 
-            <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article"> 
-                <li><a href="/tags.html#Machine-Translation-ref">Machine Translation
-                    <span>3</span>
-</a></li>
-                <li><a href="/tags.html#Word-Alignment-ref">Word Alignment
-                    <span>1</span>
-</a></li>
-            </ul>
 
-        </div>
-        </section>
-</div>
-</article>
-                </div>
-                <div class="span1"></div>
-            </div>
-        </div>
+             </div>
+         </section>
     </div>
-<footer>
-<div id="footer">
-    <ul class="footer-content">
-        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
-    </ul>
-</div>
-</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-        <script>
-            function validateForm(query)
-            {
-                return (query.length > 0);
-            }
-        </script>
 
-    </body>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+  </body>
+
 </html>

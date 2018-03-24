@@ -10,7 +10,7 @@
 
 I am a Researcher / Machine Learning Engineer currently working at [Duolingo](Duolingo). I love languages, machine learning, and everything in between.
 
-I love learning languages. I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects recently appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
+I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects recently appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
 <p style="height: 12px;"></p>
 
@@ -256,6 +256,7 @@ i><u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. A Comparative Study 
 ### In English
 
 - [Training an N-gram Language Model and Estimating Sentence Probability](training-an-n-gram-language-model-and-estimating-sentence-probability.html)
+- [Using GIZA++ to Obtain Word Alignment Between Bilingual Sentences](using-giza-to-obtain-word-alignment-between-bilingual-sentences.html)
 
 ### In Japanese
 
