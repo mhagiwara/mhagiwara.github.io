@@ -1,7 +1,7 @@
-Title: Building a Statistical Machine Translation System using Moses
-Date: 2015-12-26 12:00
-Category: NLProc Cookbook
-Tags: Machine Translation
+{"title": "Building a Statistical Machine Translation System using Moses", "template": "page.html", "url": "building-a-statistical-machine-translation-system-using-moses.html"}
+
+
+# Building a Statistical Machine Translation System using Moses
 
 ## Problem
 
@@ -16,66 +16,76 @@ statistical machine translation models given a parallel corpus (a large collecti
 
 Specifically, we will be building a machine translation system which translates from English to [Lojban](https://en.wikipedia.org/wiki/Lojban) (a constructed syntactically unambiguous language).
 
-After cloning [zmifanva git repository](https://github.com/mhagiwara/zmifanva) and installing Moses and GIZA++ under `mosesdecoder` and `giza-pp` respectively (see Moses's [Getting Started Guide](http://www.statmt.org/moses/?n=Development.GetStarted) for instructuion), let's first prepare the training corpus by running:
+After cloning [zmifanva git repository](https://github.com/mhagiwara/zmifanva) and installing Moses and GIZA++ under `mosesdecoder` and `giza-pp` respectively (see Moses's [Getting Started Guide](http://www.statmt.org/moses/?n=Development.GetStarted) for instruction), let's first prepare the training corpus by running:
 
-```
-$ mkdir corpus
-$ mkdir lm
-$ python scripts/convert_solr_xml_to_bitext.py docs/aspect.xml docs/cll.xml docs/conlang.xml docs/jbowiki.xml docs/phrasebook.xml docs/tatoeba.xml docs/teris.xml docs/introduction.xml docs/crashcourse1.xml docs/crashcourse.jbo_eng_dict.xml > corpus/train
-```
+    $ mkdir corpus
+    $ mkdir lm
+    $ python scripts/convert_solr_xml_to_bitext.py \
+        docs/aspect.xml \
+        docs/cll.xml \
+        docs/conlang.xml \
+        docs/jbowiki.xml \
+        docs/phrasebook.xml \
+        docs/tatoeba.xml \
+        docs/teris.xml \
+        docs/introduction.xml \
+        docs/crashcourse1.xml \
+        docs/crashcourse.jbo_eng_dict.xml \
+        > corpus/train
 
 This will create a file `corpus/train`, which is a collection of tab-separated lines of Lojban and English sentences. After this, we preprocess the training sentences by tokenizing and cleaning them:
 
-```
-$ cat corpus/train | cut -f 1 | python scripts/tokenize_jbo.py > corpus/train.tok.jb
-$ cat corpus/train | cut -f 2 | mosesdecoder/scripts/tokenizer/tokenizer.perl -l en > corpus/train.tok.en
 
-$ mosesdecoder/scripts/training/clean-corpus-n.perl corpus/train.tok jb en corpus/train.clean 1 80
-```
+    $ cat corpus/train | cut -f 1 | python scripts/tokenize_jbo.py > corpus/train.tok.jb
+    $ cat corpus/train | cut -f 2 | mosesdecoder/scripts/tokenizer/tokenizer.perl -l en
+        > corpus/train.tok.en
+
+    $ mosesdecoder/scripts/training/clean-corpus-n.perl corpus/train.tok jb en corpus/train.clean 1 80
+
 
 `clean-corpus-n.perl` is a script bundled with Moses, which filters out sentences which are either too long or too short (in this case, length is between 1 and 80 words)
 or length of Lojban/English sentences is too unbalanced (by default, filters the sentence pair if the ratio of sentence length is greater than 9). This is because sentence pairs that are too long, too short, or too unbalanced, are not suited as part of training data since they may cause some difficulties, such as inaccurate word alignment.
 
 Next, we need to build a language model. A statistical machine translation system uses a language model and a translation model to generate output in target language. A language model, as explained in [this article](/training-an-n-gram-language-model-and-estimating-sentence-probability.html), is what determines how likely (or fluent) a generated sentence (or a sentence that is being generated, which is called a *hypothesis*) in the target language.
 
-```
-$ mosesdecoder/bin/lmplz -o 3 < corpus/train.clean.jb > lm/train.arpa.jb
-$ mosesdecoder/bin/build_binary lm/train.arpa.jb lm/train.blm.jb
-```
+
+    $ mosesdecoder/bin/lmplz -o 3 < corpus/train.clean.jb > lm/train.arpa.jb
+    $ mosesdecoder/bin/build_binary lm/train.arpa.jb lm/train.blm.jb
+
 
 We can give an arbitrary collection of text in order to build a language model. Here, we are just passing the Lojban part of the training corpus, although in practice a larger corpus separate from the training bilingual corpus is often used, which usually gives better results. Note that here we are binarizing the language model file so that Moses can load it faster.
 
 Now we are ready to run the main training script of Moses as follows:
-```
-$ mosesdecoder/scripts/training/train-model.perl \
-    -root-dir train.en-jb -corpus corpus/train.clean \
-    -f en -e jb -alignment grow-diag-final-and -reordering msd-bidirectional-fe \
-    -lm 0:3:$PWD/lm/train.blm.jb:8 \
-    -external-bin-dir mosesdecoder/tools
-```
+
+    $ mosesdecoder/scripts/training/train-model.perl \
+        -root-dir train.en-jb -corpus corpus/train.clean \
+        -f en -e jb -alignment grow-diag-final-and -reordering msd-bidirectional-fe \
+        -lm 0:3:$PWD/lm/train.blm.jb:8 \
+        -external-bin-dir mosesdecoder/tools
+
 
 There seems to be a lot going on here, but the most important parameters are: `-corpus`, which specifies which training corpus it reads from (in this case, the preprocessed `corpus/train.clean.en` and `corpus/train.clean.jb` files), `-f` and `-e`, which determines the languages we are translating to and from (`f` means foreign, and `e` means English. In machine translation, by default we assume we are translating text in a foreign language to English, but in this case it's the other way), and `-root-dir`, which specifies the location where the output model is written.
 
 After the training is finished, we can run Moses in an interactive mode by:
 
-```
-$ mosesdecoder/bin/moses -f train.en-jb/model/moses.ini
-```
+
+    $ mosesdecoder/bin/moses -f train.en-jb/model/moses.ini
+
 
 We can type `Hello , everybody .` (note the tokenization --- Moses decoder itself is not responsible for tokenizing the text) and you can see the correct translation is generated by Moses as follows:
 
-```
-Hello , everybody .
-Translating: Hello , everybody .
-Line 0: Initialize search took 0.000 seconds total
-Line 0: Collecting options took 0.000 seconds at moses/Manager.cpp:127
-Line 0: Search took 0.010 seconds
-coi ro do
-BEST TRANSLATION: coi ro do [1111]  [total=-6.115] core=(0.000,-3.000,2.000,-4.030,-8.843,-0.272,-4.228,-0.699,0.000,0.000,-0.420,0.000,0.000,0.000,-11.409)
-Line 0: Decision rule took 0.000 seconds total
-Line 0: Additional reporting took 0.000 seconds total
-Line 0: Translation took 0.011 seconds total
-```
+
+    Hello , everybody .
+    Translating: Hello , everybody .
+    Line 0: Initialize search took 0.000 seconds total
+    Line 0: Collecting options took 0.000 seconds at moses/Manager.cpp:127
+    Line 0: Search took 0.010 seconds
+    coi ro do
+    BEST TRANSLATION: coi ro do [1111]  [total=-6.115] core=(0.000,-3.000,2.000,-4.030,-8.843,...
+    Line 0: Decision rule took 0.000 seconds total
+    Line 0: Additional reporting took 0.000 seconds total
+    Line 0: Translation took 0.011 seconds total
+
 
 ## Discussion
 
