@@ -1,6 +1,4 @@
-Title: TinySegmenter in Python
-Date: 2016-12-02 00:00
-Category: Personal
+{"title": "TinySegmenter in Python", "template": "page.html", "url": "tinysegmenter-in-python.html"}
 
 
 # TinySegmenter in Python
@@ -36,7 +34,7 @@ No need to install it - just copy it anywhere, import it, and use it as the foll
 ### Features (from the original TinySegmenter)
 
 
-- Around 95% segemntation precision for Japanese news articles.
+- Around 95% segmentation precision for Japanese news articles.
 - Segmentation units are compatible with [MeCab + IPADic](http://taku910.github.io/mecab/)
 - Only 23KB of source code. Just copy it anywhere and no other things are required.
 -  No dependency on any dictionaries - character-based segmentation (Features: character, character N-grams, character types).

@@ -1,152 +1,159 @@
 <!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Masato Hagiwara" />
-        <meta name="copyright" content="Masato Hagiwara" />
+<html lang="en">
 
-<meta name="keywords" content=", Personal, " />
-        <title>TinySegmenter in Python  · Masato Hagiwara's Page
-</title>
-        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
-        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
-        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-175204-11']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-    </head>
-    <body>
-        <div id="content-sans-footer">
-        <div class="navbar navbar-static-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="/"><span class=site-name>Masato Hagiwara's Page</span></a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav pull-right top-menu">
-                            <li ><a href="">Home</a></li>
-                            <li ><a href="/categories.html">Categories</a></li>
-                            <li ><a href="/tags.html">Tags</a></li>
-                            <li ><a href="/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span1"></div>
-                <div class="span10">
-<article>
-<div class="row-fluid">
-    <header class="page_header span10 offset2">
-    <h1><a href="/tinysegmenter-in-python.html"> TinySegmenter in Python  </a></h1>
-    </header>
-</div>
+  <head>
 
-<div class="row-fluid">
-        <div class="span8 offset2 article-content">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-            <h1>TinySegmenter in Python</h1>
+    <title>TinySegmenter in Python</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-175204-11']);
+_gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+    <style>
+        h1 {
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+    </style>
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+  <a class="navbar-brand js-scroll-trigger" href="/#page-top">
+    <span class="d-block d-lg-none">Masato Hagiwara's Page</span>
+    <span class="d-none d-lg-block">
+      <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+    </span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#experience">Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#education">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#publications">Publications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#press">Press</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="/#blog">Blog</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <div class="container-fluid p-0">
+         <section class="resume-section p-3 p-lg-5 d-flex d-column">
+             <div class="my-auto">
+                 <h1>TinySegmenter in Python</h1>
+
 <h2>What is this?</h2>
+
 <p>"TinySegmenter in Python" is a Python re-implementation of <a href="http://chasen.org/~taku/software/TinySegmenter/">TinySegmenter</a>, which is an extremely compact (23KB) Japanese tokenizer originally written in JavaScript by Mr. Taku Kudo. It works on Python 2.5 or above.</p>
+
 <p>The interface of "TinySegmenter in Python" is compatible with <a href="http://www.nltk.org/">NLTK</a>'s TokenizerI, although the distribution file below does not directly depend on NLTK. If you'd like to use it as a tokenizer in NLTK, you have to modify the first few lines of the code as below:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">from</span> <span class="nn">nltk.tokenize.api</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="k">class</span> <span class="nc">TinySegmenter</span><span class="p">(</span><span class="n">TokenizerI</span><span class="p">):</span>
-</pre></div>
+<pre><code>import nltk
+import re
+from nltk.tokenize.api import *
 
+class TinySegmenter(TokenizerI):
+</code></pre>
 
 <h2>Download and Usage</h2>
+
 <p>Download the source code from <a href="https://github.com/mhagiwara/nltk/blob/master/jpbook/tinysegmenter.py">here</a>. TinySegmenter in Python is freely distributable under the terms of a new BSD license. </p></p>
+
 <p>No need to install it - just copy it anywhere, import it, and use it as the follow example:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tinysegmenter</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">segmenter</span> <span class="o">=</span> <span class="n">TinySegmenter</span><span class="p">()</span>
-<span class="k">print</span> <span class="s1">&#39; | &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">segmenter</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="s2">u&quot;私の名前は中野です&quot;</span><span class="p">))</span>
+<pre><code>from tinysegmenter import *
 
-<span class="err">私</span> <span class="o">|</span> <span class="err">の</span> <span class="o">|</span> <span class="err">名前</span> <span class="o">|</span> <span class="err">は</span> <span class="o">|</span> <span class="err">中野</span> <span class="o">|</span> <span class="err">です</span>
-</pre></div>
+segmenter = TinySegmenter()
+print ' | '.join(segmenter.tokenize(u"私の名前は中野です"))
 
+私 | の | 名前 | は | 中野 | です
+</code></pre>
 
 <h3>Features (from the original TinySegmenter)</h3>
+
 <ul>
-<li>Around 95% segemntation precision for Japanese news articles.</li>
+<li>Around 95% segmentation precision for Japanese news articles.</li>
 <li>Segmentation units are compatible with <a href="http://taku910.github.io/mecab/">MeCab + IPADic</a></li>
 <li>Only 23KB of source code. Just copy it anywhere and no other things are required.</li>
 <li>No dependency on any dictionaries - character-based segmentation (Features: character, character N-grams, character types).</li>
 <li>Feature selection by L1-norm regularization <a href="http://en.wikipedia.org/wiki/AdaBoost">Boosting</a>.</li>
 </ul>
+
 <h3>A Better Alternative</h3>
+
 <p>If you are interested in more accurate analysis of Japanese and Chinese text in JavaScript,  check out my other open source project <a href="https://github.com/rakuten-nlp/rakutenma">Rakuten MA</a>, which is an open source morphological analyzer written in 100% JavaScript, supporting PoS tagging in Japanese and Chinese.</p>
+
 <h3>Acknowledgment</h3>
+
 <p>I thank Mr. Kudo for his effort on this kind of wonderful software.</p>
-            <aside>
-            <hr/>
-            <nav>
-            <ul class="articles_timeline">
- 
-                <li class="previous_article">« <a href="/makijita.html" title="Previous: 巻き舌クリニック">巻き舌クリニック</a></li>
- 
-                <li class="next_article"><a href="/nltk-japanese-corpus.html" title="Next: NLTK Japanese Corpora - NLTKで使える日本語コーパス">NLTK Japanese Corpora - NLTKで使える日本語コーパス</a> »</li>
-            </ul>
-            </nav>
-            </aside>
-        </div>
-        <section>
-        <div class="span2" style="float:right;font-size:0.9em;">
- 
-            <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2016-12-02T00:00:00-05:00">Dec 2, 2016</time>
-            <h4>Category</h4>
-            <a class="category-link" href="/categories.html#Personal-ref">Personal</a> 
 
-        </div>
-        </section>
-</div>
-</article>
-                </div>
-                <div class="span1"></div>
-            </div>
-        </div>
+             </div>
+         </section>
     </div>
-<footer>
-<div id="footer">
-    <ul class="footer-content">
-        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
-    </ul>
-</div>
-</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-        <script>
-            function validateForm(query)
-            {
-                return (query.length > 0);
-            }
-        </script>
 
-    </body>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+  </body>
+
 </html>

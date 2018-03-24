@@ -258,6 +258,8 @@ i><u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. A Comparative Study 
 - [Training an N-gram Language Model and Estimating Sentence Probability](training-an-n-gram-language-model-and-estimating-sentence-probability.html)
 - [Using GIZA++ to Obtain Word Alignment Between Bilingual Sentences](using-giza-to-obtain-word-alignment-between-bilingual-sentences.html)
 - [Building a Statistical Machine Translation System using Moses](building-a-statistical-machine-translation-system-using-moses.html)
+- [TinySegmenter in Python](tinysegmenter-in-python.html)
+- [NLTK Japanese Corpora](nltk-japanese-corpus.html)
 
 ### In Japanese
 

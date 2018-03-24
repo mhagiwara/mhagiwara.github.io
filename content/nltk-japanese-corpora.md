@@ -1,8 +1,7 @@
-Title: NLTK Japanese Corpora - NLTKで使える日本語コーパス
-Date: 2016-12-10 00:00
-Category: Personal
-save_as: nltk-japanese-corpus.html
-url: nltk-japanese-corpus.html
+{"title": "NLTK Japanese Corpora - NLTKで使える日本語コーパス", "template": "page.html", "url": "nltk-japanese-corpus.html"}
+
+
+# NLTK Japanese Corpora - NLTKで使える日本語コーパス
 
 NLTK (Natural Language Toolkit) is an excellent toolkit which you can use for natural language processing and text mining experiments and learning. Unfortunately it doesn't include Japanese large corpora and this makes it relatively difficult to try some experiments using Japanese linguistic resources. Here I introduce two Japanese freely available corpora, along with their corpus reader modules. By using corpus readers, you can easily access the corpora with the unified interface.
 
