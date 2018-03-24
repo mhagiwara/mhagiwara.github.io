@@ -255,7 +255,7 @@ i><u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. A Comparative Study 
 
 ### In English
 
-(Coming soon...)
+- [Training an N-gram Language Model and Estimating Sentence Probability](training-an-n-gram-language-model-and-estimating-sentence-probability.html)
 
 ### In Japanese
 

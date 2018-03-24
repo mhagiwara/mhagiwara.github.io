@@ -1,7 +1,6 @@
-Title: Training an N-gram Language Model and Estimating Sentence Probability
-Date: 2015-11-25 12:00
-Category: NLProc Cookbook
-Tags: Machine Translation, Language Model
+{"title": "Training an N-gram Language Model and Estimating Sentence Probability", "template": "page.html", "url": "training-an-n-gram-language-model-and-estimating-sentence-probability.html"}
+
+# Training an N-gram Language Model and Estimating Sentence Probability
 
 ## Problem
 
@@ -29,10 +28,16 @@ echo "I am a boy ." | mosesdecoder/bin/query text/coca_fulltext.clean.lm.arpa
 
 which will output the result as follows (along with other information such as perplexity and time taken to analyze the input):
 
-```
-
-I=486 2 -1.7037368	am=4760 3 -1.4910358	a=27 3 -1.1888235	boy=10140 2 -3.2120245	.=29 3 -0.6548149	</s>=2 2 -1.335156	Total: -9.585592 OOV: 0
-```
+<pre>
+I=486 2 -1.7037368
+am=4760 3 -1.4910358
+a=27 3 -1.1888235
+boy=10140 2 -3.2120245
+.=29 3 -0.6548149
+&lt;/s&gt;=2 2 -1.335156
+Total: -9.585592
+OOV: 0
+</pre>
 
 The final number `-9.585592` is the *log* probability of the sentence. Since it's the logarithm, you need to compute the 10 to the power of that number, which is around 2.60 x 10<sup>-10</sup>.
 
@@ -45,18 +50,18 @@ The file created by the `lmplz` program is in a format called `ARPA format` for 
 For example, suppose an excerpt of the ARPA language model file looks like the following:
 
 
-```
+<pre>
 2-grams
--1.7037368      <s> I   -0.35425213
+-1.7037368      &lt;s&gt; I   -0.35425213
 -3.1241505      a boy   -0.19261438
 -1.9892355      am a    -0.08787394
 -1.0562452      boy .   -0.19261438
 
 3-grams
--1.4910358      <s> I am
+-1.4910358      &lt;s&gt; I am
 -1.1888235      I am a
 -0.6548149      a boy .
--1.1425415      . </s>  0
-```
+-1.1425415      . &lt;/s&gt;  0
+</pre>
 
-when we are looking at the trigram 'I am a' in the sentence, we can directly read off its log probability `-1.1888235` (which corresponds to log P('a' | 'I' 'am')) in the table since we do find it in the file. However, the trigram 'am a boy' is not in the table and we need to back-off to 'a boy' (notice we dropped one word from the context, i.e., the preceding words) and use its log probability `-3.1241505`. Since we backed off, we need to add the back-off weight for 'am a', which is `-0.08787394`. The sum of these two numbers is the number we saw in the analysis output next to the word 'boy' (`-3.2120245`). You can also find some explanation of the ARPA format on [the CMU Sphinx page](http://cmusphinx.sourceforge.net/wiki/sphinx4:standardgrammarformats).
+when we are looking at the trigram 'I am a' in the sentence, we can directly read off its log probability `-1.1888235` (which corresponds to log P('a' | 'I' 'am')) in the table since we do find it in the file. However, the trigram 'am a boy' is not in the table and we need to back-off to 'a boy' (notice we dropped one word from the context, i.e., the preceding words) and use its log probability `-3.1241505`. Since we backed off, we need to add the back-off weight for 'am a', which is `-0.08787394`. The sum of these two numbers is the number we saw in the analysis output next to the word 'boy' (`-3.2120245`). You can also find some explanation of the ARPA format on [the CMU Sphinx page](https://cmusphinx.github.io/wiki/tutoriallm/#building-a-grammar).

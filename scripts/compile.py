@@ -6,7 +6,7 @@ import markdown2
 import simplejson as json
 
 
-CONTENTS_DIR = 'contents'
+CONTENTS_DIR = 'content'
 
 
 def get_content_files():
