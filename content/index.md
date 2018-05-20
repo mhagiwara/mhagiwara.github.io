@@ -53,6 +53,7 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 
 ### News
 
+- **May 2018**: I'm travelling to Shenzhen, China and giving a talk (in Chinese) at Baidu in August, 2018.  
 - **Mar. 2018**: I'm going to give a keynote talk at the [Optimizing Human Learning](https://humanlearn.io/) workshop co-located with [ITS 2018](http://its2018.its-conferences.com/) (Montréal, Canada, June 2018).
 - **Feb. 2018**: Our research project on Duolingo user behavior was featured on a [Quartz article](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 - **Jan. 2018**: We announced [2018 Duolingo Shared Task on Second Language Acquisition Modeling (SLAM)
