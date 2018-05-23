@@ -85,11 +85,14 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 <a name="experience" id="experience"></a>
 ## Experience
 
-- Feb. 2015 - Present: **Software Engineer - Duolingo, Inc.** (in Pittsburgh, PA)
+- Feb. 2015 - Present: **Machine Learning Engineer / Researcher - Duolingo, Inc.** (in Pittsburgh, PA)
+    - Built automatic grading technologies for Duolingo English Test writing and speaking questions using neural networks
+    - Led data creation and analysis for various research projects, including user behavior analysis and second language acquisition modeling (SLAM) shared task
+    - Led the content creation of Chinese, Japanese, and Korean from English courses
 
 <p></p>
 
-- Oct. 2010 - Feb. 2015: Lead Scientist - Rakuten Institute of Technology (in New York)
+- Oct. 2010 - Feb. 2015: **Lead Scientist - Rakuten Institute of Technology** (in New York)
     - Implemented machine transliteration (NLP2011 paper award) and machine translation for e-commerce
     - Built Chinese/Japanese word segmentation, morphological analysis, named entity extraction systems
     - Lexical knowledge acquisition and information extraction from the Web
