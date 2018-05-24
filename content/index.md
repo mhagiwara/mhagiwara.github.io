@@ -8,7 +8,7 @@
 
 <p style="height: 24px;"></p>
 
-I am a Researcher / Machine Learning Engineer currently working at [Duolingo](Duolingo). I love languages, machine learning, and everything in between.
+I am a Researcher / Machine Learning Engineer currently working at [Duolingo](http://www.duolingo.com/). I love languages, machine learning, and everything in between.
 
 I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects recently appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
