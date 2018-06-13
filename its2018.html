@@ -117,16 +117,16 @@ _gaq.push(['_trackPageview']);
 <li>Optimizing human
 <ul>
 <li>Your total learning = time x learning efficacy. This "time" factor is often overlooked </li>
-<li>We wanted to find out what separates those who stay on our app and those who quit.</li>
-<li>There are a few statistically significant factors for predicting user retention. Frequency, number, and consistency of lessons stood out.</li>
+<li>We wanted to find out what separates those who stay on our app and those who quit</li>
+<li>There are a few statistically significant factors for predicting user retention. Frequency, number, and consistency of lessons stood out</li>
 <li>We ran user clustering to find out different user behavioral patterns based on time of day, and found clear behavioral clusters (e.g., 9-to-5, prime time, weekend, etc.) </li>
-<li>The "before bed" cluster was the best in terms of learning performance. This result is consistent with many research studies (e.g., Mezza et al. 2016) on the effect of sleep for your learning. </li>
+<li>The "before bed" cluster was the best in terms of learning performance. This result is consistent with many research studies (e.g., Mezza et al. 2016) on the effect of sleep</li>
 </ul></li>
 <li>Optimizing language
 <ul>
-<li>There are very few educational datasets that are 1) about language learning, 2) multilingual, and 3) longitudinal.</li>
-<li>We released the SLAM (second language acquisition model) dataset, which provides Duolingo users' long-term language learning traces and token-level error attribution.</li>
-<li>We ran the 2018 Duolingo SLAM shared task. 15 teams participated.</li>
+<li>There are very few educational datasets that are 1) about language learning, 2) multilingual, and 3) longitudinal</li>
+<li>We released the SLAM (second language acquisition model) dataset, which provides Duolingo users' long-term language learning traces and token-level error attribution</li>
+<li>We ran the 2018 Duolingo SLAM shared task. 15 teams participated</li>
 <li>For this particular dataset, the choice of algorithms (e.g., tree ensembles, RNNs, multitask approach) appears to be more important than feature engineering</li>
 </ul></li>
 <li>Optimizing learning 
@@ -134,6 +134,10 @@ _gaq.push(['_trackPageview']);
 <li>The two sigma problem - tutored students perform two standard deviations (sigmas) better than the ones in a traditional classroom setting </li>
 <li>"Progress bar" keeps track of your mastery of the concepts taught in a lesson</li>
 <li>The easiest way is to approximate this is to use the population learning curve  </li>
+<li>The population curve is misleading - Streeter (2015) proposed a framework for modeling a mixture of arbitrary learning curves </li>
+<li>"Strength bar" keeps track of how much you still remember the concept taught in a lesson</li>
+<li>The older version of Duolingo was using the Leitner system, which is a simple system to estimate the halflife based on the numbers of corrects and incorrects</li>
+<li>Halflife regression (Settles 2015) estimates the halflife based on an arbitrary set of features, leading to a 1.7% increase in next-day retention</li>
 </ul></li>
 </ul>
 
@@ -163,7 +167,12 @@ _gaq.push(['_trackPageview']);
 <li><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/8SWHNO">Data for the 2018 Duolingo Shared Task on Second Language Acquisition Modeling (SLAM)</a></li>
 <li><a href="http://sharedtask.duolingo.com/">2018 Duolingo Shared Task on Second Language Acquisition Modeling (SLAM)</a> </li>
 </ul></li>
-<li>Optimizing learning</li>
+<li>Optimizing learning
+<ul>
+<li><a href="http://web.mit.edu/5.95/readings/bloom-two-sigma.pdf">The 2 Sigma Problem: The Search for Methods of Group Instruction as Effective as One-to-One Tutoring</a></li>
+<li>(Streeter 2015) <a href="https://s3.amazonaws.com/duolingo-papers/publications/streeter.edm15.pdf">Mixture Modeling of Individual Learning Curves</a></li>
+<li>(Settles and Meeder 2015) <a href="https://s3.amazonaws.com/duolingo-papers/publications/settles.acl16.pdf">A Trainable Spaced Repetition Model for Language Learning</a></li>
+</ul></li>
 </ul>
 
 <h2>Collaborators</h2>
