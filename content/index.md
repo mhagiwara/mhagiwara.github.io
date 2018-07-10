@@ -207,6 +207,7 @@ i><u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. A Comparative Study 
 
 ### Conference Papers (Selected)
 
+* Burr Settles, Chris Brust, Erin Gustafson, <u>Masato Hagiwara</u>, Nitin Madnani. Second Language Acquisition Modeling. BEA 2018, 2018. \[[paper](http://sharedtask.duolingo.com/papers/settles.slam18.pdf)\]
 * Ayah Zirikly, <u>Masato Hagiwara</u>. Cross-lingual Transfer of Named Entity Recognizers without Parallel Corpora. ACL 2015, pp. 390-396, 2015. \[[paper](http://www.aclweb.org/anthology/P15-2064)\]
 * <u>Masato Hagiwara</u>, Satoshi Sekine. Lightweight Client-Side Chinese/Japanese Morphological Analyzer Based on Online Learning. COLING 2014 system demonstration, pp. 39-43, 2014. \[[paper](http://anthology.aclweb.org/C/C14/C14-2009.pdf)\]
 * Haibo Li, <u>Masato Hagiwara</u>, Qi Li, Heng Ji. Comparison of the Impact of Word Segmentation on Name Tagging for Chinese and Japanese, LREC 2014, pp.2532-2536, 2014. \[[paper](http://www.lrec-conf.org/proceedings/lrec2014/pdf/358_Paper.pdf)\]
@@ -260,6 +261,7 @@ i><u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. A Comparative Study 
 
 ### In English
 
+- [CJKA.io - NLP/ML recipes for Chinese, Japanese, Korean, and Arabic language processing](http://cjka.io/)
 - [Deep NLP Kata - Practice Exercises for Deep Learning and Natural Language Processing](http://masatohagiwara.net/deepnlp-kata/)
 - [Training an N-gram Language Model and Estimating Sentence Probability](training-an-n-gram-language-model-and-estimating-sentence-probability.html)
 - [Using GIZA++ to Obtain Word Alignment Between Bilingual Sentences](using-giza-to-obtain-word-alignment-between-bilingual-sentences.html)
