@@ -1,4 +1,4 @@
-{"title": "巻き舌クリニック - みんなで巻き舌を克服するサイト", "template": "page.html", "url": "makijita.html"}
+{"title": "巻き舌クリニック - みんなで巻き舌を克服するサイト", "template": "page_with_ads.html", "url": "makijita.html"}
 
 # 巻き舌クリニック - みんなで巻き舌を克服するサイト
 
