@@ -53,8 +53,8 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 
 ### News
 
-- **August 2018**: I'm travelling to Shenzhen, China and [giving a talk at Baidu](/shenzhen2018.html) in August, 2018.  
-- **Jue 2018**: I uploaded [the companion website](/its2018.html) for my keynote talk at the [Optimizing Human Learning](https://humanlearn.io/) workshop co-located with [ITS 2018](http://its2018.its-conferences.com/) (Montréal, Canada, June 2018).
+- **Aug. 2018**: I [gave a talk](/shenzhen2018.html) at Baidu in Shenzhen, China.  
+- **Jun. 2018**: I uploaded [the companion website](/its2018.html) for my keynote talk at the [Optimizing Human Learning](https://humanlearn.io/) workshop co-located with [ITS 2018](http://its2018.its-conferences.com/) (Montréal, Canada, June 2018).
 - **Mar. 2018**: I'm going to give a keynote talk at the [Optimizing Human Learning](https://humanlearn.io/) workshop co-located with [ITS 2018](http://its2018.its-conferences.com/) (Montréal, Canada, June 2018).
 - **Feb. 2018**: Our research project on Duolingo user behavior was featured on a [Quartz article](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 - **Jan. 2018**: We announced [2018 Duolingo Shared Task on Second Language Acquisition Modeling (SLAM)
@@ -94,10 +94,9 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 <p></p>
 
 - Oct. 2010 - Feb. 2015: **Lead Scientist - Rakuten Institute of Technology** (in New York)
-    - Implemented machine transliteration (NLP2011 paper award) and machine translation for e-commerce
-    - Built Chinese/Japanese word segmentation, morphological analysis, named entity extraction systems
-    - Lexical knowledge acquisition and information extraction from the Web
-    - Developed writing support system for English as a Second Language (ESL) learners
+    - Implemented machine transliteration (NLP2011 paper award) and machine translation for the largest Japanese e-commerse website (Rakuten)
+    - Built Chinese/Japanese word segmentation, morphological analysis, and named entity extraction systems
+    - Developed a writing support system for English as a Second Language (ESL) learners
 
 <p></p>
 
@@ -116,22 +115,10 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 
 <p></p>
 
-- Nov. 2006 - Aug. 2007: **Developer - IPA, JAPAN: Exploratory Software Project.** (Project Manager: Prof. David J. Farber)
-    - Accepted as the Exploratory Software Project "Serendi: A Location-Aware Social Networking Platform," a meta social networking service targeted at mobile devices with GPS. (acceptance ratio 23.4%)
-    - Developed the "compatibility" analysis module, which recommends users in real time based on natural language processing and network analysis. Used PHP, JavaScript, Ruby, MySQL, and ActiveRecord.
-    - Conducted an extensive user test with more than 50 users and confirmed the reliability of the system.
-
-<p></p>
-
 - Aug. 2005 - Sep. 2005: **Intern (Software Engineer), Google Inc., CA, USA.** (Mentors: Dekang Lin and Jun Wu)
     - Participated in the two-month internship program, as one of the few interns chosen from Japan, as it was only the second year since the internship program started.
     - Improved Japanese query suggestion, which is currently used as the basis for the query suggestion shown at the top and bottom of the Google search result.
     - Fully used the parallel distributed computation algorithms such as MapReduce and the large network cluster infrastructure which Google offers.
-
-<p></p>
-
-- Apr. 2006 - Mar. 2007: **Research Assistant, Nagoya University**
-    - Proposed and implemented some extension and selection methods of context for lexical similarity computation, to increase the performance of linguistic resources construction such as thesauri.
 
 <p style="height: 120px;"></p>
 
@@ -191,6 +178,7 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 
 ### Books and Articles
 
+* Yoh Okuno, Graham Neubig, <u>Masato Hagiwara</u>, Mamoru Komachi. [Natural Language Processing: Basics and Technology (Shoeisha)](http://www.shoeisha.co.jp/book/detail/9784798128528) (in Japanese). Shoeisha, 2016.
 * Drew Conway, John Myles White, <u>萩原正人 (Masato Hagiwara)</u>, 奥野 陽 (Yoh Okuno), 水野 貴明 (Takaaki Mizuno),  木下 哲也 (Tetsuya Kinoshita) (translation). 入門 機械学習 (Machine Learning for Hackers). O'Reilly Japan, 2012. [O'Reilly Japan - 入門 機械学習](http://www.oreilly.co.jp/books/9784873115948/)
 * Steven Bird, Ewan Klein, Edward Loper. <u>萩原正人 (Masato Hagiwara)</u>, 中山敬広 (Takahiro Nakayama), 水野貴明(Takaaki Mizuno) (translation). 入門 自然言語処理 (Natural Language Processing with Python). O'Reilly Japan, 2010. [O'Reilly Japan - 入門 自然言語処理](http://www.oreilly.co.jp/books/9784873114705/)
 * Masato Hagiwara, Koji Murakami, Graham Neubig, Yuichiroh Matsubayashi: Robust NLP for Real-world Data : 7. ANPI_NLP - Mining Safety Information after Disasters Using Natural Language Processing-. Information Processing Society of Japan Magazine. Vol. 53, No. 3, pp. 241-248, 2012.
