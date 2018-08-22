@@ -94,16 +94,17 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 <p></p>
 
 - Oct. 2010 - Feb. 2015: **Lead Scientist - Rakuten Institute of Technology** (in New York)
-    - Implemented machine transliteration (NLP2011 paper award) and machine translation for the largest Japanese e-commerse website (Rakuten)
-    - Built Chinese/Japanese word segmentation, morphological analysis, and named entity extraction systems
-    - Developed a writing support system for English as a Second Language (ESL) learners
+	- Developed machine transliteration (NLP2011 paper award) and machine translation algorithms for the largest Japanese e-commerce website (Rakuten)
+	- Built a Chinese/Japanese word segmentation / morphological analyzer (RakutenMA)
+	- Developed a writing support system for English as a Second Language (ESL) learners
+
 
 <p></p>
 
 - Apr. 2009 - Sep. 2010: **Research and Development Engineer - Baidu Japan, Inc.** (worked in Shanghai / Beijing / Tokyo)
-    - Planned and acted as a lead developer in various projects including [Unnatural language processing contest](http://www.baidu.jp/unlp/) and [Baidu Mobile Corpus and Timed Corpus](http://www.baidu.jp/corpus/).
-    - Worked on the ranking and page analytical algorithms including spam detection for [Baidu mobile search](http://m.baidu.jp). Also worked on the mobile emoticon search using various NLP semantic analysis techniques.
-    - Worked on various NLP topics including - word / sentence analysis technologies, synonym mining and dictionary construction, proper noun detection, Japanese Input Method [BaiduType](http://ime.baidu.jp), etc.
+    - Led NLP data initiatives including [Unnatural language processing contest](http://www.baidu.jp/unlp/) and [Baidu mobile corpus and timed corpus](http://www.baidu.jp/corpus/)
+    - Improved the ranking and page analysis algorithms including spam detection and emoticon search for [Baidu mobile search](http://m.baidu.jp)
+    - Worked as a consultant on various NLP projects including Japanese Input Method [BaiduType](http://ime.baidu.jp)
 
 <p></p>
 
