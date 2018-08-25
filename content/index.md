@@ -109,10 +109,9 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 <p></p>
 
 - Apr. 2008 - Jul. 2008: **Research Intern - Microsoft Research** (Redmond, WA; Mentor: Hisami Suzuki)
-    - Proposed a state-of-the-art method for Japanese query alteration, which corrects misspellings and normalizes the spelling/transliteration variants, with higher accuracy than previous systems.
-    - Implemented the system using Visual C#, SQL Server, and Ruby, with tens of gigabytes of query log. This system is being integrated into Microsoft Live Search (http://www.live.com/).
-    - Developed a method to automatically and efficiently generate query re-writing pairs from session log.
-    - Presented the project at the 3rd NLP Symposium for Young Researchers and was awarded the outstanding presentation award. Presented at NAACL 2009.
+	- Built a state-of-the-art method for Japanese query alteration for spelling correction and spelling/transliteration normalization
+	- Implemented the system using Visual C#, SQL Server, and Ruby, with tens of gigabytes of query log, which was integrated into Microsoft Live Search
+	- Published a research paper on the query alteration algorithm at NAACL 2009 and at  the 3rd NLP Symposium for Young Researchers (Outstanding Presentation Award)
 
 <p></p>
 
