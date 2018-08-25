@@ -8,7 +8,7 @@
 
 <p style="height: 24px;"></p>
 
-I am a Researcher / Machine Learning Engineer currently working at [Duolingo](http://www.duolingo.com/). I love languages, machine learning, and everything in between.
+I am a Senior Machine Learning Engineer / Researcher currently working at [Duolingo](http://www.duolingo.com/). I love languages, machine learning, and everything in between.
 
 I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects recently appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
@@ -86,14 +86,14 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 <a name="experience" id="experience"></a>
 ## Experience
 
-- Feb. 2015 - Present: **Machine Learning Engineer / Researcher - Duolingo, Inc.** (in Pittsburgh, PA)
+- Feb. 2015 - Present: **Senior Machine Learning Engineer / Researcher - Duolingo, Inc.** (Pittsburgh, PA)
     - Built automatic grading technologies for Duolingo English Test writing and speaking questions using neural networks
     - Led data creation and analysis for various research projects, including user behavior analysis and second language acquisition modeling (SLAM) shared task
     - Led the content creation of Chinese, Japanese, and Korean from English courses
 
 <p></p>
 
-- Oct. 2010 - Feb. 2015: **Lead Scientist - Rakuten Institute of Technology** (in New York)
+- Oct. 2010 - Feb. 2015: **Lead Scientist - Rakuten Institute of Technology** (New York, NY)
 	- Developed machine transliteration (NLP2011 paper award) and machine translation algorithms for the largest Japanese e-commerce website (Rakuten)
 	- Built a Chinese/Japanese word segmentation / morphological analyzer (RakutenMA)
 	- Developed a writing support system for English as a Second Language (ESL) learners
@@ -101,14 +101,14 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 
 <p></p>
 
-- Apr. 2009 - Sep. 2010: **Research and Development Engineer - Baidu Japan, Inc.** (worked in Shanghai / Beijing / Tokyo)
+- Apr. 2009 - Sep. 2010: **Research and Development Engineer - Baidu Japan, Inc.** (Shanghai / Beijing / Tokyo)
     - Led NLP data initiatives including [Unnatural language processing contest](http://www.baidu.jp/unlp/) and [Baidu mobile corpus and timed corpus](http://www.baidu.jp/corpus/)
     - Improved the ranking and page analysis algorithms including spam detection and emoticon search for [Baidu mobile search](http://m.baidu.jp)
     - Worked as a consultant on various NLP projects including Japanese Input Method [BaiduType](http://ime.baidu.jp)
 
 <p></p>
 
-- Apr. 2008 - Jul. 2008: **Research Intern - Microsoft Research, Redmond, USA.** (Mentor: Hisami Suzuki)
+- Apr. 2008 - Jul. 2008: **Research Intern - Microsoft Research** (Redmond, WA; Mentor: Hisami Suzuki)
     - Proposed a state-of-the-art method for Japanese query alteration, which corrects misspellings and normalizes the spelling/transliteration variants, with higher accuracy than previous systems.
     - Implemented the system using Visual C#, SQL Server, and Ruby, with tens of gigabytes of query log. This system is being integrated into Microsoft Live Search (http://www.live.com/).
     - Developed a method to automatically and efficiently generate query re-writing pairs from session log.
@@ -116,10 +116,9 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 
 <p></p>
 
-- Aug. 2005 - Sep. 2005: **Intern (Software Engineer), Google Inc., CA, USA.** (Mentors: Dekang Lin and Jun Wu)
-    - Participated in the two-month internship program, as one of the few interns chosen from Japan, as it was only the second year since the internship program started.
-    - Improved Japanese query suggestion, which is currently used as the basis for the query suggestion shown at the top and bottom of the Google search result.
-    - Fully used the parallel distributed computation algorithms such as MapReduce and the large network cluster infrastructure which Google offers.
+- Aug. 2005 - Sep. 2005: **Intern (Software Engineer), Google Inc.** (Mountain View, CA; Mentors: Dekang Lin and Jun Wu)
+    - Improved Japanese query suggestion, which is currently used as the basis for the query suggestion shown at the top and bottom of the Google search result
+    - Ran knowledge extraction algorithms on the distributed computation infrastructure (MapReduce and the Google's large network clusters)
 
 <p style="height: 120px;"></p>
 
@@ -128,7 +127,7 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 <a name="education" id="education"></a>
 ## Education
 
-* Apr. 2006 - Mar. 2009: **Ph.D. Candidate, Department of Information Engineering**,
+* Apr. 2006 - Mar. 2009: **Ph.D., Department of Information Engineering**,
     - Graduate School of Information Science, Nagoya University, Japan.
     - Doctoral Thesis: "Modeling and Selection of Context for Better Synonym Acquisition"
 
@@ -146,18 +145,10 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 
 <p></p>
 
-* May. 2014: [Artificial Intelligence](https://edge.edx.org/courses/BerkeleyX/CS188x/Artificial_Intelligence/20021a0a32d14a31b087db8d4bb582fd/) (CS188x; provided by Pieter
-    Abbeel (UC Berkeley) on edX)
-    - [Completed all the homework and assignments](/files/cs188x_progress.png)
-
-<p></p>
-
-* Dec. 2012: [Probabilistic Graphical Model](https://www.coursera.org/specializations/probabilistic-graphical-models) (provided by Daphne Koller (Stanford University) on Coursera)
-    - Score: [92.8% (with distinction)](/files/pgm_certificate.pdf)
-
 
 ### Awards & Professional Activities
 
+* Co-organizer of the [Workshop for Natural Language Processing Open Source Software (NLP-OSS)](https://nlposs.github.io/), co-located at ACL 2018. 
 * Invited talk at CUNY NLP Seminar (hosted by Prof. Heng Ji) Title: Word Segmentation and Transliteration in Chinese and Japanese, April 2013. [slides](/files/20130405_CUNY_NLP_Seminar.pdf)
 * 2011 Field Innovation Award from the Japanese Society for Artificial Intelligence: ANPI_NLP: Safety Information Confirmation Support using Natural Language Processing for The 2011 Tohoku Earthquake.
 * Paper Award at NLP2011 “Latent Class Transliteration based on Source Language Origins” (the largest Japanese NLP academic conference)
@@ -166,9 +157,7 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 * Panelist at the joint workshop “Relationship between industrial, students, universities, and students in the NLP field” at the 17th Annual Meeting of the Association for Natural Language Processing
 * Best Paper Award at NLP2009 “Semantic Category Extraction from Unsegmented Text using Graph Kernels” (the largest Japanese NLP academic conference, chosen among 235 papers)
 * Paper Award at the 3rd NLP Symposium for Young Researchers. Presentation: “A Unified Approach to Japanese Query Alteration based on Semantic Similarity”
-* Paper Award at the 22nd IMI Seminar of the 21st Century COE Program. Presentation: “Utilization of Probabilistic Latent Semantics for Automatic Thesaurus Construction”
-* Program Committee at SANCL 2012, the Student Research Workshop (SRW) at ACL-IJCNLP 2009 and ACL 2012.
-* Program Committee at ACL 2014 (morphology) and COLING 2014 (machine translation).
+
 
 <p style="height: 120px;"></p>
 
