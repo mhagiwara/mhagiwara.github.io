@@ -12,6 +12,8 @@ I am a Senior Machine Learning Engineer / Researcher currently working at [Duoli
 
 I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects recently appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
+You can find my resume [here](/files/resume_masato_hagiwara.pdf).
+
 <p style="height: 12px;"></p>
 
 <ul class="list-inline list-social-icons mb-0">
@@ -126,15 +128,15 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 <a name="education" id="education"></a>
 ## Education
 
-* Apr. 2006 - Mar. 2009: **Ph.D., Department of Information Engineering**,
+* Apr. 2006 - Mar. 2009: **Ph.D., Information Engineering**,
     - Graduate School of Information Science, Nagoya University, Japan.
     - Doctoral Thesis: "Modeling and Selection of Context for Better Synonym Acquisition"
 
 <p></p>
 
-* Apr. 2004 - Mar. 2006 : **Master's Program in Department of Information Engineering**,
+* Apr. 2004 - Mar. 2006 : **Master's Degree, Information Engineering**,
     - Graduate School of Information Science, Nagoya University, Japan
-    - *Skipped a year in undergraduate and admitted to the graduate school based on the grade-skipping system due to the excellent academic performance*. Overall GPA: 3.8
+    - *Skipped a year in undergraduate due to the excellent academic performance*. Overall GPA: 3.8
     - Master's Thesis: "Utilization of Probabilistic Latent Semantics for Automatic Thesaurus Construction"
 
 <p></p>
@@ -148,12 +150,10 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 ### Awards & Professional Activities
 
 * Co-organizer of the [Workshop for Natural Language Processing Open Source Software (NLP-OSS)](https://nlposs.github.io/), co-located at ACL 2018. 
+* Invited keynote at the [Optimizing Human Learning](https://humanlearn.io/) workshop co-located with [ITS 2018](http://its2018.its-conferences.com/) (Montréal, Canada, June 2018).
 * Invited talk at CUNY NLP Seminar (hosted by Prof. Heng Ji) Title: Word Segmentation and Transliteration in Chinese and Japanese, April 2013. [slides](/files/20130405_CUNY_NLP_Seminar.pdf)
 * 2011 Field Innovation Award from the Japanese Society for Artificial Intelligence: ANPI_NLP: Safety Information Confirmation Support using Natural Language Processing for The 2011 Tohoku Earthquake.
 * Paper Award at NLP2011 “Latent Class Transliteration based on Source Language Origins” (the largest Japanese NLP academic conference)
-* Invited presentation at IPSJ 2012 “Real-world Natural Language Processing”
-* Leading editorial member of a special issue on “UnNatural Language Processing, ” Journal of Natural Language Processing, 2011.
-* Panelist at the joint workshop “Relationship between industrial, students, universities, and students in the NLP field” at the 17th Annual Meeting of the Association for Natural Language Processing
 * Best Paper Award at NLP2009 “Semantic Category Extraction from Unsegmented Text using Graph Kernels” (the largest Japanese NLP academic conference, chosen among 235 papers)
 * Paper Award at the 3rd NLP Symposium for Young Researchers. Presentation: “A Unified Approach to Japanese Query Alteration based on Semantic Similarity”
 
@@ -165,20 +165,19 @@ I speak Chinese, Japanese, and English fluently, and am learning Korean and [Loj
 <a name="publications" id="publications"></a>
 ## Publications
 
-### Books and Articles
+### Books
 
 * Yoh Okuno, Graham Neubig, <u>Masato Hagiwara</u>, Mamoru Komachi. [Natural Language Processing: Basics and Technology (Shoeisha)](http://www.shoeisha.co.jp/book/detail/9784798128528) (in Japanese). Shoeisha, 2016.
 * Drew Conway, John Myles White, <u>萩原正人 (Masato Hagiwara)</u>, 奥野 陽 (Yoh Okuno), 水野 貴明 (Takaaki Mizuno),  木下 哲也 (Tetsuya Kinoshita) (translation). 入門 機械学習 (Machine Learning for Hackers). O'Reilly Japan, 2012. [O'Reilly Japan - 入門 機械学習](http://www.oreilly.co.jp/books/9784873115948/)
 * Steven Bird, Ewan Klein, Edward Loper. <u>萩原正人 (Masato Hagiwara)</u>, 中山敬広 (Takahiro Nakayama), 水野貴明(Takaaki Mizuno) (translation). 入門 自然言語処理 (Natural Language Processing with Python). O'Reilly Japan, 2010. [O'Reilly Japan - 入門 自然言語処理](http://www.oreilly.co.jp/books/9784873114705/)
-* Masato Hagiwara, Koji Murakami, Graham Neubig, Yuichiroh Matsubayashi: Robust NLP for Real-world Data : 7. ANPI_NLP - Mining Safety Information after Disasters Using Natural Language Processing-. Information Processing Society of Japan Magazine. Vol. 53, No. 3, pp. 241-248, 2012.
-* Masato Hagiwara: Recommendation for Overseas Internship. Japanese Society for Artificial Intelligence Journal, Vol. 29, No. 2, pp. 209-211, 2014.
 
 
 ### Journal Papers
 
+* Masato Hagiwara, Koji Murakami, Graham Neubig, Yuichiroh Matsubayashi: Robust NLP for Real-world Data : 7. ANPI_NLP - Mining Safety Information after Disasters Using Natural Language Processing-. Information Processing Society of Japan Magazine. Vol. 53, No. 3, pp. 241-248, 2012.
 * <u>萩原正人</u>，小川泰弘，外山勝彦: [グラフカーネルを用いた非分かち書き文からの漸次的語彙知識獲得](https://www.jstage.jst.go.jp/article/tjsai/26/3/26_3_440/_article/-char/ja/), 人工知能学会誌, Vol.26, No.3, pp.440-450, 2011.
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Supervised Synonym Acquisition Using Distributional Features and Syntactic Patterns. <i>Journal of Natural Language Processing</i>, Vol. 16, Num. 2, pp. 59-83, 2009.
-i><u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. A Comparative Study on Effective Context Selection for Distributional Similarity. <i>Journal of Natural Language Processing</i>, Vol. 5, Num. 5, pp. 119-150, 2008.
+* <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. A Comparative Study on Effective Context Selection for Distributional Similarity. <i>Journal of Natural Language Processing</i>, Vol. 5, Num. 5, pp. 119-150, 2008.
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Effective Use of Indirect Dependency for Distributional Similarity. <i>Journal of Natural Language Processing</i>, Vol. 15, Num. 4, pp. 19-42, 2008.
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Bootstrapping-based Extraction of Dictionary Terms from Unsegmented Legal Text. <i>New Frontiers in Artificial Intelligence: JSAI 2008 Conference and Workshops, Revised Selected papers, Lecture Notes in Computer Science</i>, Vol. 5447, pp. 213-227, 2009.
 
@@ -197,16 +196,11 @@ i><u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. A Comparative Study 
 * <u>Masato Hagiwara</u> and Hisami Suzuki. Japanese Query Alteration Based on Lexical Semantic Similarity. <i>Proc. of NAACL HLT 2009</i>, pp. 191-199, 2009. \[[paper](http://www.aclweb.org/anthology-new/N/N09/N09-1022.pdf)\]
 * Nobuyuki Shimizu, <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama and Hiroshi Nakagawa. Metric learning for synonym acquisition. <i>Proc. of COLING 2008</i>, pp. 793-800, 2008. \[[paper](http://www.aclweb.org/anthology-new/C/C08/C08-1100.pdf)\]
 * <u>Masato Hagiwara</u>. A Supervised Learning Approach to Automatic Synonym Identification based on Distributional Features. <i>Proc. of ACL 2008 Student Research Workshop</i>, pp. 1-6, 2008. \[[paper](/media/acl08_hagiwara.pdf)\] \[[link](http://www.ling.ohio-state.edu/acl08/srw.html)\]
-* <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Bootstrapping-based Extraction of Dictionary Terms from Unsegmented Legal Text. <i>Proc. of JURISIN 2008</i>, pp. 63-72, 2008. \[[paper](/media/jurisin08_hagiwara.ppt)\]
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Context Feature Selection for Distributional Similarity. <i>Proc. of IJCNLP 2008</i>, pp. 553-560, 2008. \[[paper](/media/ijcnlp08_hagiwara.pdf)\] \[[link](http://www.ijcnlp2008.org/acceptedpapers.htm)\]
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Effective Proximity Distance for Word-Based Context. <i>Proc. of SNLP 2007</i>, pp. 105-110, 2007. \[[paper](http://naist.cpe.ku.ac.th/SlideSNLP2007/131207/Effective%20Proximity%20Distance%20for%20Word-Based%20Context.pdf)\] \[[link](http://naist.cpe.ku.ac.th/snlp2007/program.html)\]
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Effectiveness of Indirect Dependency for Automatic Synonym Acquisition. <i>Proc. of CoSMo 2007</i>, pp. 1 - 8, 2007. \[[paper](http://clic.cimec.unitn.it/marco/beyond_words/proceedings/cosmo07_hagiwara.pdf)\] \[[ppt](http://clic.cimec.unitn.it/marco/beyond_words/slides/Hagiwara.ppt)\]
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Selection of Effective Contextual Information for Automatic Synonym Acquisition. <i>Proc. of COLING/ACL 2006</i>, pp. 353 - 360, 2006. \[[paper](http://acl.ldc.upenn.edu/P/P06/P06-1045.pdf)\] \[[link](http://portal.acm.org/citation.cfm?id=1220175.1220220&#038;coll=GUIDE&#038;dl=GUIDE&#038;CFID=18731177&#038;CFTOKEN=47423989)\]
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. PLSI Utilization for Automatic Thesaurus Construction. <i>Proc. of IJCNLP 2005</i>, pp. 334 - 345, 2005. \[[paper](http://www.aclweb.org/anthology/I05-1030)\]
-
-### Others
-
-* Technical Review of Eric Rochester. [Mastering Clojure Data Analysis](http://www.packtpub.com/mastering-clojure-data-analysis/book). Packt Publishing, 2014.
 
 <p style="height: 120px;"></p>
 
