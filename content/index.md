@@ -55,6 +55,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### News
 
+- **Oct. 2018**: I'm working on my new book titled "Real-World Natural Language Processing" with Manning Publications. Stay tuned!
 - **Sep. 2018**: I will present our [SLAM Shared Task](http://sharedtask.duolingo.com/) poster at [ETCPS 2018](https://actnext.org/events/2018-education-technology-computational-psychometrics-symposium/) in Iowa City.
 - **Aug. 2018**: I [gave a talk](/shenzhen2018.html) at Baidu in Shenzhen, China.  
 - **Jun. 2018**: I uploaded [the companion website](/its2018.html) for my keynote talk at the [Optimizing Human Learning](https://humanlearn.io/) workshop co-located with [ITS 2018](http://its2018.its-conferences.com/) (Montréal, Canada, June 2018).
