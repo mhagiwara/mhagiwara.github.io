@@ -169,6 +169,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### Books
 
+* <u>Masato Hagiwara</u>, [Real-World Natural Language Processing](http://www.realworldnlpbook.com/), To be published by Manning Publications, 2019. 
 * Yoh Okuno, Graham Neubig, <u>Masato Hagiwara</u>, Mamoru Komachi. [Natural Language Processing: Basics and Technology (Shoeisha)](http://www.shoeisha.co.jp/book/detail/9784798128528) (in Japanese). Shoeisha, 2016.
 * Drew Conway, John Myles White, <u>萩原正人 (Masato Hagiwara)</u>, 奥野 陽 (Yoh Okuno), 水野 貴明 (Takaaki Mizuno),  木下 哲也 (Tetsuya Kinoshita) (translation). 入門 機械学習 (Machine Learning for Hackers). O'Reilly Japan, 2012. [O'Reilly Japan - 入門 機械学習](http://www.oreilly.co.jp/books/9784873115948/)
 * Steven Bird, Ewan Klein, Edward Loper. <u>萩原正人 (Masato Hagiwara)</u>, 中山敬広 (Takahiro Nakayama), 水野貴明(Takaaki Mizuno) (translation). 入門 自然言語処理 (Natural Language Processing with Python). O'Reilly Japan, 2010. [O'Reilly Japan - 入門 自然言語処理](http://www.oreilly.co.jp/books/9784873114705/)
@@ -235,12 +236,12 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 ### In English
 
 - [CJKA.io - NLP/ML recipes for Chinese, Japanese, Korean, and Arabic language processing](http://cjka.io/)
-- [Deep NLP Kata - Practice Exercises for Deep Learning and Natural Language Processing](http://masatohagiwara.net/deepnlp-kata/)
 - [Training an N-gram Language Model and Estimating Sentence Probability](training-an-n-gram-language-model-and-estimating-sentence-probability.html)
 - [Using GIZA++ to Obtain Word Alignment Between Bilingual Sentences](using-giza-to-obtain-word-alignment-between-bilingual-sentences.html)
 - [Building a Statistical Machine Translation System using Moses](building-a-statistical-machine-translation-system-using-moses.html)
 - [TinySegmenter in Python](tinysegmenter-in-python.html)
 - [NLTK Japanese Corpora](nltk-japanese-corpus.html)
+- [100 Must-Read NLP Papers](http://masatohagiwara.net/100-nlp-papers/)
 
 ### In Japanese
 
