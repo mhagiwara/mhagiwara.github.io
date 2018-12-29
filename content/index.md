@@ -242,6 +242,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 - [TinySegmenter in Python](tinysegmenter-in-python.html)
 - [NLTK Japanese Corpora](nltk-japanese-corpus.html)
 - [100 Must-Read NLP Papers](http://masatohagiwara.net/100-nlp-papers/)
+- [szdict - Creative Commons Chinese-English Dictionary of Tech Terms](http://en.szdict.com/)
 
 ### In Japanese
 
