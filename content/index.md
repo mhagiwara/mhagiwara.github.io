@@ -8,7 +8,7 @@
 
 <p style="height: 24px;"></p>
 
-I am a Senior Machine Learning Engineer / Researcher currently working at [Duolingo](http://www.duolingo.com/). I love languages, machine learning, and everything in between.
+I am the Owner and an independent NLP/ML Engineer at [Octanove Labs](http://www.octanove.com/), my one-person consulting/freelancing business. Formerly, I was a Machine Learning Engineer / Researcher at [Duolingo](http://www.duolingo.com/). I love language and machine learning, and help people connect the two.
 
 I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects recently appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
@@ -55,6 +55,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### News
 
+- **Feb. 2019**: I'm excited to announce that I started working as an independent NLP/ML engineer. If you are interested in working with me, [let me know](http://www.octanove.com/)!
 - **Oct. 2018**: I'm working on [my new book titled "Real-World Natural Language Processing"](http://www.realworldnlpbook.com/) with Manning Publications. Stay tuned!
 - **Sep. 2018**: I will present our [SLAM Shared Task](http://sharedtask.duolingo.com/) poster at [ETCPS 2018](https://actnext.org/events/2018-education-technology-computational-psychometrics-symposium/) in Iowa City.
 - **Aug. 2018**: I [gave a talk](/shenzhen2018.html) at Baidu in Shenzhen, China.  
