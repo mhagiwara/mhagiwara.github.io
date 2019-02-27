@@ -55,7 +55,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### News
 
-- **Feb. 2019**: I'm excited to announce that I started working as an independent NLP/ML engineer. If you are interested in working with me, [let me know](http://www.octanove.com/)!
+- **Feb. 2019**: I'm excited to announce that I started working as an independent NLP/ML engineer. If you are interested in discussing how I can help with your NLP/ML projects, [let me know](http://www.octanove.com/)!
 - **Oct. 2018**: I'm working on [my new book titled "Real-World Natural Language Processing"](http://www.realworldnlpbook.com/) with Manning Publications. Stay tuned!
 - **Sep. 2018**: I will present our [SLAM Shared Task](http://sharedtask.duolingo.com/) poster at [ETCPS 2018](https://actnext.org/events/2018-education-technology-computational-psychometrics-symposium/) in Iowa City.
 - **Aug. 2018**: I [gave a talk](/shenzhen2018.html) at Baidu in Shenzhen, China.  
