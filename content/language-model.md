@@ -62,3 +62,15 @@ For example, suppose an excerpt of the ARPA language model file looks like the f
 </pre></code>
 
 when we are looking at the trigram 'I am a' in the sentence, we can directly read off its log probability `-1.1888235` (which corresponds to log P('a' | 'I' 'am')) in the table since we do find it in the file. However, the trigram 'am a boy' is not in the table and we need to back-off to 'a boy' (notice we dropped one word from the context, i.e., the preceding words) and use its log probability `-3.1241505`. Since we backed off, we need to add the back-off weight for 'am a', which is `-0.08787394`. The sum of these two numbers is the number we saw in the analysis output next to the word 'boy' (`-3.2120245`). You can also find some explanation of the ARPA format on [the CMU Sphinx page](https://cmusphinx.github.io/wiki/tutoriallm/#building-a-grammar).
+
+## Further Reading
+
+If you are interested in learning more about language models and math, I recommend these two books. They are excellent textbooks in Natural Language Processing.
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0262133601/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0262133601&linkCode=as2&tag=octanove-20&linkId=9d165318837fa73a9959b0cd8318e9e4"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0262133601&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=octanove-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=octanove-20&l=am2&o=1&a=0262133601" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+<a target="_blank" href="https://www.amazon.com/gp/product/0262133601/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0262133601&linkCode=as2&tag=octanove-20&linkId=495f24f98743520e90b11469d0f2d82a">Foundations of Statistical Natural Language Processing by Christopher D. Manning and Hinrich Schütze</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=octanove-20&l=am2&o=1&a=0262133601" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0131873210/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0131873210&linkCode=as2&tag=octanove-20&linkId=172b6e6d802c8d53bd4debd9479a33d0"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0131873210&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=octanove-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=octanove-20&l=am2&o=1&a=0131873210" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+<a target="_blank" href="https://www.amazon.com/gp/product/0131873210/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0131873210&linkCode=as2&tag=octanove-20&linkId=b502d4a001c35d7bf7afdff6bb4f72fa">Speech and Language Processing, 2nd Edition by Daniel Jurafsky and James H. Martin</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=octanove-20&l=am2&o=1&a=0131873210" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
