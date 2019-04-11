@@ -1,5 +1,5 @@
 Title: 巻き舌クリニック - 自分はどうやって巻き舌ができるようになったか
-Date: 2018-05-24 00:00
+Date: 2012-01-01 00:00
 Category: Language Learning
 slug: makijita
 

@@ -35,7 +35,8 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (('ブログトップ', 'http://masatohagiwara.net/blog/'),
-         ('著者個人ページ', 'http://masatohagiwara.net/'))
+         ('著者個人ページ', 'http://masatohagiwara.net/'),
+         ('お問い合わせ', 'https://docs.google.com/forms/d/e/1FAIpQLSffbTFvdUXJhN4jTOmylcIRvlntKmaYVkIbYPrbBCPm0iC9Sw/viewform?usp=sf_link'))
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/mhagiwara'),
