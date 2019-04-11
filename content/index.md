@@ -249,6 +249,6 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 - [巻き舌クリニック - みんなで巻き舌を克服するサイト](blog/makijita.html)
 - [博士のための「けものみち」就職活動ガイド](blog/job-hunting-guide-for-phds.html)
-- [大人になってから自由を手にする方法、または話題性とキャリア資本の重要さ](autonomy-remarkability-and-career-capital.html)
+- [大人になってから自由を手にする方法、または話題性とキャリア資本の重要さ](blog/autonomy-remarkability-and-career-capital.html)
 - [海外で技術書をゼロから執筆・出版する方法](publishing-a-technical-book-overseas.html)
 - [AI (人工知能)・ML (機械学習) 用語辞典](http://ja.aimldict.com/)

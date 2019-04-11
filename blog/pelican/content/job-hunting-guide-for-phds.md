@@ -1,5 +1,5 @@
 Title: 博士のための「けものみち」就職活動ガイド
-Date: 2018-01-01 00:00
+Date: 2017-01-01 00:00
 Category: Research
 slug: job-hunting-guide-for-phds
 

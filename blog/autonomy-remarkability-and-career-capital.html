@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="http://masatohagiwara.net/blog/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://masatohagiwara.net/blog/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://masatohagiwara.net/blog/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="http://masatohagiwara.net/blog/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="http://masatohagiwara.net/blog/theme/font-awesome/css/solid.css">
+
+
+    <link href="http://masatohagiwara.net/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="米国で働く機械学習エンジニアのブログ Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-175204-11', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<meta name="author" content="Masato Hagiwara" />
+<meta name="description" content="自分も今年で３５歳になったのだが、最近になって特に、そろそろ本気で「あたまがちょっとおかしい」と周りから思われるような、少し大きなことをやっていかないと、割と「普通の人」で人生がいつの間にか終わってしまうのではという危機感が常にある。その一環として、今年は「韓国に一ヶ月滞在して、インタビューを受けることができるぐらい韓国語を上達させる」という目標を立てて、８月頭に実際に実行に移した。今日でアメリカに帰ってきて２週間ほど経つが、この「ミニプロジェクト」を企画して本当に良かったと思っているので、企画・実行するにあたって、考えたことや気づいたことなどを日記も兼ねて書いておきたい。 「ちょっと韓国行ってくる、しかも一ヶ月」 自分は今、Duolingo という、世界最大の外国語学習アプリを開発しているアメリカのスタートアップで、ソフトウェアエンジニア兼リサーチサイエンティストとして働いている。普段は、自分の自然言語処理や機械学習の専門を活かして、データ解析や英語検定試験の開発などのプロジェクトに主に関わっているのだけど、外国語学習や教育、特にアジアの言語が好きなこともあり、今年５月に Duolingo からリリースした日本語コースの設計では中心的な役割を果たした。そこで得られた知見を活用して、ちょうどその時点で既に開発中であった韓国語のコースに自ら関わり始めたのが事の発端である。韓国語は前から興味があり少しだけ勉強していて、もっと真剣に勉強したいとずっと思っていたという自分の興味にも合っていた。 また、弊社はマーケティングにほとんど予算を使わないことで有名で、凄腕の広報チームが …" />
+<meta name="keywords" content="">
+
+<meta property="og:site_name" content="米国で働く機械学習エンジニアのブログ"/>
+<meta property="og:title" content="大人になってから自由を手にする方法、または話題性とキャリア資本の重要さ"/>
+<meta property="og:description" content="自分も今年で３５歳になったのだが、最近になって特に、そろそろ本気で「あたまがちょっとおかしい」と周りから思われるような、少し大きなことをやっていかないと、割と「普通の人」で人生がいつの間にか終わってしまうのではという危機感が常にある。その一環として、今年は「韓国に一ヶ月滞在して、インタビューを受けることができるぐらい韓国語を上達させる」という目標を立てて、８月頭に実際に実行に移した。今日でアメリカに帰ってきて２週間ほど経つが、この「ミニプロジェクト」を企画して本当に良かったと思っているので、企画・実行するにあたって、考えたことや気づいたことなどを日記も兼ねて書いておきたい。 「ちょっと韓国行ってくる、しかも一ヶ月」 自分は今、Duolingo という、世界最大の外国語学習アプリを開発しているアメリカのスタートアップで、ソフトウェアエンジニア兼リサーチサイエンティストとして働いている。普段は、自分の自然言語処理や機械学習の専門を活かして、データ解析や英語検定試験の開発などのプロジェクトに主に関わっているのだけど、外国語学習や教育、特にアジアの言語が好きなこともあり、今年５月に Duolingo からリリースした日本語コースの設計では中心的な役割を果たした。そこで得られた知見を活用して、ちょうどその時点で既に開発中であった韓国語のコースに自ら関わり始めたのが事の発端である。韓国語は前から興味があり少しだけ勉強していて、もっと真剣に勉強したいとずっと思っていたという自分の興味にも合っていた。 また、弊社はマーケティングにほとんど予算を使わないことで有名で、凄腕の広報チームが …"/>
+<meta property="og:locale" content="ja_JP"/>
+<meta property="og:url" content="http://masatohagiwara.net/blog/autonomy-remarkability-and-career-capital.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-09-07 00:00:00-04:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://masatohagiwara.net/blog/author/masato-hagiwara.html">
+<meta property="article:section" content="Career"/>
+<meta property="og:image" content="http://masatohagiwara.net/face.jpg">
+
+  <title>大人になってから自由を手にする方法、または話題性とキャリア資本の重要さ &ndash; 米国で働く機械学習エンジニアのブログ</title>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-7401771876348738",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://masatohagiwara.net/blog">
+        <img src="http://masatohagiwara.net/face.jpg" alt="米国で働く機械学習エンジニアのブログ" title="米国で働く機械学習エンジニアのブログ">
+      </a>
+      <h1><a href="http://masatohagiwara.net/blog">米国で働く機械学習エンジニアのブログ</a></h1>
+
+<p>米国でフリーの機械学習・自然言語処理エンジニア・コンサルタントとして働いています。機械学習・自然言語処理、英語・中国語学習などのトピックが中心です。</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="http://masatohagiwara.net/blog/" target="_blank">ブログトップ</a></li>
+          <li><a href="http://masatohagiwara.net/" target="_blank">著者個人ページ</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSffbTFvdUXJhN4jTOmylcIRvlntKmaYVkIbYPrbBCPm0iC9Sw/viewform?usp=sf_link" target="_blank">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/mhagiwara" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/mhagiwara_ja" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="autonomy-remarkability-and-career-capital">大人になってから自由を手にする方法、または話題性とキャリア資本の重要さ</h1>
+    <p>
+          Posted on 2017-09-07(木) in <a href="http://masatohagiwara.net/blog/category/career.html">Career</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p><img src="images/Seoul1.jpg" style="width: 320px;"/>
+<img src="images/Seoul2.jpg" style="width: 320px;"/></p>
+<p>自分も今年で３５歳になったのだが、最近になって特に、そろそろ本気で「あたまがちょっとおかしい」と周りから思われるような、少し大きなことをやっていかないと、割と「普通の人」で人生がいつの間にか終わってしまうのではという危機感が常にある。その一環として、今年は「韓国に一ヶ月滞在して、インタビューを受けることができるぐらい韓国語を上達させる」という目標を立てて、８月頭に実際に実行に移した。今日でアメリカに帰ってきて２週間ほど経つが、この「ミニプロジェクト」を企画して本当に良かったと思っているので、企画・実行するにあたって、考えたことや気づいたことなどを日記も兼ねて書いておきたい。</p>
+<h2>「ちょっと韓国行ってくる、しかも一ヶ月」</h2>
+<p>自分は今、<a href="https://www.duolingo.com">Duolingo</a> という、世界最大の外国語学習アプリを開発しているアメリカのスタートアップで、ソフトウェアエンジニア兼リサーチサイエンティストとして働いている。普段は、自分の自然言語処理や機械学習の専門を活かして、<a href="https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/">データ解析</a>や<a href="https://englishtest.duolingo.com/">英語検定試験</a>の開発などのプロジェクトに主に関わっているのだけど、外国語学習や教育、特にアジアの言語が好きなこともあり、今年５月に Duolingo からリリースした日本語コースの設計では<a href="http://making.duolingo.com/how-we-invented-a-new-way-to-teach-one-of-the-most-difficult-languages-to-learn">中心的な役割を果たした</a>。そこで得られた知見を活用して、ちょうどその時点で既に開発中であった<a href="https://www.duolingo.com/course/ko/en/Learn-Korean-Online">韓国語のコース</a>に自ら関わり始めたのが事の発端である。韓国語は前から興味があり少しだけ勉強していて、もっと真剣に勉強したいとずっと思っていたという自分の興味にも合っていた。</p>
+<p>また、弊社はマーケティングにほとんど予算を使わないことで有名で、凄腕の広報チームが、弊社 CEO や VP をはじめとした社員のトークやインタビュー、目新しい機能やアプリなどのリリースをネタにして、TechCrunch など米国大手テック系のメディアに取り上げてもらってバズらせるのが非常に上手い。今回も、韓国滞在および韓国語コースのローンチに合わせて、大手メディアにインタビューしてもらおうという目論見もあって、この時期に滞在を決めたというわけだ。</p>
+<p>はじめは、韓国語の学習プログラムでは名高い延世大学などの夏季短期語学プログラムに３週間ほど参加しようとも思っていたのだが、集団で外国語の授業を受けるのが個人的にあまり好きではないことと、上記のインタビューやトークなどの仕事も同時にこなしたいこともあって、４週間弱、個人レッスンやホームステイを通じて韓国語を勉強しながら、リモートで働くことに決めた。</p>
+<p>Duolingoは、「世界中のすべての人々に良質の教育をあまねく無料で提供する」ことをミッションにしている会社だけあって、社員がこうして外国語を学ぶことに寛容で、部分的に手当まで出るので、上司も割とあっさりと二つ返事でＯＫしてくれたのはありがたいことだった。もちろん、こうしてコースの開発とローンチ、そして個人的興味のタイミングをうまく調整した結果であって、単に１ヶ月旅行に行ってきます、ではきっと通らなかっただろう。</p>
+<h2>ノマド的な働き方を実現するのは、実はとても難しい</h2>
+<p>韓国に行ってから出会った色々な人の目には、アメリカの割と名の知れたスタートアップで働きながら、こうして旅行も兼ねながらノマド的に働いている自分が、かなり気楽で羨ましい身分に映ったようで、どうしたらそのような働き方ができるのかという興味を持ってくれた人も居た。この記事は、その質問に対するある種の答えでもある。</p>
+<p>確かに、韓国、特にソウルは、電源とWi-Fi完備のカフェが至るところにあり、ノマド的な働き方をするにはかなり適した都市だと思う。といっても、休暇を取って来ているわけではないので、韓国語の勉強と平行して、昼間はアメリカ本社側の通常の仕事に加えて、地元の記者に会って<a href="https://www.forbes.com/sites/elaineramirez/2017/09/07/duolingo-korean-language-course-launch/">インタビュー</a>を受けたり、企業や大学でのトークをこなしたりして、夜中はアメリカ側とミーティングなどでスケジュールが一杯という、けっこうハードな滞在だった。</p>
+<p>このように、一見気楽に見える「ノマド的な働き方」を成功させるのは、実はとても難しい。ノマドワーカーというと、例えばタイのチェンマイとかインドネシアのバリ島のような物価が割と安くて気候も良いところで、ブログを書いてアフィリエイトとかで悠々と暮らしているイメージがあるが、そのほとんどがあまり続かないか、続いても鳴かず飛ばずなのではないかという気がしている。その理由は、「まず自由や情熱を追い求めてから」「他人と代替不可能な特越した能力をつけたり経験を積もうとする」からである。他人と代替不可能な卓越した能力や経験が無いので、それに対してお金を払ってくれる人を探すのが難しいからだ。その順序を変えて、「過去の実績や自分の適性を認めてもらってから、少し枠にとらわれない働き方を模索する」だけで、物事はずっとうまく進む。</p>
+<h2>「情熱を持てる仕事を探せば幸せになれる」のウソ</h2>
+<p>自分がこのような「一ヶ月韓国滞在」プロジェクトを思いついた大きなきっかけになったのが、<a href="http://calnewport.com/">Cal Newport 氏</a>の著書である <a href="http://calnewport.com/books/so-good/">"So Good They Can't Ignore You"</a> である。タイトルを直訳すると「無視できないぐらい上手くなれ」ということであるが、この本は、自分がこれまで読んだ仕事術・自己啓発系の書籍の中でも、自分の考え方や行動に最も大きなインパクトを与えたものだと言える。本書では、</p>
+<blockquote>
+<p>「情熱を持てる仕事」すなわちいわゆる「天職」と言われているような仕事を見つけさえすれば、皆幸せになれる</p>
+</blockquote>
+<p>という「天職仮説」を全面的に否定している。スティーブ・ジョブズをはじめ、各方面で成功している人をよくみると、そのように「天職」をまず見つけ、そこからキャリアを築いていった人はまれであり、逆に、他の人では代替不可能な能力や経験をまず身に着けながら、少しずつキャリアを築いていったという例が多いのに気づく。</p>
+<p>その逆に、上記のような「ノマドブロガー」はどうか。本書の中にも、そのような「順番を間違えてしまった」例が数多く登場する。本書に登場するある２５歳の男性は、９時から５時まで普通の会社で働き、自分の自由になるお金や時間がほとんど無いことにうんざりしてしまい、「自分の本当の情熱」を探すために仕事を辞め、世界に旅に出る。俗に言う脱サラして、自分でビジネスを始めることによって、ライフスタイは自分で自由に「デザイン」できるのだということを世界に知ってほしかったというわけだ。</p>
+<p>ここでの問題は、この男性の「ビジネス」とは、他の多くの「ノマドワーカー」と同様、「ノマドワーカー」に関するブログだけだったということだ。このような商品に価値がほとんど無いということは明らかであろう。ここでも、「他人では代替不可能な能力」をないがしろにして、「他人でも代替可能な情熱」を優先したばかりに、このブログに読者が定着することはなかった。そのうち、その点を嘆く記事が目につくようになったが、ある記事には、「安定したブログ読者層を築く方法」というタイトルと共に「2. エネルギーを発揮する」「4. 読者に感謝を示す」などのとりとめのない言葉が並んでいたが、最も大切なこと、すなわち、「読者がお金を払いたくなるようなコンテンツを提供する」という点が抜けていた。その後、この男性のブログはすぐに更新が滞りがちになった。最後に著者が彼のブログをチェックした時には、４ヶ月以上も更新が無いままであったという。</p>
+<h2>「キャリア資本」と「話題性」の重要さ</h2>
+<p>この「他人では代替不可能な能力や経験」を、著者は「キャリア資本」と呼んでいる。このキャリア資本は、仕事に対する情熱や自由に先立つもので、日本的な「職人芸」に代表される、「意図的な練習 (deliberate practice)」によって培われるものだとする。このキャリア資本を積みかさね、かつ、タイミングや、市場に需要があるかなどの要因も慎重に吟味しながら、仕事やプロジェクトを決めるべきだとのことだ。</p>
+<p>また、ミッション志向のプロジェクトには、以下の引用 (本書 p.192) にある、「話題性 (remarkability)」も欠かせない。これは、自分も普段からなんとなく意識していた点を見事に明文化してくれくれているので、以下にそのまま引用したい：</p>
+<blockquote>
+<p>「話題性の法則」・・・
+ミッション志向のプロジェクトを成功させるためには、以下の２つの観点から「話題性」を兼ね備えていなければならない。一つは、聞いた人がそのプロジェクトのことを話題にして他の人に伝えたくてしょうがないようなものであること。もう一つは、そのような口コミが可能である場所でプロジェクトを実施すること。</p>
+</blockquote>
+<p>言い換えると、プロジェクトの「印象に残る度」「キャッチーさ」などの側面も非常に重要ということである。この「話題性の法則」を聞いてすぐ頭に浮かぶのが、Cal Newport 氏と共に活躍するブロガーである <a href="https://www.scotthyoung.com/blog/about/">Scott Young 氏</a>によるプロジェクトである、<a href="https://www.scotthyoung.com/blog/myprojects/the-year-without-english-2/">「一年間外国語生活プロジェクト」</a> である。このプロジェクトで Young 氏は、スペイン・ブラジル・中国・韓国を旅しながら、現地語を学ぶことによって、なるべく英語（彼の母語）を話さないように一年間生活したというのだ。実は、今回の自分の「一ヶ月韓国滞在」プロジェクトも、彼のこのアイデアにかなり影響されている。<a href="https://www.scotthyoung.com/blog/2016/02/18/choosing-projects/">この記事</a>で、彼なりの「プロジェクトの選び方」が紹介されている。この記事の中で、彼も何度も「compelling (したくてしょうがない)」という言葉を使っているのが印象深い。</p>
+<h2>「ミニプロジェクト」を成功させるには</h2>
+<p>ということで、上記をまとめると、今回のような「ミニプロジェクト」を成功させ、自由を手に入れるには、以下の観点が重要であると言えるだろう：</p>
+<ul>
+<li>あらかじめ代替不可能な能力や経験を積んでおく、もしくは、上記 Young 氏のように、プロジェクト自体を通じてそのような能力や経験を積めるようなものを考える</li>
+<li>プロジェクト自体を、他の人のためになる、他の人がお金を払ってくれるようなものにできるようにする</li>
+<li>「話題性」をはじめから意識する。友人知人が、噂してやまないようなプロジェクトを考える。「ちょっとあたまがおかしい」と思われるぐらいがちょうどいい。</li>
+</ul>
+<h2>最後に</h2>
+<p>結果的に、当初の目的であった「韓国語でインタビューを受けられるぐらい」には韓国語は上達しなかったのだけど、それでも、準備期間も含めてたった３ヶ月で、オンラインで教えてもらっている先生に驚かれるぐらい韓国語力が向上したので、個人的には今回のミニプロジェクトは大成功だと言って良い。そして、もう一つの大切な目標であった Duolingo の韓国語コースも、<a href="https://www.duolingo.com/comment/24349868">本日、予定通りに達成することができ</a>、<a href="http://lifehacker.com/duolingo-the-language-learning-app-now-teaches-korean-1800966777">数多く</a>の<a href="https://techcrunch.com/2017/09/06/duolingo-launches-support-for-korean/">大手メディア</a>に<a href="https://www.forbes.com/sites/elaineramirez/2017/09/07/duolingo-korean-language-course-launch/">興味を持ってもらえた</a>ようで良かった。</p>
+<p>最後に、韓国滞在中に使わせてもらった、とても素敵なコワーキングスペース <a href="http://en.hivearena.com/">Hive Arena</a> の代表 Jongjin と Hyekung、そして、素敵なホームステイ先の <a href="https://www.homestay.com/south-korea/seoul/57949-homestay-in-changdong-seoul">Candy House</a> の家族の皆さんにはとてもお世話になった。もしソウルに行く機会があれば、ぜひチェックしてみることをオススメする。</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy; Masato Hagiwara 2019</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " 米国で働く機械学習エンジニアのブログ ",
+  "url" : "http://masatohagiwara.net/blog",
+  "image": "http://masatohagiwara.net/face.jpg",
+  "description": "米国でフリーの機械学習・自然言語処理エンジニア・コンサルタントとして働いています。機械学習・自然言語処理、英語・中国語学習などのトピックが中心です。"
+}
+</script>
+
+</body>
+</html>

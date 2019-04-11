@@ -1,9 +1,10 @@
-{"title": "大人になってから自由を手にする方法、または話題性とキャリア資本の重要さ", "template": "page.html", "url": "autonomy-remarkability-and-career-capital.html"}
+Title: 大人になってから自由を手にする方法、または話題性とキャリア資本の重要さ
+Date: 2017-09-07 00:00
+Category: Career
+slug: autonomy-remarkability-and-career-capital
 
-# 大人になってから自由を手にする方法、または話題性とキャリア資本の重要さ
-
-<img src="files/Seoul1.jpg" style="width: 320px;"/>
-<img src="files/Seoul2.jpg" style="width: 320px;"/>
+<img src="images/Seoul1.jpg" style="width: 320px;"/>
+<img src="images/Seoul2.jpg" style="width: 320px;"/>
 
 自分も今年で３５歳になったのだが、最近になって特に、そろそろ本気で「あたまがちょっとおかしい」と周りから思われるような、少し大きなことをやっていかないと、割と「普通の人」で人生がいつの間にか終わってしまうのではという危機感が常にある。その一環として、今年は「韓国に一ヶ月滞在して、インタビューを受けることができるぐらい韓国語を上達させる」という目標を立てて、８月頭に実際に実行に移した。今日でアメリカに帰ってきて２週間ほど経つが、この「ミニプロジェクト」を企画して本当に良かったと思っているので、企画・実行するにあたって、考えたことや気づいたことなどを日記も兼ねて書いておきたい。
 
