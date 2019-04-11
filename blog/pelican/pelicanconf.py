@@ -44,5 +44,20 @@ SOCIAL = (('github', 'https://github.com/mhagiwara'),
 
 DEFAULT_PAGINATION = 10
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+COPYRIGHT_YEAR = 2019
+COPYRIGHT_NAME = 'Masato Hagiwara'
+
+GOOGLE_ANALYTICS = 'UA-175204-11'
+
+GOOGLE_ADSENSE = {
+    'ca_id': 'ca-pub-7401771876348738',
+    'page_level_ads': True,
+    'ads': {
+        'aside': '',
+        'main_menu': '',
+        'index_top': '',
+        'index_bottom': '',
+        'article_top': '',
+        'article_bottom': '',
+    }
+}
