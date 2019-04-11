@@ -1,13 +1,15 @@
-{"title": "スタートアップを退職し米国でMLエンジニアとして独立します", "template": "page.html", "url": "leaving-startup-and-becoming-independent.html"}
-
-# スタートアップを退職し米国でMLエンジニアとして独立します 
+Title: スタートアップを退職し米国でMLエンジニアとして独立します 
+Date: 2019-02-17 00:00
+Category: Career
+slug: leaving-startup-and-becoming-independent
+Cover: images/duo_office.jpg 
 
 先週をもって、これまで４年間勤めた Duolingo (デュオリンゴ) を退職した。
 
 アメリカの非日系のスタートアップで働くこと、退職すること、そしてアメリカで機械学習エンジニアとして独立することなど、こういった話はあまり出てこない（そもそも日本人の前例があまりない）ので、誰かの役に立つかかもと思い、これまで４年間のまとめも兼ねて書いてみる。
 
 <figure style="text-align: center">
-	<img src="img/duo_office.jpg" style="width: 480px;"/>
+	<img src="images/duo_office.jpg" style="width: 480px;"/>
 	<figcaption>最終出社日に外から撮影したオフィス</figcaption>
 </figure>
 
@@ -34,7 +36,7 @@ Duolingo のことは、入社するずっと前から知っていた。
 自分が入った時には、社員はおよそ40人ほどしか居なかった。小さい雑居ビルの１フロア分を借りたオフィスのスペースは、程なくしてすぐに手狭になった。会議室が2つしかなかったのですぐ足りなくなり、しまいには「エレベーターホール」や「階段の踊り場」が Google Calendar で予約可能になり、そこで個別ミーティングをしていたこと。トイレに行列ができるようになり、「緊急」の場合は、同じ雑居ビルに入居するレストランのトイレを借りていたこと。今となっては笑い話である。
 
 <figure style="text-align: center">
-	<img src="img/duo_interview.jpg" style="width: 480px;"/>
+	<img src="images/duo_interview.jpg" style="width: 480px;"/>
 	<figcaption>筆者。引っ越し前のオフィスにて撮影</figcaption>
 </figure>
 
@@ -59,13 +61,13 @@ Duolingo のことは、入社するずっと前から知っていた。
 給料も日本の会社では考えられない勢いで上がっていき、ピッツバーグという生活費の安いところにありながら最後にはシリコンバレー水準でも遜色ない給料をもらっていたと思う。2017年に家を買う同僚が続出しすぎて社内でも話題になっていたのはまだ記憶に新しい。
 
 <figure style="text-align: center">
-	<img src="img/duo_duoversary.jpg" style="width: 480px;"/>
+	<img src="images/duo_duoversary.jpg" style="width: 480px;"/>
 	<figcaption>会社設立５周年パーティーにて CEO へのサプライズプレゼント</figcaption>
 </figure>
 
 社員が言語を学ぶことに対しても積極的で、自分のような語学好きにはまさに天国のような環境であった。社員の間で「○○語を話す夕食会」などが頻繁に開かれ、新しく覚えた言語を練習することができる。語学レッスンなど社員の自己研鑽には会社から補助が出る。また、昨年から全社を挙げての「言語チャレンジ大会」が開かれ、１年間で、Duolingo のコースを完了させ、言語スキルを上げた社員には賞金が出る取り組みも催された。
 
-周りがほとんど英語ネイティブのアメリカ人なので、英語は言わずもがな、中国語や、趣味で勉強し始めた韓国語もずいぶんと上達した。2017年には、[韓国に1ヶ月ほどホームステイ滞在](http://masatohagiwara.net/autonomy-remarkability-and-career-capital.html)して、リモートで働きながら韓国語を勉強し、講演をして回った。このような柔軟な働き方にも理解のある会社だった。
+周りがほとんど英語ネイティブのアメリカ人なので、英語は言わずもがな、中国語や、趣味で勉強し始めた韓国語もずいぶんと上達した。2017年には、[韓国に1ヶ月ほどホームステイ滞在](http://masatohagiwara.net/blog/autonomy-remarkability-and-career-capital.html)して、リモートで働きながら韓国語を勉強し、講演をして回った。このような柔軟な働き方にも理解のある会社だった。
 
 社内の情報の透明性も非常に高く、会社の売上や支出などの数字も内部には全てオープン。週に1度の Q&A と呼ばれる全社集会では、社員が CEO や他のリーダーに自由に質問ができる。採用の決定や昇進なども、マネジャーの一存で決めるのではなく、コミッティー制で、上から下の社員まで、ステークホルダーが自分の意見を自由に表明することができる。
 
@@ -84,14 +86,14 @@ Duolingo English Test (DET) では、コンピュータとインターネット�
 自分は、この Duolingo English Test (DET) で、自然言語処理と機械学習を使った、テスト項目の自動作成、難易度の自動推定、ライティング・スピーキングの自動採点などを中心に、様々なプロジェクトに関わった。項目応答理論、コンピュータ適応型テスト、自動採点技術など、入社前にはあまり詳しくなかった分野にも詳しくなった。2018年の国際学会 ITS (Intelligent Tutoring System; 知的教育システム) の[ワークショップで招待講演](http://masatohagiwara.net/its2018.html)をした際も、非常に多くの方に興味を持っていただけた。 
 
 <figure style="text-align: center">
-	<img src="img/duo_japanese.jpg" style="width: 480px;"/>
+	<img src="images/duo_japanese.jpg" style="width: 480px;"/>
 	<figcaption>日本語コースのローンチ記念パーティーでのトーク</figcaption>
 </figure>
 
 在職中には、他にも、データ解析系のプロジェクトにいくつも携わったり、2017年には、日本語・韓国語・中国語を学ぶコースの教材設計の中心的役割を果たしたりした。また、2018年には、[Duolingo の学習者の実データを元にした Shared Task](http://sharedtask.duolingo.com/) (Kaggle コンペティションのようなもの) を共同主催した。他の人が作ったタスクやデータ・セットで、いかに高い性能を出すかを競うという研究も結構だが、これまで存在しなかったデータ・セットやタスクの仕様を自分たちで考え、他の人を巻き込んで実行に移し、世間へ公開していくかという「知の最前線を押し広げていく」研究プロジェクトに共同主催者として参加できたことは非常に貴重な経験であった。
 
 <figure style="text-align: center">
-	<img src="img/duo_chinese.jpg" style="width: 480px;"/>
+	<img src="images/duo_chinese.jpg" style="width: 480px;"/>
 	<figcaption>社内で中国語コースのローンチボタンを押す瞬間</figcaption>
 </figure>
 
@@ -112,7 +114,7 @@ Duolingo は、間違いなく自分がこれまで働いた中で一番良い�
 最終的に出した結論は、残念ながら No であった。
 
 <figure style="text-align: center">
-	<img src="img/duo_pittsburgh.jpg" style="width: 480px;"/>
+	<img src="images/duo_pittsburgh.jpg" style="width: 480px;"/>
 	<figcaption>ピッツバーグの夜景。３本の川が合流し作り出す美しい風景が特徴</figcaption>
 </figure>
 
@@ -133,7 +135,7 @@ Duolingo は、間違いなく自分がこれまで働いた中で一番良い�
 アメリカの業界標準では、退職希望日の2週間前までに、上司に退職を希望している旨を伝える。例えば、競合他社に転職する場合には、「今すぐ辞めてくれ」と追い出される場合もあるが、自分のように個人の都合の場合には、2週間きっちりと引き継ぎ作業を行うことになる。自分の場合は、これまで関わってきた研究や開発の全プロジェクトに対して、後任者がスムーズに引き継げるよう、ドキュメントを整備し実験をすべて正確に再現可能にしてから退職した。そのため、退職の旨を伝えてから2週間はかなり忙しかった。
 
 <figure style="text-align: center">
-	<img src="img/duo_farewell.jpg" style="width: 480px;"/>
+	<img src="images/duo_farewell.jpg" style="width: 480px;"/>
 	<figcaption>最終出社日のプチ送別会</figcaption>
 </figure>
 
