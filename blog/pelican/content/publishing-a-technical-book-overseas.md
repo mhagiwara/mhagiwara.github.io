@@ -1,6 +1,7 @@
-{"title": "海外で技術書をゼロから執筆・出版する方法", "template": "page.html", "url": "publishing-a-technical-book-overseas.html"}
-
-# 海外で技術書をゼロから執筆・出版する方法
+Title: 海外で技術書をゼロから執筆・出版する方法
+Date: 2018-10-24 00:00
+Category: Natural Language Processing
+slug: publishing-a-technical-book-overseas
 
 本記事は、私が海外（アメリカ）で技術書 「実世界自然言語処理」"Real-World Natural Language Processing" (Manning Publications) をゼロから執筆、出版するまでを綴った日記です。本記事の執筆時点 (2018年12月) において、まだ書籍は未発表・執筆中ですので、進展がある毎に更新していく予定です。
 
