@@ -95,6 +95,8 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
     - Consult for early/mid-stage startups on NLP and ML projects
     - Work on research projects on educational NLP applications with [RIKEN AIP](http://www.riken.jp/en/research/labs/aip/)
 
+<p></p>
+
 - Feb. 2015 - Feb. 2019: **Senior Machine Learning Engineer / Researcher - Duolingo, Inc.** (Pittsburgh, PA)
     - Built automatic grading technologies for Duolingo English Test writing and speaking questions using neural networks
     - Led data creation and analysis for various research projects, including user behavior analysis and second language acquisition modeling (SLAM) shared task
