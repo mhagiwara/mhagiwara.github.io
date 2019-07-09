@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>米国で働く機械学習エンジニアのブログ</title><link href="http://masatohagiwara.net/blog/" rel="alternate"></link><link href="http://masatohagiwara.net/blog/feeds/all.atom.xml" rel="self"></link><id>http://masatohagiwara.net/blog/</id><updated>2019-04-25T00:00:00-04:00</updated><subtitle>米国でフリーの機械学習・自然言語処理エンジニア・コンサルタントとして働いています。機械学習・自然言語処理、英語・中国語学習などのトピックが中心です。</subtitle><entry><title>中国トップ研究者による自然言語処理の入門者へのアドバイス</title><link href="http://masatohagiwara.net/blog/advice-for-nlp-novice.html" rel="alternate"></link><published>2019-04-25T00:00:00-04:00</published><updated>2019-04-25T00:00:00-04:00</updated><author><name>Masato Hagiwara</name></author><id>tag:masatohagiwara.net,2019-04-25:/blog/advice-for-nlp-novice.html</id><summary type="html">&lt;p&gt;&lt;span style="display:block;text-align:center"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>米国で働く機械学習エンジニアのブログ</title><link href="http://masatohagiwara.net/blog/" rel="alternate"></link><link href="http://masatohagiwara.net/blog/feeds/all.atom.xml" rel="self"></link><id>http://masatohagiwara.net/blog/</id><updated>2019-07-09T00:00:00-04:00</updated><subtitle>米国でフリーの機械学習・自然言語処理エンジニア・コンサルタントとして働いています。機械学習・自然言語処理、英語・中国語学習などのトピックが中心です。</subtitle><entry><title>拙著『実世界自然言語処理』の事前予約が可能になりました</title><link href="http://masatohagiwara.net/blog/real-world-nlp-book-meap.html" rel="alternate"></link><published>2019-07-09T00:00:00-04:00</published><updated>2019-07-09T00:00:00-04:00</updated><author><name>Masato Hagiwara</name></author><id>tag:masatohagiwara.net,2019-07-09:/blog/real-world-nlp-book-meap.html</id><summary type="html">&lt;p&gt;昨年の夏ほどから執筆を開始した拙著『実世界自然言語処理 (Real-World Natural Language Processing)』の事前予約が可能になった。&lt;/p&gt;
+&lt;p&gt;この事前予約、正確には MEAP (Manning Early Access Program) と言い、購入すると、執筆中の書籍の執筆が完了した章から順番に読めるようになり、最後に完成した書籍が手に入る、というもの。執筆中のため、誤りがあったり校正がまだ整っていなかったりする可能性もあるものの、完成した書籍を後から買うよりも安価に購入できるというメリットがある。興味のある方は、以下のリンクを参照して欲しい。&lt;/p&gt;
+&lt;figure style="text-align: center"&gt;
+    &lt;a href="https://www.manning.com/books/real-world-natural-language-processing"&gt;
+    &lt;img src="images/rwnlp-meap.png" style="width: 240px;"/&gt;
+    &lt;figcaption&gt;『実世界自然言語処理 (Real-World Natural Language Processing)』&lt;/figcaption&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;本書籍は、昨年の夏ごろ、Manning の編集者から連絡があり、執筆を開始していたものだ。全編英語で、しかも単著で書籍をイチから執筆するということで、色々と大変なこともあったが、とりあえず一つのマイルストーンまで辿り着けたことでほっと胸をなでおろしている。執筆を開始したいきさつについては、以下の記事に詳しく書いたので、興味のある方はこちらもどうぞ。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://masatohagiwara.net/blog/publishing-a-technical-book-overseas.html"&gt;海外で技術書をゼロから執筆・出版する方法&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;本書の特徴&lt;/h2&gt;
+&lt;p&gt;本書は、他の自然言語処理や機械学習の教科書や入門書とは一味違ったものになっていると自負している。一般の教科書では、「ニューロンとは」「活性化関数とは」みたいな入門的な概念から始まり …&lt;/p&gt;</summary><content type="html">&lt;p&gt;昨年の夏ほどから執筆を開始した拙著『実世界自然言語処理 (Real-World Natural Language Processing)』の事前予約が可能になった。&lt;/p&gt;
+&lt;p&gt;この事前予約、正確には MEAP (Manning Early Access Program) と言い、購入すると、執筆中の書籍の執筆が完了した章から順番に読めるようになり、最後に完成した書籍が手に入る、というもの。執筆中のため、誤りがあったり校正がまだ整っていなかったりする可能性もあるものの、完成した書籍を後から買うよりも安価に購入できるというメリットがある。興味のある方は、以下のリンクを参照して欲しい。&lt;/p&gt;
+&lt;figure style="text-align: center"&gt;
+    &lt;a href="https://www.manning.com/books/real-world-natural-language-processing"&gt;
+    &lt;img src="images/rwnlp-meap.png" style="width: 240px;"/&gt;
+    &lt;figcaption&gt;『実世界自然言語処理 (Real-World Natural Language Processing)』&lt;/figcaption&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;本書籍は、昨年の夏ごろ、Manning の編集者から連絡があり、執筆を開始していたものだ。全編英語で、しかも単著で書籍をイチから執筆するということで、色々と大変なこともあったが、とりあえず一つのマイルストーンまで辿り着けたことでほっと胸をなでおろしている。執筆を開始したいきさつについては、以下の記事に詳しく書いたので、興味のある方はこちらもどうぞ。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://masatohagiwara.net/blog/publishing-a-technical-book-overseas.html"&gt;海外で技術書をゼロから執筆・出版する方法&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;本書の特徴&lt;/h2&gt;
+&lt;p&gt;本書は、他の自然言語処理や機械学習の教科書や入門書とは一味違ったものになっていると自負している。一般の教科書では、「ニューロンとは」「活性化関数とは」みたいな入門的な概念から始まり、「排他的論理和を計算するニューラルネットを作る」など簡単な例を経て、少しずつ難しいタスクを解いていく。言い換えると、教え方がボトムアップなのである。&lt;/p&gt;
+&lt;p&gt;ニューロンや活性化関数などの概念は、深層学習や（現代の）自然言語処理において非常に大切な概念なのは間違いない。しかし、この「ボトムアップ式」の問題は、「学習に途中で挫折した時に、何も有用なことが達成できなくて終わる」という点である。&lt;/p&gt;
+&lt;p&gt;一方、本書では、第１章で基礎的な概念を説明した後、第２章でいきなり「感情分析システムを作ってみよう」という例から入る。RNNや線形レイヤーなど、既存のコンポーネントを繋ぎ合わせることによって、個別の概念を完全に理解しなくても、上から下まで動くものをまず作り、必要に応じて概念を詳しく学んでいく、という「トップダウン式」を採用している。&lt;/p&gt;
+&lt;p&gt;この「トップダウン式」を採用したのは、２つの要因があった。一つは、特に海外で絶対的な人気を誇る &lt;a href="https://course.fast.ai/"&gt;fast.ai の深層学習のコース&lt;/a&gt; が、このトップダウン式を採用しているということである。自分もコースを一通り見てみたが、フレームワーク等を駆使して Lesson 1 からいきなり動くものを作り、そこから必要に応じて概念を掘り下げていく Jeremy Howard の教え方には定評がある。もう一つの要因は、ここ数年で自然言語処理の分野で多大な人気を博している &lt;a href="https://allennlp.org/"&gt;AllenNLP&lt;/a&gt; の登場である。AllenNLP を使うと、自然言語処理向けに抽象化されたモジュールを組み合わせることで、実に多様なタスクを簡単に解くことができる。本書では、ほぼ全ての章でこの AllenNLP をフル活用し、「まず動くものを作り、概念を必要に応じて解説する」というトップダウンな教え方を可能にしていた。&lt;/p&gt;
+&lt;p&gt;また、自分が機械学習エンジニアとして、実サービス向けの機械学習・自然言語処理システムに関わったこれまでの経験を活かし、教科書などではあまり触れられない、自然言語処理・機械学習の実サービスをいかに設計・開発・運用するかといった、エンジニアリング、MLOps 寄りの内容もカバーする予定である。&lt;/p&gt;
+&lt;h2&gt;執筆&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://masatohagiwara.net/blog/publishing-a-technical-book-overseas.html"&gt;前回の記事&lt;/a&gt; を執筆してから、&lt;a href="http://masatohagiwara.net/blog/leaving-startup-and-becoming-independent.html"&gt;勤めていたスタートアップを退職し、機械学習エンジニアとして独立&lt;/a&gt; し、米国の東海岸から西海岸まで引っ越しの準備をするなど、色々と私生活ではバタバタとしていたが、本書の執筆については、各章を執筆し、編集者にチェックしてもらう、という流れが確立しつつあり、順調に進んでいた。現時点で、第5章までは執筆がほぼ終わっているため、来年の春には書籍の全体が完成する予定である（ので、興味があれば安心して予約注文していただければと思う）。&lt;/p&gt;
+&lt;p&gt;本書で取り上げるタスクについては、全て&lt;a href="https://github.com/mhagiwara/realworldnlp"&gt;こちらの Github リポジトリ&lt;/a&gt;からサンプルコードを参照でき、Google Colab で動かせるようにしてあるので、実際に動くコードに興味のある方はそちらを直接参照していただければと思う。&lt;/p&gt;</content></entry><entry><title>中国トップ研究者による自然言語処理の入門者へのアドバイス</title><link href="http://masatohagiwara.net/blog/advice-for-nlp-novice.html" rel="alternate"></link><published>2019-04-25T00:00:00-04:00</published><updated>2019-04-25T00:00:00-04:00</updated><author><name>Masato Hagiwara</name></author><id>tag:masatohagiwara.net,2019-04-25:/blog/advice-for-nlp-novice.html</id><summary type="html">&lt;p&gt;&lt;span style="display:block;text-align:center"&gt;
   &lt;img src="images/nlp.jpeg" width="80%"/&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;スタンフォード大学の博士課程を卒業、対話モデル・強化学習の応用等の分野で多大な成果を残し、現在では中国の自然言語処理スタートアップ &lt;a href="http://www.shannonai.com/"&gt;Shannon.ai&lt;/a&gt; をリードする &lt;a href="https://nlp.stanford.edu/~bdlijiwei/"&gt;Jiwei Li (李纪为)氏&lt;/a&gt;による、&lt;a href="https://zhuanlan.zhihu.com/p/59184256"&gt;「自然言語処理に入門する際のちょっとしたアドバイス (初入NLP领域的一些小建议)」&lt;/a&gt;と題された記事がありましたので、内容を簡単に紹介します。&lt;/p&gt;
