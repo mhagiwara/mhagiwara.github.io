@@ -8,7 +8,7 @@
 
 <p style="height: 24px;"></p>
 
-I am the Owner and an independent NLP/ML Engineer at [Octanove Labs](http://www.octanove.com/), my one-person consulting/freelancing business. Formerly, I was a Machine Learning Engineer / Researcher at [Duolingo](http://www.duolingo.com/). I love language and machine learning, and help people connect the two.
+I am the Owner and an independent NLP/ML Engineer at [Octanove Labs](http://www.octanove.com/), my one-person consulting/freelancing business. Formerly, I was a Machine Learning Engineer / Researcher at [Duolingo](http://www.duolingo.com/). I love language and machine learning, and help people connect the two. Author of the Manning book [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing).
 
 I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects recently appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
@@ -55,6 +55,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### News
 
+- **Jul. 2019**: My book ["Real-World Natural Language Processing"](https://www.manning.com/books/real-world-natural-language-processing) is available via MEAP, Manning Early Access Program. Feedback is welcome!
 - **Feb. 2019**: I'm excited to announce that I started working as an independent NLP/ML engineer. If you are interested in discussing how I can help with your NLP/ML projects, [let me know](http://www.octanove.com/)!
 - **Oct. 2018**: I'm working on [my new book titled "Real-World Natural Language Processing"](http://www.realworldnlpbook.com/) with Manning Publications. Stay tuned!
 - **Sep. 2018**: I will present our [SLAM Shared Task](http://sharedtask.duolingo.com/) poster at [ETCPS 2018](https://actnext.org/events/2018-education-technology-computational-psychometrics-symposium/) in Iowa City.
@@ -64,8 +65,6 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 - **Feb. 2018**: Our research project on Duolingo user behavior was featured on a [Quartz article](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 - **Jan. 2018**: We announced [2018 Duolingo Shared Task on Second Language Acquisition Modeling (SLAM)
 ](http://sharedtask.duolingo.com/).
-- **Nov. 2017**: I'm co-organizing the [Workshop for Natural Language Processing Open Source Software (NLP-OSS)](https://nlposs.github.io/), co-located with [ACL 2018](http://acl2018.org/) (Melbourne, Australia, July 2018).
-- **Nov. 2017**: We launched the [Chinese for English speakers course](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) on Duolingo.
 
 <p style="height: 120px;"></p>
 
