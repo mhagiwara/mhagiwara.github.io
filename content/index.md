@@ -73,13 +73,13 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 <a name="projects" id="projects"></a>
 ## Projects
 
-- **Duolingo** - I build and do research for [Duolingo](http://www.duolingo.com/), the most popular language learning app in the world, and [Duolingo English Test](https://englishtest.duolingo.com/), an affordable and accessible English certification test developed by Duolingo.
+- **Books** - I'm currently working on [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing) with Manning Publications. I also co-authored the Japanese book [Natural Language Processing: Basics and Technology (Shoeisha)](http://www.shoeisha.co.jp/book/detail/9784798128528). I'm also the lead translator of two O'Reilly books: ["Natural Language Processing in Python"](http://nltk.org/book/) and ["Machine Learning for Hackers"](http://shop.oreilly.com/product/0636920018483.do).
+
+- **TEASPN** - I'm the lead developer of [TEASPN](https://www.teaspn.org/), a protocol and a framework for integrated writing environments.
+
+- **Duolingo** - I built and worked on research for [Duolingo](http://www.duolingo.com/), the most popular language learning app in the world, and [Duolingo English Test](https://englishtest.duolingo.com/), an affordable and accessible English certification test developed by Duolingo.
 
 - **Rakuten MA** - [Rakuten MA](https://github.com/rakuten-nlp/rakutenma) is a morphological analyzer for Chinese and Japanese written entirely in JavaScript.
-
-- **Books** - I co-authored the Japanese book [Natural Language Processing: Basics and Technology (Shoeisha)](http://www.shoeisha.co.jp/book/detail/9784798128528). I'm also the lead translator of two O'Reilly books: ["Natural Language Processing in Python"](http://nltk.org/book/) and ["Machine Learning for Hackers"](http://shop.oreilly.com/product/0636920018483.do).
-
-- **Lojban** - I'm a big fan of the constructed logical language [Lojban](https://mw.lojban.org/) and built some Lojan NLP tools such as: [JavaScript Lojban Parser camxes.js](http://masatohagiwara.net/camxes.js/), [Lojban sentence search engine jufsisku](http://lojban.lilyx.net/jufsisku/), and [Lojban/English translation engine zmifanva](http://lojban.lilyx.net/zmifanva/).
 
 - **Music** - In my free time, I [create music](https://soundcloud.com/mhagiwara) and play jazz.
 
