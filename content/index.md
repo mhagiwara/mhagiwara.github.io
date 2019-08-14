@@ -55,6 +55,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### News
 
+- **Aug. 2019**: Our paper on [TEASPN](https://www.teaspn.org): Framework and Protocol for Integrated Writing Assistance Environments, is accepted to appear at EMNLP 2019 (system demonstration)!
 - **Jul. 2019**: My book ["Real-World Natural Language Processing"](https://www.manning.com/books/real-world-natural-language-processing) is available via MEAP, Manning Early Access Program. Feedback is welcome!
 - **Feb. 2019**: I'm excited to announce that I started working as an independent NLP/ML engineer. If you are interested in discussing how I can help with your NLP/ML projects, [let me know](http://www.octanove.com/)!
 - **Oct. 2018**: I'm working on [my new book titled "Real-World Natural Language Processing"](http://www.realworldnlpbook.com/) with Manning Publications. Stay tuned!
