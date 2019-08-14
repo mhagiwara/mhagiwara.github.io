@@ -193,6 +193,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### Conference Papers (Selected)
 
+* <u>Masato Hagiwara</u>, Takumi Ito, Tatsuki Kuribayashi, Jun Suzuki and Kentaro Inui. TEASPN: Framework and Protocol for Integrated Writing Assistance Environments. EMNLP (system demonstrations), 2019 (to appear).
 * Burr Settles, Chris Brust, Erin Gustafson, <u>Masato Hagiwara</u>, Nitin Madnani. Second Language Acquisition Modeling. BEA 2018, 2018. \[[paper](http://sharedtask.duolingo.com/papers/settles.slam18.pdf)\]
 * Ayah Zirikly, <u>Masato Hagiwara</u>. Cross-lingual Transfer of Named Entity Recognizers without Parallel Corpora. ACL 2015, pp. 390-396, 2015. \[[paper](http://www.aclweb.org/anthology/P15-2064)\]
 * <u>Masato Hagiwara</u>, Satoshi Sekine. Lightweight Client-Side Chinese/Japanese Morphological Analyzer Based on Online Learning. COLING 2014 system demonstration, pp. 39-43, 2014. \[[paper](http://anthology.aclweb.org/C/C14/C14-2009.pdf)\]
