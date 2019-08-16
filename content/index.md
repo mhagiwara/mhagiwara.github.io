@@ -91,9 +91,10 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 <a name="experience" id="experience"></a>
 ## Experience
 
-- Feb. 2019 - Present: **Owner & Independent NLP/ML Engineer and Consultant - Octanove Labs LLC** (Pittsburgh, PA)
-    - Consult for early/mid-stage startups on NLP and ML projects
-    - Work on research projects on educational NLP applications with [RIKEN AIP](http://www.riken.jp/en/research/labs/aip/)
+- Feb. 2019 - Present: **Owner & Independent NLP/ML Engineer and Consultant - Octanove Labs LLC** (Seattle, WA)
+    - Work as a consultant for early-to-mid stage startups in the US/Japan on their ML strategies
+    - Work on research projects e.g., educational NLP applications with [RIKEN AIP](http://www.riken.jp/en/research/labs/aip/) and chatbot/NER with [Stduio Ousia](http://www.ousia.jp/en/)
+    - Proposed protocol & framework for integrated writing environments ([TEASPN](https://www.teaspn.org))
 
 <p></p>
 
