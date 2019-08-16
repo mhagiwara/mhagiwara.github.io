@@ -158,6 +158,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### Awards & Professional Activities
 
+* Invited talk on “Education and AllenNLP” at AllenNLP Summit, 2019.
 * Co-organizer of the [Workshop for Natural Language Processing Open Source Software (NLP-OSS)](https://nlposs.github.io/), co-located at ACL 2018. 
 * Invited keynote at the [Optimizing Human Learning](https://humanlearn.io/) workshop co-located with [ITS 2018](http://its2018.its-conferences.com/) (Montréal, Canada, June 2018).
 * Invited talk at CUNY NLP Seminar (hosted by Prof. Heng Ji) Title: Word Segmentation and Transliteration in Chinese and Japanese, April 2013. [slides](/files/20130405_CUNY_NLP_Seminar.pdf)
