@@ -55,7 +55,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### News
 
-- **Nov. 2019**: I'm presenting [our ultra fine-grained NER system](/files/201911_TAC_KBP.pdf) at [TAC KBP 2019](https://tac.nist.gov/).
+- **Nov. 2019**: I'm presenting [our ultra fine-grained NER system](/files/201911_TAC_KBP.pdf) at [TAC KBP 2019](https://tac.nist.gov/), which ranked #2 among 9 strong competitors in the EDL track (joint work with [Studio Ousia](http://www.ousia.jp/en/))!
 - **Aug. 2019**: Our paper on [TEASPN](https://www.teaspn.org): Framework and Protocol for Integrated Writing Assistance Environments, is accepted to appear at EMNLP 2019 (system demonstration)!
 - **Jul. 2019**: My book ["Real-World Natural Language Processing"](https://www.manning.com/books/real-world-natural-language-processing) is available via MEAP, Manning Early Access Program. Feedback is welcome!
 - **Feb. 2019**: I'm excited to announce that I started working as an independent NLP/ML engineer. If you are interested in discussing how I can help with your NLP/ML projects, [let me know](http://www.octanove.com/)!
@@ -196,7 +196,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### Conference Papers (Selected)
 
-* Takumi Ito, Tatsuki Kuribayashi, Hayato Kobayashi, Ana Brassard, <u>Masato Hagiwara</u>, Jun Suzuki and Kentaro Inui. Diamonds in the Rough: Generating Fluent Sentences from Early-stage Drafts. ILNG 2019 (to appear).
+* Takumi Ito, Tatsuki Kuribayashi, Hayato Kobayashi, Ana Brassard, <u>Masato Hagiwara</u>, Jun Suzuki and Kentaro Inui. Diamonds in the Rough: Generating Fluent Sentences from Early-stage Drafts. ILNG 2019 \[[paper](https://arxiv.org/abs/1910.09180)\].
 * <u>Masato Hagiwara</u>, Takumi Ito, Tatsuki Kuribayashi, Jun Suzuki and Kentaro Inui. TEASPN: Framework and Protocol for Integrated Writing Assistance Environments. EMNLP (system demonstrations), 2019. \[[paper](https://arxiv.org/abs/1909.02621)\]
 * Burr Settles, Chris Brust, Erin Gustafson, <u>Masato Hagiwara</u>, Nitin Madnani. Second Language Acquisition Modeling. BEA 2018, 2018. \[[paper](http://sharedtask.duolingo.com/papers/settles.slam18.pdf)\]
 * Ayah Zirikly, <u>Masato Hagiwara</u>. Cross-lingual Transfer of Named Entity Recognizers without Parallel Corpora. ACL 2015, pp. 390-396, 2015. \[[paper](http://www.aclweb.org/anthology/P15-2064)\]
