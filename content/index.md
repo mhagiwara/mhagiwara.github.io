@@ -8,9 +8,9 @@
 
 <p style="height: 24px;"></p>
 
-I am the Owner and an independent NLP/ML Engineer at [Octanove Labs](http://www.octanove.com/), my one-person consulting/freelancing business. Formerly, I was a Machine Learning Engineer / Researcher at [Duolingo](http://www.duolingo.com/). I love language and machine learning, and help people connect the two. Author of the Manning book [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing).
+I am an independent NLP/ML Engineer and Researcher at [Octanove Labs](http://www.octanove.com/). I work with world-class institutions and start-ups including [Allen Institute for AI](https://allenai.org/), [RIKEN AIP](https://www.riken.jp/en/research/labs/aip/), and [Studio Ousia](http://www.ousia.jp/en/). Author of the Manning book [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing).
 
-I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects recently appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
+Formerly, I was a Machine Learning Engineer / Researcher at [Duolingo](http://www.duolingo.com/). I love language and machine learning, and help people connect the two. I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
 You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
@@ -55,6 +55,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### News
 
+- **Dec. 2019**: We launched [GitHub Typo Corpus](https://github.com/mhagiwara/github-typo-corpus), a large-scale multilingual dataset of misspellings and grammatical errors.
 - **Nov. 2019**: I'm presenting [our ultra fine-grained NER system](/files/201911_TAC_KBP.pdf) at [TAC KBP 2019](https://tac.nist.gov/), which ranked #2 among 9 strong competitors in the EDL track (joint work with [Studio Ousia](http://www.ousia.jp/en/))!
 - **Aug. 2019**: Our paper on [TEASPN](https://www.teaspn.org): Framework and Protocol for Integrated Writing Assistance Environments, is accepted to appear at EMNLP 2019 (system demonstration)!
 - **Jul. 2019**: My book ["Real-World Natural Language Processing"](https://www.manning.com/books/real-world-natural-language-processing) is available via MEAP, Manning Early Access Program. Feedback is welcome!
@@ -75,13 +76,28 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 <a name="projects" id="projects"></a>
 ## Projects
 
-- **Books** - I'm currently working on [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing) with Manning Publications. I also co-authored the Japanese book [Natural Language Processing: Basics and Technology (Shoeisha)](http://www.shoeisha.co.jp/book/detail/9784798128528). I'm also the lead translator of two O'Reilly books: ["Natural Language Processing in Python"](http://nltk.org/book/) and ["Machine Learning for Hackers"](http://shop.oreilly.com/product/0636920018483.do).
+* **NLP** — I'm the main researcher and developer of many NLP open source projects and datasets, including:
+  * [TEASPN](https://www.teaspn.org/), a protocol and a framework for integrated writing environments
+  * [Rakuten MA](https://github.com/rakuten-nlp/rakutenma), a morphological analyzer for Chinese and Japanese written entirely in JavaScript
+  * [NanigoNet](https://github.com/mhagiwara/nanigonet), a language detector for code-mixed input supporting 150+19 human+programming languages
+  * [Github Typo Corpus](https://github.com/mhagiwara/github-typo-corpus), a large-scale multilingual dataset of misspellings and grammatical errors
 
-- **TEASPN** - I'm the lead developer of [TEASPN](https://www.teaspn.org/), a protocol and a framework for integrated writing environments.
+<p></p>
+
+- **Education** — I love teaching NLP to the world. I'm currently working on:
+  * [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing) with Manning Publications
+  * Official [AllenNLP](https://allennlp.org/) Course with [Matt Gardner](https://matt-gardner.github.io/) and the AllenNLP team
+
+<p></p>
+
+- I'm also a co-author or a co-translator of the following Japanese books:
+  * [Natural Language Processing: Basics and Technology](http://www.shoeisha.co.jp/book/detail/9784798128528) (Shoeisha)
+  * [Natural Language Processing in Python](http://nltk.org/book/) (O'Reilly)
+  * [Machine Learning for Hackers](http://shop.oreilly.com/product/0636920018483.do) (O'Reilly)
+
+<p></p>
 
 - **Duolingo** - I built and worked on research for [Duolingo](http://www.duolingo.com/), the most popular language learning app in the world, and [Duolingo English Test](https://englishtest.duolingo.com/), an affordable and accessible English certification test developed by Duolingo.
-
-- **Rakuten MA** - [Rakuten MA](https://github.com/rakuten-nlp/rakutenma) is a morphological analyzer for Chinese and Japanese written entirely in JavaScript.
 
 - **Music** - In my free time, I [create music](https://soundcloud.com/mhagiwara) and play jazz.
 
@@ -92,15 +108,16 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 <a name="experience" id="experience"></a>
 ## Experience
 
-- Feb. 2019 - Present: **Owner & Independent NLP/ML Engineer and Consultant - Octanove Labs LLC** (Seattle, WA)
-    - Work as a consultant for early-to-mid stage startups in the US/Japan on their ML strategies
-    - Work on research projects e.g., educational NLP applications with [RIKEN AIP](http://www.riken.jp/en/research/labs/aip/) and chatbot/NER with [Stduio Ousia](http://www.ousia.jp/en/)
-    - Proposed protocol & framework for integrated writing environments ([TEASPN](https://www.teaspn.org))
+- Feb. 2019 - Present: **Owner & Independent NLP/ML Engineer and Researcher - Octanove Labs LLC** (Seattle, WA)
+    - Worked as a consultant for early-to-mid stage startups in the US/Japan on their ML strategies
+    - Worked on QA and NER with [Stduio Ousia](http://www.ousia.jp/en/) (ranked #2 at TAC KBP 2019 fine-grained NER track)
+    - Built educational research and open-source projects with RIKEN ([TEASPN](https://www.teaspn.org), [NanigoNet](https://github.com/mhagiwara/nanigonet), and [Github Typo Corpus](https://github.com/mhagiwara/github-typo-corpus))
+    - Built a free, Web-based AllenNLP course in collaboration with with Matt Gardner at [Allen Institute for AI](https://allenai.org/)
 
 <p></p>
 
 - Feb. 2015 - Feb. 2019: **Senior Machine Learning Engineer / Researcher - Duolingo, Inc.** (Pittsburgh, PA)
-    - Built automatic grading technologies for Duolingo English Test writing and speaking questions using neural networks
+    - Built automatic grading technologies for Duolingo English Test using neural networks
     - Led data creation and analysis for various research projects, including user behavior analysis and second language acquisition modeling (SLAM) shared task
     - Led the content creation of Chinese, Japanese, and Korean from English courses
 
@@ -212,8 +229,6 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 * Nobuyuki Shimizu, <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama and Hiroshi Nakagawa. Metric learning for synonym acquisition. <i>Proc. of COLING 2008</i>, pp. 793-800, 2008. \[[paper](http://www.aclweb.org/anthology-new/C/C08/C08-1100.pdf)\]
 * <u>Masato Hagiwara</u>. A Supervised Learning Approach to Automatic Synonym Identification based on Distributional Features. <i>Proc. of ACL 2008 Student Research Workshop</i>, pp. 1-6, 2008. \[[paper](/media/acl08_hagiwara.pdf)\] \[[link](http://www.ling.ohio-state.edu/acl08/srw.html)\]
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Context Feature Selection for Distributional Similarity. <i>Proc. of IJCNLP 2008</i>, pp. 553-560, 2008. \[[paper](/media/ijcnlp08_hagiwara.pdf)\] \[[link](http://www.ijcnlp2008.org/acceptedpapers.htm)\]
-* <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Effective Proximity Distance for Word-Based Context. <i>Proc. of SNLP 2007</i>, pp. 105-110, 2007. \[[paper](http://naist.cpe.ku.ac.th/SlideSNLP2007/131207/Effective%20Proximity%20Distance%20for%20Word-Based%20Context.pdf)\] \[[link](http://naist.cpe.ku.ac.th/snlp2007/program.html)\]
-* <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Effectiveness of Indirect Dependency for Automatic Synonym Acquisition. <i>Proc. of CoSMo 2007</i>, pp. 1 - 8, 2007. \[[paper](http://clic.cimec.unitn.it/marco/beyond_words/proceedings/cosmo07_hagiwara.pdf)\] \[[ppt](http://clic.cimec.unitn.it/marco/beyond_words/slides/Hagiwara.ppt)\]
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Selection of Effective Contextual Information for Automatic Synonym Acquisition. <i>Proc. of COLING/ACL 2006</i>, pp. 353 - 360, 2006. \[[paper](http://acl.ldc.upenn.edu/P/P06/P06-1045.pdf)\] \[[link](http://portal.acm.org/citation.cfm?id=1220175.1220220&#038;coll=GUIDE&#038;dl=GUIDE&#038;CFID=18731177&#038;CFTOKEN=47423989)\]
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. PLSI Utilization for Automatic Thesaurus Construction. <i>Proc. of IJCNLP 2005</i>, pp. 334 - 345, 2005. \[[paper](http://www.aclweb.org/anthology/I05-1030)\]
 
@@ -254,7 +269,6 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 - [TinySegmenter in Python](tinysegmenter-in-python.html)
 - [NLTK Japanese Corpora](nltk-japanese-corpus.html)
 - [100 Must-Read NLP Papers](http://masatohagiwara.net/100-nlp-papers/)
-- [szdict - Creative Commons Chinese-English Dictionary of Tech Terms](http://en.szdict.com/)
 
 ### In Japanese
 
@@ -263,4 +277,3 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 - [大人になってから自由を手にする方法、または話題性とキャリア資本の重要さ](blog/autonomy-remarkability-and-career-capital.html)
 - [海外で技術書をゼロから執筆・出版する方法](blog/publishing-a-technical-book-overseas.html)
 - [スタートアップを退職し米国でMLエンジニアとして独立します](blog/leaving-startup-and-becoming-independent.html)
-- [AI (人工知能)・ML (機械学習) 用語辞典](http://ja.aimldict.com/)
