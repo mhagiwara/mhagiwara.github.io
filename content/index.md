@@ -8,6 +8,8 @@
 
 <p style="height: 24px;"></p>
 
+**Need help with your NLP/ML projects? I offer consultation service for my sponsors. [See more details here](https://github.com/sponsors/mhagiwara)**.
+
 I am an independent NLP/ML Engineer and Researcher at [Octanove Labs](http://www.octanove.com/). I work with world-class institutions and start-ups including [Allen Institute for AI](https://allenai.org/), [RIKEN AIP](https://www.riken.jp/en/research/labs/aip/), and [Studio Ousia](http://www.ousia.jp/en/). Author of the Manning book [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing).
 
 Formerly, I was a Machine Learning Engineer / Researcher at [Duolingo](http://www.duolingo.com/). I love language and machine learning, and help people connect the two. I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
