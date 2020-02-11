@@ -32,7 +32,12 @@ def main():
         template = env.get_template(page['template'])
 
         with codecs.open(page['url'], mode='w', encoding='utf-8') as outfile:
-            outfile.write(template.render(body=body, title=page['title']))
+            outfile.write(template.render(
+                body=body,
+                title=page['title'],
+                url=page['url'],
+                description=page.get('description'),
+                image=page.get('image')))
 
 
 if __name__ == '__main__':
