@@ -19,17 +19,27 @@ h5,
 h6 {
   font-family: 'Saira Extra Condensed', serif;
   font-weight: 700;
-  text-transform: uppercase;
   color: #343a40;
 }
 
 h1 {
-  font-size: 6rem;
-  line-height: 5.5rem;
+  font-size: 4rem;
+  line-height: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+p, li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #495057;
 }
 
 .subheading {
@@ -102,6 +112,9 @@ h2 {
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
   }
+  .p-lg-5 {
+      padding: 5rem!important;
+  }
 }
 
 section.resume-section {
@@ -144,4 +157,13 @@ a {
 
 a:hover, a:focus, a:active {
   color: #824027;
+}
+
+figure, img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+figure figcaption {
+  text-align: center;
 }

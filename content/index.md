@@ -53,21 +53,15 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 <p style="height: 24px;"></p>
 
-### News
+## News
 
-- **Dec. 2019**: We launched [GitHub Typo Corpus](https://github.com/mhagiwara/github-typo-corpus), a large-scale multilingual dataset of misspellings and grammatical errors.
+- **Feb. 2020**: I'm looking for a research and software engineering intern who is interested in working on cutting-edge NLP and ML research. [See more info here](http://www.octanove.com/careers.html).
+- **Dec. 2019**: We launched [GitHub Typo Corpus](https://github.com/mhagiwara/github-typo-corpus), a large-scale multilingual dataset of misspellings and grammatical errors. [The paper](https://arxiv.org/abs/1911.12893) was accepted to appear at [LREC 2020](https://lrec2020.lrec-conf.org/).
 - **Nov. 2019**: I'm presenting [our ultra fine-grained NER system](/files/201911_TAC_KBP.pdf) at [TAC KBP 2019](https://tac.nist.gov/), which ranked #2 among 9 strong competitors in the EDL track (joint work with [Studio Ousia](http://www.ousia.jp/en/))!
 - **Aug. 2019**: Our paper on [TEASPN](https://www.teaspn.org): Framework and Protocol for Integrated Writing Assistance Environments, is accepted to appear at EMNLP 2019 (system demonstration)!
 - **Jul. 2019**: My book ["Real-World Natural Language Processing"](https://www.manning.com/books/real-world-natural-language-processing) is available via MEAP, Manning Early Access Program. Feedback is welcome!
 - **Feb. 2019**: I'm excited to announce that I started working as an independent NLP/ML engineer. If you are interested in discussing how I can help with your NLP/ML projects, [let me know](http://www.octanove.com/)!
 - **Oct. 2018**: I'm working on [my new book titled "Real-World Natural Language Processing"](http://www.realworldnlpbook.com/) with Manning Publications. Stay tuned!
-- **Sep. 2018**: I will present our [SLAM Shared Task](http://sharedtask.duolingo.com/) poster at [ETCPS 2018](https://actnext.org/events/2018-education-technology-computational-psychometrics-symposium/) in Iowa City.
-- **Aug. 2018**: I [gave a talk](/shenzhen2018.html) at Baidu in Shenzhen, China.  
-- **Jun. 2018**: I uploaded [the companion website](/its2018.html) for my keynote talk at the [Optimizing Human Learning](https://humanlearn.io/) workshop co-located with [ITS 2018](http://its2018.its-conferences.com/) (Montréal, Canada, June 2018).
-- **Mar. 2018**: I'm going to give a keynote talk at the [Optimizing Human Learning](https://humanlearn.io/) workshop co-located with [ITS 2018](http://its2018.its-conferences.com/) (Montréal, Canada, June 2018).
-- **Feb. 2018**: Our research project on Duolingo user behavior was featured on a [Quartz article](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
-- **Jan. 2018**: We announced [2018 Duolingo Shared Task on Second Language Acquisition Modeling (SLAM)
-](http://sharedtask.duolingo.com/).
 
 <p style="height: 120px;"></p>
 
@@ -81,6 +75,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
   * [Rakuten MA](https://github.com/rakuten-nlp/rakutenma), a morphological analyzer for Chinese and Japanese written entirely in JavaScript
   * [NanigoNet](https://github.com/mhagiwara/nanigonet), a language detector for code-mixed input supporting 150+19 human+programming languages
   * [Github Typo Corpus](https://github.com/mhagiwara/github-typo-corpus), a large-scale multilingual dataset of misspellings and grammatical errors
+  * [Open Language Profiles](https://www.openlanguageprofiles.org/), a platform for sharing open linguistic resources for language education
 
 <p></p>
 
