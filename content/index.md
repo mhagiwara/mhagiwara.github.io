@@ -8,7 +8,7 @@
 
 <p style="height: 24px;"></p>
 
-I am an independent NLP/ML Engineer and Researcher at [Octanove Labs](http://www.octanove.com/). I work with world-class institutions and start-ups including [Allen Institute for AI](https://allenai.org/), [RIKEN AIP](https://www.riken.jp/en/research/labs/aip/), and [Studio Ousia](http://www.ousia.jp/en/). Author of the Manning book [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing).
+I am an independent NLP/ML Engineer and Researcher at [Octanove Labs](http://www.octanove.com/). I work with world-class institutions and start-ups including [ACTNext](https://actnext.org/), [Allen Institute for AI](https://allenai.org/), [Mirai Translate](https://miraitranslate.com/en/), and [RIKEN AIP](https://www.riken.jp/en/research/labs/aip/). Author of the Manning book [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing).
 
 Formerly, I was a Machine Learning Engineer / Researcher at [Duolingo](http://www.duolingo.com/). I love language and machine learning, and help people connect the two. I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
@@ -55,6 +55,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ## News
 
+- **Apr. 2020**: I'm now working with [Mirai Translate](https://miraitranslate.com/en/), a Japan-based startup offering human-level machine translation services, and [ACTNext](https://actnext.org/), ACT's research and development unit for educational research.
 - **Feb. 2020**: I'm looking for a research and software engineering intern who is interested in working on cutting-edge NLP and ML research. [See more info here](http://www.octanove.com/careers.html).
 - **Dec. 2019**: We launched [GitHub Typo Corpus](https://github.com/mhagiwara/github-typo-corpus), a large-scale multilingual dataset of misspellings and grammatical errors. [The paper](https://arxiv.org/abs/1911.12893) was accepted to appear at [LREC 2020](https://lrec2020.lrec-conf.org/).
 - **Nov. 2019**: I'm presenting [our ultra fine-grained NER system](/files/201911_TAC_KBP.pdf) at [TAC KBP 2019](https://tac.nist.gov/), which ranked #2 among 9 strong competitors in the EDL track (joint work with [Studio Ousia](http://www.ousia.jp/en/))!
