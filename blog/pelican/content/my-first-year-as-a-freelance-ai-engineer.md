@@ -1,10 +1,10 @@
-Title: 米国でAIエンジニアとして独立して1年が経った
+Title: 米国でAIフリーランスとして独立して1年が経った
 Date: 2020-06-10 00:00
 Category: Career
 slug: my-first-year-as-a-freelance-ai-engineer
 Cover: images/wework.jpg
 
-この記事は、私が米国で AI エンジニアとして独立してからちょうど一年が経った 2020年2月 に書いた [My First Year as a Freelance AI Engineer
+この記事は、私が米国で AI フリーランスとして独立してからちょうど一年が経った 2020年2月 に書いた [My First Year as a Freelance AI Engineer
 ](http://masatohagiwara.net/202002-my-first-year-as-a-freelance-ai-engineer.html) という記事を、自分で日本語に翻訳し、その後数ヶ月に起こったことを踏まえて加筆・訂正したものである。
 
 <figure style="text-align: center">
