@@ -55,6 +55,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ## News
 
+- **Apr. 2021**: I'm happy to announce [GrammarTagger](https://github.com/octanove/grammartagger), a neural multilingual grammar profiler, and [EXPATS](https://github.com/octanove/expats), a toolkit for explainable automated text scoring!
 - **Apr. 2020**: I'm now working with [Mirai Translate](https://miraitranslate.com/en/), a Japan-based startup offering human-level machine translation services, and [ACTNext](https://actnext.org/), ACT's research and development unit for educational research.
 - **Feb. 2020**: I'm looking for a research and software engineering intern who is interested in working on cutting-edge NLP and ML research. [See more info here](http://www.octanove.com/careers.html).
 - **Dec. 2019**: We launched [GitHub Typo Corpus](https://github.com/mhagiwara/github-typo-corpus), a large-scale multilingual dataset of misspellings and grammatical errors. [The paper](https://arxiv.org/abs/1911.12893) was accepted to appear at [LREC 2020](https://lrec2020.lrec-conf.org/).
