@@ -201,6 +201,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### Journal Papers
 
+* Burr Settles, Geoffrey T. LaFlair, <u>Masato Hagiwara</u>: [Machine Learning–Driven Language Assessment](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00310/96485). Transactions of the Association for Computational Linguistics, Vol. 8, pp. 247–263, 2020.
 * Masato Hagiwara, Koji Murakami, Graham Neubig, Yuichiroh Matsubayashi: Robust NLP for Real-world Data : 7. ANPI_NLP - Mining Safety Information after Disasters Using Natural Language Processing-. Information Processing Society of Japan Magazine. Vol. 53, No. 3, pp. 241-248, 2012.
 * <u>萩原正人</u>，小川泰弘，外山勝彦: [グラフカーネルを用いた非分かち書き文からの漸次的語彙知識獲得](https://www.jstage.jst.go.jp/article/tjsai/26/3/26_3_440/_article/-char/ja/), 人工知能学会誌, Vol.26, No.3, pp.440-450, 2011.
 * <u>Masato Hagiwara</u>, Yasuhiro Ogawa, Katsuhiko Toyama. Supervised Synonym Acquisition Using Distributional Features and Syntactic Patterns. <i>Journal of Natural Language Processing</i>, Vol. 16, Num. 2, pp. 59-83, 2009.
@@ -210,6 +211,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### Conference Papers (Selected)
 
+* Yoshinari Fujinuma, <u>Masato Hagiwara</u>. Semi-Supervised Joint Estimation of Word and Document Readability. TextGraphs-15, 2021 \[[paper](https://arxiv.org/abs/2104.13103)\].
 * Takumi Ito, Tatsuki Kuribayashi, Hayato Kobayashi, Ana Brassard, <u>Masato Hagiwara</u>, Jun Suzuki and Kentaro Inui. Diamonds in the Rough: Generating Fluent Sentences from Early-stage Drafts. ILNG 2019 \[[paper](https://arxiv.org/abs/1910.09180)\].
 * <u>Masato Hagiwara</u>, Takumi Ito, Tatsuki Kuribayashi, Jun Suzuki and Kentaro Inui. TEASPN: Framework and Protocol for Integrated Writing Assistance Environments. EMNLP (system demonstrations), 2019. \[[paper](https://arxiv.org/abs/1909.02621)\]
 * Burr Settles, Chris Brust, Erin Gustafson, <u>Masato Hagiwara</u>, Nitin Madnani. Second Language Acquisition Modeling. BEA 2018, 2018. \[[paper](http://sharedtask.duolingo.com/papers/settles.slam18.pdf)\]
