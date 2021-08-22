@@ -56,9 +56,9 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 ## News
 
 - **Aug. 2021**: I'll be giving an invited talk on "Machine Learning for Language Learning" hosted by Waseda University. See [the official announcement](http://www.celese.sci.waseda.ac.jp/node/1513) and [the talk slides](https://docs.google.com/presentation/d/1lht3eVMphXsAOgPpNNZrQGyhXSaWh0Y4T5Dy9fMXzlk/edit?usp=sharing) for more info.
+- **Jul. 2021**: I'm working on a book about Japanese NLP with Paul O'Leary McCann. We'll be covering everything from tokenization/morphological analysis up to recent neural methods and BERT. See [the official website](https://www.japanesenlp.com/) for more info.
 - **Apr. 2021**: I'm happy to announce [GrammarTagger](https://github.com/octanove/grammartagger), a neural multilingual grammar profiler, and [EXPATS](https://github.com/octanove/expats), a toolkit for explainable automated text scoring!
 - **Apr. 2020**: I'm now working with [Mirai Translate](https://miraitranslate.com/en/), a Japan-based startup offering human-level machine translation services, and [ACTNext](https://actnext.org/), ACT's research and development unit for educational research.
-- **Feb. 2020**: I'm looking for a research and software engineering intern who is interested in working on cutting-edge NLP and ML research. [See more info here](http://www.octanove.com/careers.html).
 - **Dec. 2019**: We launched [GitHub Typo Corpus](https://github.com/mhagiwara/github-typo-corpus), a large-scale multilingual dataset of misspellings and grammatical errors. [The paper](https://arxiv.org/abs/1911.12893) was accepted to appear at [LREC 2020](https://lrec2020.lrec-conf.org/).
 - **Nov. 2019**: I'm presenting [our ultra fine-grained NER system](/files/201911_TAC_KBP.pdf) at [TAC KBP 2019](https://tac.nist.gov/), which ranked #2 among 9 strong competitors in the EDL track (joint work with [Studio Ousia](http://www.ousia.jp/en/))!
 - **Aug. 2019**: Our paper on [TEASPN](https://www.teaspn.org): Framework and Protocol for Integrated Writing Assistance Environments, is accepted to appear at EMNLP 2019 (system demonstration)!
