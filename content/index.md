@@ -8,7 +8,7 @@
 
 <p style="height: 24px;"></p>
 
-I am an independent NLP/ML Engineer and Researcher at [Octanove Labs](http://www.octanove.com/). I work with world-class institutions and start-ups including [ACTNext](https://actnext.org/), [Allen Institute for AI](https://allenai.org/), [Mirai Translate](https://miraitranslate.com/en/), and [RIKEN AIP](https://www.riken.jp/en/research/labs/aip/). Author of the Manning book [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing).
+I'm a Senior AI Researcher at [Earth Species Project](https://www.earthspecies.org/) working on decoding non-human communication with AI/ML technologies. Author of the Manning book [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing).
 
 Formerly, I was a Machine Learning Engineer / Researcher at [Duolingo](http://www.duolingo.com/). I love language and machine learning, and help people connect the two. I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
@@ -55,6 +55,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ## News
 
+- **Nov. 2021**: I'm joining [Earth Species Project](https://www.earthspecies.org/) as a Senior AI Researcher. I'm thrilled to work on decoding non-human communication with AI/ML technologies!
 - **Aug. 2021**: I'll be giving an invited talk on "Machine Learning for Language Learning" hosted by Waseda University. See [the official announcement](http://www.celese.sci.waseda.ac.jp/node/1513) and [the talk slides](https://docs.google.com/presentation/d/1lht3eVMphXsAOgPpNNZrQGyhXSaWh0Y4T5Dy9fMXzlk/edit?usp=sharing) for more info.
 - **Jul. 2021**: I'm working on a book about Japanese NLP with Paul O'Leary McCann. We'll be covering everything from tokenization/morphological analysis up to recent neural methods and BERT. See [the official website](https://www.japanesenlp.com/) for more info.
 - **Apr. 2021**: I'm happy to announce [GrammarTagger](https://github.com/octanove/grammartagger), a neural multilingual grammar profiler, and [EXPATS](https://github.com/octanove/expats), a toolkit for explainable automated text scoring!
@@ -63,8 +64,6 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 - **Nov. 2019**: I'm presenting [our ultra fine-grained NER system](/files/201911_TAC_KBP.pdf) at [TAC KBP 2019](https://tac.nist.gov/), which ranked #2 among 9 strong competitors in the EDL track (joint work with [Studio Ousia](http://www.ousia.jp/en/))!
 - **Aug. 2019**: Our paper on [TEASPN](https://www.teaspn.org): Framework and Protocol for Integrated Writing Assistance Environments, is accepted to appear at EMNLP 2019 (system demonstration)!
 - **Jul. 2019**: My book ["Real-World Natural Language Processing"](https://www.manning.com/books/real-world-natural-language-processing) is available via MEAP, Manning Early Access Program. Feedback is welcome!
-- **Feb. 2019**: I'm excited to announce that I started working as an independent NLP/ML engineer. If you are interested in discussing how I can help with your NLP/ML projects, [let me know](http://www.octanove.com/)!
-- **Oct. 2018**: I'm working on [my new book titled "Real-World Natural Language Processing"](http://www.realworldnlpbook.com/) with Manning Publications. Stay tuned!
 
 <p style="height: 120px;"></p>
 
@@ -82,8 +81,9 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 <p></p>
 
-- **Education** — I love teaching NLP to the world. I'm currently working on:
+- **Education** — I love teaching NLP to the world. Books/courses I wrote include:
   * [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing) with Manning Publications
+  * [Introduction to Japanese Natural Language Processing](https://www.japanesenlp.com/) with Paul O'Leary McCann
   * Official [AllenNLP](https://allennlp.org/) Course with [Matt Gardner](https://matt-gardner.github.io/) and the AllenNLP team
 
 <p></p>

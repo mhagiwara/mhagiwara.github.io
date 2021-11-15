@@ -1,9 +1,9 @@
 import codecs
 import glob
+import json
 
 from jinja2 import Environment, FileSystemLoader
 import markdown2
-import simplejson as json
 
 
 CONTENTS_DIR = 'content'
