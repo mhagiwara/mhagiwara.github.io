@@ -55,6 +55,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ## News
 
+- **Feb. 2023**: Two papers ([AVES](https://arxiv.org/abs/2210.14493) and [BEANS](https://arxiv.org/abs/2210.12300)) my colleagues at Earth Species Projects and I co-authored were accepted at ICASSP 2023!
 - **Nov. 2021**: I'm joining [Earth Species Project](https://www.earthspecies.org/) as a Senior AI Researcher. I'm thrilled to work on decoding non-human communication with AI/ML technologies!
 - **Aug. 2021**: I'll be giving an invited talk on "Machine Learning for Language Learning" hosted by Waseda University. See [the official announcement](http://www.celese.sci.waseda.ac.jp/node/1513) and [the talk slides](https://docs.google.com/presentation/d/1lht3eVMphXsAOgPpNNZrQGyhXSaWh0Y4T5Dy9fMXzlk/edit?usp=sharing) for more info.
 - **Jul. 2021**: I'm working on a book about Japanese NLP with Paul O'Leary McCann. We'll be covering everything from tokenization/morphological analysis up to recent neural methods and BERT. See [the official website](https://www.japanesenlp.com/) for more info.
@@ -212,6 +213,8 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### Conference Papers (Selected)
 
+* <u>Masato Hagiwara</u>. AVES: Animal Vocalization Encoder based on Self-Supervision. ICASSP 2023 \[[paper](https://arxiv.org/abs/2210.14493)\].
+* <u>Masato Hagiwara</u>, Benjamin Hoffman, Jen-Yu Liu, Maddie Cusimano, Felix Effenberger, Katie Zacarian. BEANS: The Benchmark of Animal Sounds. ICASSP 2023 \[[paper](https://arxiv.org/abs/2210.12300)\].
 * Yoshinari Fujinuma, <u>Masato Hagiwara</u>. Semi-Supervised Joint Estimation of Word and Document Readability. TextGraphs-15, 2021 \[[paper](https://arxiv.org/abs/2104.13103)\].
 * Takumi Ito, Tatsuki Kuribayashi, Hayato Kobayashi, Ana Brassard, <u>Masato Hagiwara</u>, Jun Suzuki and Kentaro Inui. Diamonds in the Rough: Generating Fluent Sentences from Early-stage Drafts. ILNG 2019 \[[paper](https://arxiv.org/abs/1910.09180)\].
 * <u>Masato Hagiwara</u>, Takumi Ito, Tatsuki Kuribayashi, Jun Suzuki and Kentaro Inui. TEASPN: Framework and Protocol for Integrated Writing Assistance Environments. EMNLP (system demonstrations), 2019. \[[paper](https://arxiv.org/abs/1909.02621)\]
