@@ -73,7 +73,9 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 <a name="projects" id="projects"></a>
 ## Projects
 
-* **NLP** — I'm the main researcher and developer of many NLP open source projects and datasets, including:
+* **NLP** — I'm the main researcher and developer of many ML/NLP open source projects and datasets, including:
+  * [AVES](https://github.com/earthspecies/aves), a self-supervised, transformer-based audio representation model for encoding animal vocalizations ("BERT for animals").
+  * [BEANS](https://github.com/earthspecies/beans), a collection of bioacoustics tasks and public datasets, specifically designed to measure the performance of machine learning algorithms in the field of bioacoustics.
   * [TEASPN](https://www.teaspn.org/), a protocol and a framework for integrated writing environments
   * [Rakuten MA](https://github.com/rakuten-nlp/rakutenma), a morphological analyzer for Chinese and Japanese written entirely in JavaScript
   * [NanigoNet](https://github.com/mhagiwara/nanigonet), a language detector for code-mixed input supporting 150+19 human+programming languages
