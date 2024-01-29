@@ -8,6 +8,19 @@
 
 <p style="height: 24px;"></p>
 
+Personal Update (January 2024): I was diagnosed with late-stage lung cancer in March 2023. Since then, I have been undergoing treatment, and my overall health conditions are currently stable. However, it's important to note that stage IV lung cancer typically carries a poor prognosis. I am currently raising funds for my family, which includes my wonderful wife and two lovely daughters, as well as for my medical expenses.
+
+I would greatly appreciate it if you could consider making a donation through [this GoFundMe link](https://www.gofundme.com/f/support-masato-and-his-family). I am also providing regular updates on [my CaringBridge page](https://www.caringbridge.org/visit/mhagiwara).
+
+Thank you for your kindness and support during this challenging time.
+
+<figure>
+  <img src="img/hope.jpg" alt="At City of Hope, Cancer Treatment and Research Center">
+  <figcaption>At City of Hope, Cancer Treatment and Research Center</figcaption>
+</figure>
+
+---
+
 I'm a Senior AI Researcher at [Earth Species Project](https://www.earthspecies.org/) working on decoding non-human communication with AI/ML technologies. Author of the Manning book [Real-World Natural Language Processing](https://www.manning.com/books/real-world-natural-language-processing).
 
 Formerly, I was a Machine Learning Engineer / Researcher at [Duolingo](http://www.duolingo.com/). I love language and machine learning, and help people connect the two. I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I helped launch the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
