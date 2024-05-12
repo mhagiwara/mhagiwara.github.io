@@ -68,6 +68,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ## News
 
+- **Feb. 2024**: Our paper ([ISPA](https://arxiv.org/abs/2402.03269)) was accepted at [the XAI-SA Workshop](https://xai-sa-workshop.github.io/web/Home.html) co-located with ICASSP 2024!
 - **Feb. 2023**: Two papers ([AVES](https://arxiv.org/abs/2210.14493) and [BEANS](https://arxiv.org/abs/2210.12300)) my colleagues at Earth Species Projects and I co-authored were accepted at ICASSP 2023!
 - **Nov. 2021**: I'm joining [Earth Species Project](https://www.earthspecies.org/) as a Senior AI Researcher. I'm thrilled to work on decoding non-human communication with AI/ML technologies!
 - **Aug. 2021**: I'll be giving an invited talk on "Machine Learning for Language Learning" hosted by Waseda University. See [the official announcement](http://www.celese.sci.waseda.ac.jp/node/1513) and [the talk slides](https://docs.google.com/presentation/d/1lht3eVMphXsAOgPpNNZrQGyhXSaWh0Y4T5Dy9fMXzlk/edit?usp=sharing) for more info.
