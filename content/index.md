@@ -68,8 +68,9 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ## News
 
-- **Feb. 2024**: Our paper ([ISPA](https://arxiv.org/abs/2402.03269)) was accepted at [the XAI-SA Workshop](https://xai-sa-workshop.github.io/web/Home.html) co-located with ICASSP 2024!
-- **Feb. 2023**: Two papers ([AVES](https://arxiv.org/abs/2210.14493) and [BEANS](https://arxiv.org/abs/2210.12300)) my colleagues at Earth Species Projects and I co-authored were accepted at ICASSP 2023!
+- **Mar. 2024**: Our paper ([Project MOSLA](https://arxiv.org/abs/2403.17314)) was accepted at LREC-COLING 2024 and nominated as one of the Best Paper Candidates!
+- **Feb. 2024**: Our paper ([ISPA](https://arxiv.org/abs/2402.03269)) was accepted at [the XAI-SA Workshop](https://xai-sa-workshop.github.io/web/Home.html) co-located with ICASSP 2024.
+- **Feb. 2023**: Two papers ([AVES](https://arxiv.org/abs/2210.14493) and [BEANS](https://arxiv.org/abs/2210.12300)) my colleagues at Earth Species Projects and I co-authored were accepted at ICASSP 2023.
 - **Nov. 2021**: I'm joining [Earth Species Project](https://www.earthspecies.org/) as a Senior AI Researcher. I'm thrilled to work on decoding non-human communication with AI/ML technologies!
 - **Aug. 2021**: I'll be giving an invited talk on "Machine Learning for Language Learning" hosted by Waseda University. See [the official announcement](http://www.celese.sci.waseda.ac.jp/node/1513) and [the talk slides](https://docs.google.com/presentation/d/1lht3eVMphXsAOgPpNNZrQGyhXSaWh0Y4T5Dy9fMXzlk/edit?usp=sharing) for more info.
 - **Jul. 2021**: I'm working on a book about Japanese NLP with Paul O'Leary McCann. We'll be covering everything from tokenization/morphological analysis up to recent neural methods and BERT. See [the official website](https://www.japanesenlp.com/) for more info.
@@ -229,6 +230,8 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### Conference Papers (Selected)
 
+* <u>Masato Hagiwara</u>, Joshua Tanner. Project MOSLA: Recording Every Moment of Second Language Acquisition. LREC-COLING 2024 (Best Paper Candidate) \[[paper](https://arxiv.org/abs/2403.17314)\].
+* <u>Masato Hagiwara</u>, Marius Miron, Jen-Yu Liu. ISPA: Inter-Species Phonetic Alphabet for Transcribing Animal Sounds. XAI-SA Workshop @ ICASSP 2024. \[[paper](https://arxiv.org/abs/2402.03269)\].
 * <u>Masato Hagiwara</u>. AVES: Animal Vocalization Encoder based on Self-Supervision. ICASSP 2023 \[[paper](https://arxiv.org/abs/2210.14493)\].
 * <u>Masato Hagiwara</u>, Benjamin Hoffman, Jen-Yu Liu, Maddie Cusimano, Felix Effenberger, Katie Zacarian. BEANS: The Benchmark of Animal Sounds. ICASSP 2023 \[[paper](https://arxiv.org/abs/2210.12300)\].
 * Yoshinari Fujinuma, <u>Masato Hagiwara</u>. Semi-Supervised Joint Estimation of Word and Document Readability. TextGraphs-15, 2021 \[[paper](https://arxiv.org/abs/2104.13103)\].
