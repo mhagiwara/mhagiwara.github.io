@@ -88,9 +88,14 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 <a name="projects" id="projects"></a>
 ## Projects
 
-* **NLP** — I'm the main researcher and developer of many ML/NLP open source projects and datasets, including:
+* **ALP** (Animal Language Processing) — For the past few years, I've been the lead researcher on many projects on the application of AI for animal communications, including:
   * [AVES](https://github.com/earthspecies/aves), a self-supervised, transformer-based audio representation model for encoding animal vocalizations ("BERT for animals").
   * [BEANS](https://github.com/earthspecies/beans), a collection of bioacoustics tasks and public datasets, specifically designed to measure the performance of machine learning algorithms in the field of bioacoustics.
+  * [ISPA](https://github.com/earthspecies/ispa), a precise, concise, and interpretable system designed for transcribing animal sounds into text ("IPA for animals").
+
+<p></p>
+
+* **NLP** — I'm the main researcher and developer of many ML/NLP open source projects and datasets, including:
   * [TEASPN](https://www.teaspn.org/), a protocol and a framework for integrated writing environments
   * [Rakuten MA](https://github.com/rakuten-nlp/rakutenma), a morphological analyzer for Chinese and Japanese written entirely in JavaScript
   * [NanigoNet](https://github.com/mhagiwara/nanigonet), a language detector for code-mixed input supporting 150+19 human+programming languages
@@ -123,6 +128,12 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 <a name="experience" id="experience"></a>
 ## Experience
+
+- Nov. 2021 - Present: **Senior AI Research Scientist** (Berkeley, CA)
+  - Developed AVES, a self-supervised foundation model for animal sounds ("BERT for animals")
+  - Built BEANS, a benchmark for bioacoustics ML models (“GLUE for animals”)
+
+<p></p>
 
 - Feb. 2019 - Present: **Owner & Independent NLP/ML Engineer and Researcher - Octanove Labs LLC** (Seattle, WA)
     - Worked as a consultant for early-to-mid stage startups in the US/Japan on their ML strategies
