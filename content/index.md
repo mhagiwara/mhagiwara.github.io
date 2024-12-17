@@ -21,7 +21,7 @@ Thank you for your kindness and support during this challenging time.
 
 --- -->
 
-I'm a Senior AI Researcher at [Earth Species Project](https://www.earthspecies.org/) working on decoding non-human communication with AI/ML technologies. Currently I'm focusing on building foundation models ([AVES](https://arxiv.org/abs/2210.14493)) and benchmarks ([BEANS](https://arxiv.org/abs/2210.12300)) for non-human animals. I call this a field of (non-human) Animal Language Processing, or ALP. 
+I'm a Senior AI Researcher at [Earth Species Project](https://www.earthspecies.org/) working on decoding non-human communication with AI/ML technologies. Currently I'm focusing on building foundation models ([NatureLM-audio](https://arxiv.org/abs/2411.07186), [AVES](https://arxiv.org/abs/2210.14493)) and benchmarks ([BEANS](https://arxiv.org/abs/2210.12300)) for non-human animals. I call this a field of (non-human) Animal Language Processing, or ALP. 
 
 Formerly, I was a Machine Learning Engineer / Researcher at [Duolingo](http://www.duolingo.com/). I love language and machine learning, and help people connect the two. I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I led the launch of the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
@@ -68,6 +68,8 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ## News
 
+- **Nov. 2024**: We announced [NatureLM-audio](https://arxiv.org/abs/2411.07186), the first large audio-language model tailored for understanding animal sounds. I'm proud to be work as one of the lead researchers for this project.
+- **July 2024**: I gave an invited talk titled ["Intro to Animal Language Processing"](https://nlp-colloquium-jp.github.io/schedule/2024-07-17_masato-hagiwara/) at NLP Colloquium (a Japanese online NLP workshop).
 - **Mar. 2024**: Our paper ([Project MOSLA](https://arxiv.org/abs/2403.17314)) was accepted at LREC-COLING 2024 and nominated as one of the Best Paper Candidates!
 - **Feb. 2024**: Our paper ([ISPA](https://arxiv.org/abs/2402.03269)) was accepted at [the XAI-SA Workshop](https://xai-sa-workshop.github.io/web/Home.html) co-located with ICASSP 2024.
 - **Feb. 2023**: Two papers ([AVES](https://arxiv.org/abs/2210.14493) and [BEANS](https://arxiv.org/abs/2210.12300)) my colleagues at Earth Species Projects and I co-authored were accepted at ICASSP 2023.
@@ -89,7 +91,8 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 ## Projects
 
 * **ALP** (Animal Language Processing) — For the past few years, I've been the lead researcher on many projects on the application of AI for animal communications, including:
-  * [AVES](https://github.com/earthspecies/aves), a self-supervised, transformer-based audio representation model for encoding animal vocalizations ("BERT for animals").
+  * [NatureLM-audio](https://arxiv.org/abs/2411.07186), the first large audio-language model tailored for understanding animal sounds.
+  * [AVES and BirdAVES](https://github.com/earthspecies/aves), a self-supervised, transformer-based audio representation model for encoding animal vocalizations ("BERT for animals").
   * [BEANS](https://github.com/earthspecies/beans), a collection of bioacoustics tasks and public datasets, specifically designed to measure the performance of machine learning algorithms in the field of bioacoustics.
   * [ISPA](https://github.com/earthspecies/ispa), a precise, concise, and interpretable system designed for transcribing animal sounds into text ("IPA for animals").
 
@@ -130,6 +133,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 ## Experience
 
 - Nov. 2021 - Present: **Senior AI Research Scientist** (Berkeley, CA)
+  - Led the development of NatureLM-audio, the first audio LLM for understanding animal sounds.
   - Developed AVES, a self-supervised foundation model for animal sounds ("BERT for animals")
   - Built BEANS, a benchmark for bioacoustics ML models (“GLUE for animals”)
 
