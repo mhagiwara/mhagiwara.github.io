@@ -21,7 +21,7 @@ Thank you for your kindness and support during this challenging time.
 
 --- -->
 
-I'm a Senior AI Researcher at [Earth Species Project](https://www.earthspecies.org/) working on decoding non-human communication with AI/ML technologies. Currently I'm focusing on building foundation models ([NatureLM-audio](https://arxiv.org/abs/2411.07186), [AVES](https://arxiv.org/abs/2210.14493)) and benchmarks ([BEANS](https://arxiv.org/abs/2210.12300)) for non-human animals. I call this a field of (non-human) Animal Language Processing, or ALP. 
+I'm a Research Lead at [Earth Species Project](https://www.earthspecies.org/) working on decoding non-human communication with AI/ML technologies. Currently I'm focusing on building foundation models ([NatureLM-audio](https://arxiv.org/abs/2411.07186), [AVES](https://arxiv.org/abs/2210.14493)) and benchmarks ([BEANS](https://arxiv.org/abs/2210.12300)) for non-human animals. I call this a field of (non-human) Animal Language Processing, or ALP. 
 
 Formerly, I was a Machine Learning Engineer / Researcher at [Duolingo](http://www.duolingo.com/). I love language and machine learning, and help people connect the two. I speak Chinese, Japanese, and English fluently, and am learning Korean and [Lojban](https://en.wikipedia.org/wiki/Lojban). I led the launch of the [Japanese](https://www.duolingo.com/course/ja/en/Learn-Japanese-Online), [Korean](https://www.duolingo.com/course/ko/en/Learn-Korean-Online), and [Chinese](https://www.duolingo.com/course/zh-CN/en/Learn-Chinese-Online) courses on Duolingo. My research projects appeared on [TechCrunch](https://techcrunch.com/2017/03/05/3-habits-of-successful-language-learners/) and [Quartz](https://qz.com/1215361/the-best-time-of-day-to-learn-a-new-language-according-duolingo-data/).
 
@@ -132,7 +132,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 <a name="experience" id="experience"></a>
 ## Experience
 
-- Nov. 2021 - Present: **Senior AI Research Scientist** (Berkeley, CA)
+- Nov. 2021 - Present: **Research Lead** (Berkeley, CA)
   - Led the development of NatureLM-audio, the first audio LLM for understanding animal sounds.
   - Developed AVES, a self-supervised foundation model for animal sounds ("BERT for animals")
   - Built BEANS, a benchmark for bioacoustics ML models (“GLUE for animals”)
