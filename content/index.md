@@ -68,6 +68,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ## News
 
+- **Jan. 2025**: 🎉 Exciting news! Our paper on [NatureLM-audio](https://arxiv.org/abs/2411.07186), the first large audio-language model for understanding animal sounds, has been accepted at ICLR 2025! 🐦🔊
 - **Nov. 2024**: We announced [NatureLM-audio](https://arxiv.org/abs/2411.07186), the first large audio-language model tailored for understanding animal sounds. I'm proud to be work as one of the lead researchers for this project.
 - **July 2024**: I gave an invited talk titled ["Intro to Animal Language Processing"](https://nlp-colloquium-jp.github.io/schedule/2024-07-17_masato-hagiwara/) at NLP Colloquium (a Japanese online NLP workshop).
 - **Mar. 2024**: Our paper ([Project MOSLA](https://arxiv.org/abs/2403.17314)) was accepted at LREC-COLING 2024 and nominated as one of the Best Paper Candidates!
@@ -132,7 +133,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 <a name="experience" id="experience"></a>
 ## Experience
 
-- Nov. 2021 - Present: **Research Lead** (Berkeley, CA)
+- Nov. 2021 - Present: **Research Lead - Earth Species Project** (Berkeley, CA)
   - Led the development of NatureLM-audio, the first audio LLM for understanding animal sounds.
   - Developed AVES, a self-supervised foundation model for animal sounds ("BERT for animals")
   - Built BEANS, a benchmark for bioacoustics ML models (“GLUE for animals”)
