@@ -8,18 +8,20 @@
 
 <p style="height: 24px;"></p>
 
-<!-- Personal Update (January 2024): I was diagnosed with late-stage lung cancer in March 2023. Since then, I have been undergoing treatment, and my overall health conditions are currently stable. However, it's important to note that stage IV lung cancer typically carries a poor prognosis. I am currently raising funds for my family, which includes my wonderful wife and two lovely daughters, as well as for my medical expenses.
+Personal Update (January 2024): I was diagnosed with late-stage lung cancer in March 2023. Since then, I have been undergoing treatment, and my overall health conditions are currently stable. However, it's important to note that stage IV lung cancer typically carries a poor prognosis. I am currently raising funds for my family, which includes my wonderful wife and two lovely daughters, as well as for my medical expenses.
 
 I would greatly appreciate it if you could consider making a donation through [this GoFundMe link](https://www.gofundme.com/f/support-masato-and-his-family). I am also providing regular updates on [my CaringBridge page](https://www.caringbridge.org/visit/mhagiwara).
 
 Thank you for your kindness and support during this challenging time.
 
 <figure>
-  <img src="img/hope.jpg" alt="At City of Hope, Cancer Treatment and Research Center">
+  <img src="img/hope.jpg"
+    alt="At City of Hope, Cancer Treatment and Research Center"
+    style="width: 35%;" />
   <figcaption>At City of Hope, Cancer Treatment and Research Center</figcaption>
 </figure>
 
---- -->
+---
 
 I'm a Research Lead at [Earth Species Project](https://www.earthspecies.org/) working on decoding non-human communication with AI/ML technologies. Currently I'm focusing on building foundation models ([NatureLM-audio](https://arxiv.org/abs/2411.07186), [AVES](https://arxiv.org/abs/2210.14493)) and benchmarks ([BEANS](https://arxiv.org/abs/2210.12300)) for non-human animals. I call this a field of (non-human) Animal Language Processing, or ALP. 
 
