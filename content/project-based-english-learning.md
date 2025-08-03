@@ -6,6 +6,8 @@
 ![英語学習](img/pbel-language.jpg)
 </span>
 
+2025年8月—本記事は、私が2019年に書いたものです。内容的に少し古い箇所もありますが、今でも有用な学習法や考えがありますので、ここで記事を再掲します。
+
 目次
 
 - [はじめに](#intro)
@@ -153,10 +155,14 @@
 
 一方で、学校教育で英語に触れる時間は1000時間程度だという見積もりがあります。つまり、学習時間が圧倒的に足りないのです。
 
-<span style="display:block;text-align:center">
-![日本語の難易度](img/pbel-difficulties.png)
-(ソース: [What are the hardest languages to learn? Check the ranking](https://www.lingholic.com/hardest-languages-learn/))
-</span>
+
+<p style="text-align:center">
+  <img src="img/pbel-difficulties.png"
+       alt="日本語の難易度"
+       style="width:60%; max-width:100%; height:auto;">
+  ソース: <a href="https://www.lingholic.com/hardest-languages-learn/">What are the hardest languages to learn? Check the ranking</a>
+</p>
+
 
 英語の学習、というと、どういった教材を使うとか、どういった勉強法をするか、という、「効率」の部分につい焦点が当たる傾向があります。しかし、下のグラフで示したように、学習量は、「効率×時間」で表されます。効率と時間、両方の要素が必要です。いかに短期的に効率を追求しても、学習が続かなければ全く意味がありません。巷にあふれる多くの英語教材は、この「時間」の部分、「いかに学習を続けるか」ということにあまり関心が無いように思われます。
 
@@ -323,7 +329,6 @@ Time 紙や Newsweek 紙などを、英語教材として薦めるアドバイ�
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chris_Anderson_2007.jpg/2560px-Chris_Anderson_2007.jpg"
        alt="TED"
        style="width:60%; max-width:100%; height:auto;">
-  <br>
   ソース: <a href="https://www.flickr.com/photos/pmo/418251559">Pierre Omidyar - Flickr</a>
 </p>
 
