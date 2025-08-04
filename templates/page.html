@@ -17,6 +17,11 @@
     <meta property="og:type" content="article"/>
     {% if image %}<meta property="og:image" content="{{ image }}">{% endif %}
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ title }}" />
+    {% if description %}<meta name="twitter:description" content="{{ description }}" />{% endif %}
+    {% if image %}<meta name="twitter:image" content="{{ image }}" />{% endif %}
+
     <title>{{ title }}</title>
 
     <!-- Bootstrap core CSS -->
