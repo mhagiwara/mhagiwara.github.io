@@ -126,7 +126,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 - **Duolingo** - I built and worked on research for [Duolingo](http://www.duolingo.com/), the most popular language learning app in the world, and [Duolingo English Test](https://englishtest.duolingo.com/), an affordable and accessible English certification test developed by Duolingo.
 
-- **Music** - In my free time, I [create music](https://soundcloud.com/mhagiwara) and play jazz.
+- **Music** - In my free time, I [create music](https://www.youtube.com/@masato_hagiwara) and play jazz.
 
 <p style="height: 120px;"></p>
 
