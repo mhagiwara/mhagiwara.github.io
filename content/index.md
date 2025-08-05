@@ -313,6 +313,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 ### In Japanese
 
 - [ステート・オブ・AI ガイド — 英語で読み解く人工知能(AI)・機械学習(ML)の最新動向](https://ja.stateofaiguides.com/)
+- [あなたはなぜ英語ができないのか — プロジェクトベース英語学習法のススメ](project-based-english-learning.html)
 - [巻き舌クリニック - みんなで巻き舌を克服するサイト](blog/makijita.html)
 - [博士のための「けものみち」就職活動ガイド](blog/job-hunting-guide-for-phds.html)
 - [大人になってから自由を手にする方法、または話題性とキャリア資本の重要さ](blog/autonomy-remarkability-and-career-capital.html)

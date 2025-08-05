@@ -28,7 +28,7 @@ def main():
     for filename in get_content_files():
         page = read_content_file(filename)
 
-        body = markdown2.markdown(page['body'])
+        body = markdown2.markdown(page['body'], extras=["tables", "code-friendly"])
         template = env.get_template(page['template'])
 
         with codecs.open(page['url'], mode='w', encoding='utf-8') as outfile:

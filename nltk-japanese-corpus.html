@@ -50,6 +50,15 @@
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML">
+      MathJax.Hub.Config({
+          tex2jax: {
+              inlineMath: [["$", "$"], ["\\(", "\\)"]],
+              processEscapes: true
+          }
+      });
+    </script>
+
   </head>
 
   <body id="page-top">
@@ -109,9 +118,9 @@
 
 <h3>Download and Usage - ダウンロードおよび使用法</h3>
 
-<p>First, download the <a href="http://nlp.ist.i.kyoto-u.ac.jp/kuntt/#ga739fe2">KNB corpus</a> distribution file from here:  <a href="http://nlp.ist.i.kyoto-u.ac.jp/kuntt/KNBC_v1.0_090925.tar.bz2">解析済みブログコーパス (KNBC<em>v1.0</em>090925.tar.bz2; 4.2MB)</a>, and put the decompressed files under NLTK's data directly (nltk_data by default).</p>
+<p>First, download the <a href="http://nlp.ist.i.kyoto-u.ac.jp/kuntt/#ga739fe2">KNB corpus</a> distribution file from here:  <a href="http://nlp.ist.i.kyoto-u.ac.jp/kuntt/KNBC_v1.0_090925.tar.bz2">解析済みブログコーパス (KNBC_v1.0_090925.tar.bz2; 4.2MB)</a>, and put the decompressed files under NLTK's data directly (nltk_data by default).</p>
 
-<p>まず <a href="http://nlp.ist.i.kyoto-u.ac.jp/kuntt/#ga739fe2">KNB コーパス</a> の配布ファイルをこちらからダウンロードしてください: <a href="http://nlp.ist.i.kyoto-u.ac.jp/kuntt/KNBC_v1.0_090925.tar.bz2">解析済みブログコーパス (KNBC<em>v1.0</em>090925.tar.bz2; 4.2MB)</a>。 ファイルを解凍し、NLTKのデータディレクトリ (デフォルトでは nltk_data) の下に置いてください。</p>
+<p>まず <a href="http://nlp.ist.i.kyoto-u.ac.jp/kuntt/#ga739fe2">KNB コーパス</a> の配布ファイルをこちらからダウンロードしてください: <a href="http://nlp.ist.i.kyoto-u.ac.jp/kuntt/KNBC_v1.0_090925.tar.bz2">解析済みブログコーパス (KNBC_v1.0_090925.tar.bz2; 4.2MB)</a>。 ファイルを解凍し、NLTKのデータディレクトリ (デフォルトでは nltk_data) の下に置いてください。</p>
 
 <p>Next, download the source code of the corpus reader from here: <a href="https://github.com/mhagiwara/nltk/blob/master/jpbook/knbc.py">knbc.py</a>. KNB Corpus reader is distributed under the same license as NLTK itself (<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>).</p>
 
@@ -261,9 +270,9 @@ JEITA 形態素解析済みコーパス (ChaSen形式) 青空文庫 <br />
                                  '0014.chasen', encoding='utf-8')
 </code></pre>
 
-<p>The interface of ChaSen corpus reader is the same as the standard TaggedCorpusReader, which has raw() (returns raw strings), words() (list of words), sents() (list of sentences), paras() (list of paragraphs), tagged<em>words() (list of tagged words), tagged</em>sents() (list of tagged sentences), tagged_paras() (list of tagged paragraphs).</p>
+<p>The interface of ChaSen corpus reader is the same as the standard TaggedCorpusReader, which has raw() (returns raw strings), words() (list of words), sents() (list of sentences), paras() (list of paragraphs), tagged_words() (list of tagged words), tagged_sents() (list of tagged sentences), tagged_paras() (list of tagged paragraphs).</p>
 
-<p>ChaSen コーパスリーダーのインターフェースは、標準の TaggedCorpusReader と同じで、raw() (生の文字列を返す), words() (単語のリスト), sents() (文のリスト), paras() (パラグラフのリスト), tagged<em>words() (タグ付き単語のリスト), tagged</em>sents() (タグ付き文のリスト), tagged_paras() (タグ付きパラグラフのリスト) の各メソッドをサポートしています。</p>
+<p>ChaSen コーパスリーダーのインターフェースは、標準の TaggedCorpusReader と同じで、raw() (生の文字列を返す), words() (単語のリスト), sents() (文のリスト), paras() (パラグラフのリスト), tagged_words() (タグ付き単語のリスト), tagged_sents() (タグ付き文のリスト), tagged_paras() (タグ付きパラグラフのリスト) の各メソッドをサポートしています。</p>
 
 <pre><code>&gt;&gt;&gt; print '/'.join( genpaku.words()[0:40] )
 I/./　/心地よい/ランプ/の/明かり/に/照らさ/れ/た/書斎/を/行き/つ/戻り/つ/し/て
@@ -271,8 +280,8 @@ I/./　/心地よい/ランプ/の/明かり/に/照らさ/れ/た/書斎/を/�
 /と/腕時計/を/くらべ
 </code></pre>
 
-<p>Note that the tags (the second element of tuples returned by tagged<em>xxx methods) are themselves tuples, whose elements are readings, lemmas, pos1, pos2, and Katsuyou form.
-なお、タグ情報 (tagged</em>xxx メソッドで返されるタプルの第２要素) はそれ自体がタプルになっていて、読み, 原形, 品詞1, 品詞2, 活用形の情報が含まれます。</p>
+<p>Note that the tags (the second element of tuples returned by tagged_xxx methods) are themselves tuples, whose elements are readings, lemmas, pos1, pos2, and Katsuyou form.
+なお、タグ情報 (tagged_xxx メソッドで返されるタプルの第２要素) はそれ自体がタプルになっていて、読み, 原形, 品詞1, 品詞2, 活用形の情報が含まれます。</p>
 
 <pre><code>&gt;&gt;&gt; print '\nEOS\n'.join(['\n'.join("%s/%s" % (w[0],w[1][2]) for w in sent)
                           for sent in genpaku.tagged_sents()[0:2]])
