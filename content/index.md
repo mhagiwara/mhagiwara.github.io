@@ -303,6 +303,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 ### In English
 
 - [My First Year as a Freelance AI Engineer](202002-my-first-year-as-a-freelance-ai-engineer.html)
+- [NeuralMorse — Reinventing Morse Code with Neural Networks](neuralmorse.html)
 - [Training an N-gram Language Model and Estimating Sentence Probability](training-an-n-gram-language-model-and-estimating-sentence-probability.html)
 - [Using GIZA++ to Obtain Word Alignment Between Bilingual Sentences](using-giza-to-obtain-word-alignment-between-bilingual-sentences.html)
 - [Building a Statistical Machine Translation System using Moses](building-a-statistical-machine-translation-system-using-moses.html)
