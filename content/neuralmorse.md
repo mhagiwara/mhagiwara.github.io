@@ -1,13 +1,5 @@
 {"title": "NeuralMorse — Reinventing Morse Code with Neural Networks", "template": "page.html", "url": "neuralmorse.html", "description": "I redesigned Morse code with modern statistical techniques including neural networks. NeuralMorse dynamically tokenizes input text and encodes it as sequences of eight tonal alphabets optimized by word embeddings and the assignment problem.", "image": "img/nm-cover.png"}
 
-<!-- original tweet
-
-NeuralMorse — Reinventing Morse Code with Neural Networks
-
-I redesigned Morse code with modern statistical techniques, including neural networks. It can efficiently and semantically encode text with eight tonal alphabets.
-
-This is what it sounds like. -->
-
 # NeuralMorse — Reinventing Morse Code with Neural Networks
 
 <span style="display:block;text-align:center">
