@@ -248,6 +248,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### Conference Papers (Selected)
 
+* David Robinson, Marius Miron, <u>Masato Hagiwara</u>, Olivier Pietquin. NatureLM-audio: an Audio-Language Foundation Model for Bioacoustics. ICLR 2025. \[[paper](https://arxiv.org/abs/2411.07186v1)\].
 * <u>Masato Hagiwara</u>, Joshua Tanner. Project MOSLA: Recording Every Moment of Second Language Acquisition. LREC-COLING 2024 (Best Paper Candidate) \[[paper](https://arxiv.org/abs/2403.17314)\].
 * <u>Masato Hagiwara</u>, Marius Miron, Jen-Yu Liu. ISPA: Inter-Species Phonetic Alphabet for Transcribing Animal Sounds. XAI-SA Workshop @ ICASSP 2024. \[[paper](https://arxiv.org/abs/2402.03269)\].
 * <u>Masato Hagiwara</u>. AVES: Animal Vocalization Encoder based on Self-Supervision. ICASSP 2023 \[[paper](https://arxiv.org/abs/2210.14493)\].
@@ -302,6 +303,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### In English
 
+- [Recto — a truly 2D language](recto.html)
 - [My First Year as a Freelance AI Engineer](202002-my-first-year-as-a-freelance-ai-engineer.html)
 - [NeuralMorse — Reinventing Morse Code with Neural Networks](neuralmorse.html)
 - [Training an N-gram Language Model and Estimating Sentence Probability](training-an-n-gram-language-model-and-estimating-sentence-probability.html)
