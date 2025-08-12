@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Saira Extra Condensed', serif;
+  font-family: 'Open Sans', serif;
   font-weight: 700;
   color: #343a40;
 }
@@ -45,7 +45,7 @@ p, li {
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
-  font-family: 'Saira Extra Condensed', serif;
+  font-family: 'Open Sans', serif;
   font-size: 1.35rem;
 }
 
@@ -166,6 +166,15 @@ figure, img {
   max-width: 100%;
   height: auto;
 }
+
+.icon {
+  display: inline;
+  width: 32px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
+
 figure figcaption {
   text-align: center;
 }

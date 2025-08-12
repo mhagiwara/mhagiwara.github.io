@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Recto Pad</title>
+  <link rel="icon" href="recto-pad.png" type="image/png">
+<style>
+  :root {
+    --bg: #0b0d11;
+    --panel: #12151b;
+    --ink: #e7eaf0;
+    --muted: #9aa3b2;
+    --accent: #7aa2ff;
+    --grid: #1c2230;
+    --grid-strong: #2a3346;
+    --focus: #2b3b5f;
+    --danger: #ff6b6b;
+    --radius: 10px;
+    --cell-w: 7ch; /* cell width; tweak as you like */
+    --cell-h: 2.2rem;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 14px/1.35 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    display: grid; grid-template-rows: auto 1fr auto;
+  }
+  header, footer {
+    background: var(--panel); border-bottom: 1px solid var(--grid-strong);
+    padding: .75rem 1rem; display: flex; gap: .5rem; align-items: center; flex-wrap: wrap;
+  }
+  footer { border-top: 1px solid var(--grid-strong); border-bottom: none; }
+  h1 { font-size: 24px; margin: 0 1rem 0 0; letter-spacing: .3px; color: var(--muted); font-weight: 600; }
+  h1 .logo { height: 32px; width: auto; vertical-align: middle; margin-right: .5rem; margin-top: -10px; }
+  .btn, button {
+    background: #1a2130; color: var(--ink); border: 1px solid var(--grid-strong);
+    padding: .45rem .65rem; border-radius: 8px; cursor: pointer;
+  }
+  .btn:hover { border-color: var(--accent); }
+  .btn.danger { border-color: var(--danger); color: #ffdede; }
+  .toolbar-group { display: inline-flex; gap: .4rem; align-items: center; padding-right: .6rem; border-right: 1px solid var(--grid-strong); }
+  .toolbar-group:last-child { border-right: none; }
+  .small { color: var(--muted); font-size: 16px; }
+  input[type="number"] {
+    width: 5.5rem; background: #0f1420; color: var(--ink); border: 1px solid var(--grid-strong);
+    padding: .35rem .5rem; border-radius: 8px;
+  }
+  label { color: var(--muted); }
+  .wrap { display: grid; grid-template-columns: 1fr auto 360px; gap: 10px; padding: 10px; }
+  .mid-controls { display: flex; flex-direction: column; gap: .5rem; align-items: stretch; justify-content: flex-start; }
+  .mid-controls .btn { white-space: nowrap; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--grid-strong); border-radius: var(--radius);
+    padding: 10px; display: grid; grid-template-rows: auto 1fr;
+  }
+  .panel h2 { margin: 0 0 .5rem 0; font-size: 16px; color: var(--muted); font-weight: 600; letter-spacing: .3px; }
+  .io textarea, .io pre {
+    width: 100%; height: 180px; resize: vertical; background: #0f1420; color: var(--ink);
+    border: 1px solid var(--grid-strong); border-radius: 8px; padding: .6rem; overflow: auto; tab-size: 4;
+  }
+  .panel.io { display: flex; flex-direction: column; gap: .5rem; }
+
+  /* Grid table */
+  .sheet {
+    overflow: auto; border-radius: var(--radius);
+    border: 1px solid var(--grid-strong); background: #0f1420;
+  }
+  table { border-collapse: separate; border-spacing: 0; }
+  thead th, .rowhdr, .colhdr {
+    position: sticky; z-index: 3; background: #0f1420; color: var(--muted); font-weight: 600;
+  }
+  thead th { top: 0; border-bottom: 1px solid var(--grid-strong); }
+  .rowhdr { left: 0; border-right: 1px solid var(--grid-strong); text-align: right; padding: 0 .6rem; width: 3.3rem; }
+  .colhdr { height: var(--cell-h); min-width: var(--cell-w); border-right: 1px solid var(--grid); text-align: center; }
+  tbody td {
+    border-right: 1px solid var(--grid);
+    border-bottom: 1px solid var(--grid);
+    min-width: var(--cell-w); height: var(--cell-h);
+    background: #0b111f;
+  }
+  tbody tr:nth-child(2n) td { background: #0c1323; }
+  .cell {
+    width: 100%; height: 100%;
+    padding: .35rem .5rem; outline: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .cell:focus { background: var(--focus); box-shadow: inset 0 0 0 1px var(--accent); }
+  .active-col { background: #111a2d; }
+  .active-row td { background: #0d1627; }
+  td .cell::selection { background: #26467a; }
+  .corner { position: sticky; left: 0; top: 0; z-index: 4; width: 3.3rem; border-right: 1px solid var(--grid-strong); border-bottom: 1px solid var(--grid-strong); background: #0f1420; }
+  /* Multi-cell selection */
+  tbody td.selected { background: #102648; box-shadow: inset 0 0 0 1px var(--accent); }
+  .sheet.dragging { user-select: none; cursor: crosshair; }
+
+  /* Pills for rect tokens */
+  .glyphs { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .pill {
+    border: 1px solid var(--grid-strong); padding: .25rem .5rem; border-radius: 999px; cursor: pointer;
+    background: #111a2d; color: var(--ink); font-weight: 600;
+  }
+  .pill:hover { border-color: var(--accent); }
+  .muter { color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .right-col { display: flex; flex-direction: column; gap: 10px; align-self: start; }
+</style>
+</head>
+<body>
+  <header>
+    <h1><img src="recto-pad.png" alt="Recto Pad logo" class="logo">Recto Pad</h1>
+
+    <span class="small" id="status"></span>
+  </header>
+
+  <div class="wrap">
+    <div class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem;">
+        <h2>Grid</h2>
+        <div class="glyphs" aria-label="Rect drawing tools">
+          <span class="muter small">Draw:</span>
+          <button class="pill" id="drawCornersBtn" title="Place four corner glyphs on selection">Rect (/-, -\, \-, -/)</button>
+          <button class="pill" id="drawRowBtn" title="Place row-wise ends on first selected row">Row (|-, -|)</button>
+          <button class="pill" id="drawColBtn" title="Place column-wise ends on first selected column">Column (^-, v-)</button>
+          <button class="pill" id="drawDictBtn" title="Place a dictionary on selection">Dictionary</button>
+          <button class="pill" id="drawSetBtn" title="Place a set on selection">Set</button>
+          <button class="pill" id="drawMatrixBtn" title="Place a matrix on selection">Matrix</button>
+          <button class="pill" id="drawFnBtn" title="Place a function on selection">fn</button>
+          <button class="pill" id="drawIfBtn" title="Place an if form on selection">if</button>
+          <button class="pill" id="drawForBtn" title="Place a for form on selection">for</button>
+        </div>
+      </div>
+      <div class="sheet" id="sheet" role="application" aria-label="Recto grid editor"></div>
+    </div>
+
+    <div class="mid-controls" aria-label="Grid actions">
+      <button class="btn" id="exportBtn" title="Export Recto">Export →</button>
+      <button class="btn" id="importBtn" title="Import from box at right">Import ←</button>
+      <button class="btn" id="shareBtn" title="Copy shareable URL with encoded Recto">Share link</button>
+      <button class="btn" id="clearBtn" title="Clear grid" class="danger">Clear</button>
+    </div>
+
+    <div class="right-col" style="grid-column: 3;">
+      <div class="panel io">
+      <h2>Code</h2>
+      <textarea id="ioBox" placeholder="Paste Recto code here."></textarea>
+      <p class="small" style="margin:.4rem 0 0 0;">
+        Copy and paste this code into
+        <a href="https://colab.research.google.com/drive/1sDgWNI-QUkamf5_kZblX9R7Vxzk7_WB7?usp=sharing" target="_blank" rel="noopener noreferrer">Google Colab</a>
+        to run it.
+      </p>
+     
+      <button class="btn" id="sample1Btn">Sample1 (hello world)</button>
+      <button class="btn" id="sample2Btn">Sample2 (matrix multiplication)</button>
+      <button class="btn" id="sample3Btn">Sample3 (FizzBuzz)</button>
+      </div>
+
+      <div class="panel" aria-label="Resources">
+      <h2>Resources</h2>
+      <div class="small" style="display:flex; flex-direction: column; gap: .35rem;">
+        <a href="/recto.html" target="_blank" rel="noopener noreferrer">📄 Full documentation</a>
+        <a href="https://colab.research.google.com/drive/1sDgWNI-QUkamf5_kZblX9R7Vxzk7_WB7?usp=sharing" target="_blank" rel="noopener noreferrer">🚀 Google Colab</a>
+        <a href="https://github.com/mhagiwara/recto" target="_blank" rel="noopener noreferrer">🖋 GitHub repo</a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+(() => {
+  // --- Model ---
+  const ROWS = 30;
+  const COLS = 30;
+  let grid = makeGrid(ROWS, COLS);
+  let active = {r: 0, c: 0};
+  // Multi-cell selection state must be initialized before first render
+  let selection = null;
+  let isDragging = false;
+
+  // Load from URL hash if present
+  const hashData = (location.hash || "").replace(/^#/, "");
+  if (hashData.startsWith("code=") || hashData.startsWith("rle=")) {
+    try {
+      const value = hashData.replace(/^(code|rle)=/, "");
+      const decoded = decodeURIComponent(atob(value));
+      const parsed = JSON.parse(decoded);
+      if (Array.isArray(parsed) && parsed.length) {
+        // De-trim to at least the default size
+        const R = Math.max(ROWS, parsed.length);
+        const C = Math.max(COLS, Math.max(...parsed.map(r => r.length)) || 0);
+        grid = makeGrid(R, C);
+        for (let r = 0; r < parsed.length; r++) {
+          for (let c = 0; c < parsed[r].length; c++) {
+            grid[r][c] = parsed[r][c];
+          }
+        }
+      }
+    } catch {}
+  }
+
+  // --- DOM refs ---
+  const sheet = document.getElementById('sheet');
+  const ioBox = document.getElementById('ioBox');
+  const status = document.getElementById('status');
+  
+
+  // --- Build UI ---
+  render();
+
+  // --- Helpers ---
+  function makeGrid(r, c) {
+    return Array.from({length: r}, () => Array.from({length: c}, () => ""));
+  }
+  function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+  function escapeBackslashes(text) {
+    return text.replace(/\\/g, "\\\\");
+  }
+  function unescapeBackslashes(text) {
+    return text.replace(/\\\\/g, "\\");
+  }
+  function getSelectionBounds() {
+    if (!selection) return null;
+    const r1 = Math.min(selection.start.r, selection.end.r);
+    const r2 = Math.max(selection.start.r, selection.end.r);
+    const c1 = Math.min(selection.start.c, selection.end.c);
+    const c2 = Math.max(selection.start.c, selection.end.c);
+    return { r1, r2, c1, c2 };
+  }
+  function isTextAreaFocused() {
+    const ae = document.activeElement;
+    return !!(ae && (ae.id === 'ioBox' || ae.tagName === 'TEXTAREA'));
+  }
+  function applySelectionHighlight() {
+    const tds = sheet.querySelectorAll('tbody td');
+    tds.forEach(td => td.classList.remove('selected'));
+    const bounds = getSelectionBounds();
+    if (!bounds) return;
+    for (let r = bounds.r1; r <= bounds.r2; r++) {
+      for (let c = bounds.c1; c <= bounds.c2; c++) {
+        const cell = sheet.querySelector(`.cell[data-r="${r}"][data-c="${c}"]`);
+        if (cell && cell.parentElement) cell.parentElement.classList.add('selected');
+      }
+    }
+  }
+  function escapeBackslashes(text) {
+    return text.replace(/\\/g, "\\\\");
+  }
+  function unescapeBackslashes(text) {
+    return text.replace(/\\\\/g, "\\");
+  }
+
+  function render() {
+    sheet.innerHTML = "";
+    const table = document.createElement('table');
+    const thead = document.createElement('thead');
+    const hrow = document.createElement('tr');
+
+    // Corner
+    const corner = document.createElement('th');
+    corner.className = "corner";
+    corner.textContent = "⟂";
+    hrow.appendChild(corner);
+
+    // Column headers
+    for (let c = 0; c < COLS; c++) {
+      const th = document.createElement('th');
+      th.className = "colhdr";
+      th.textContent = c + 1;
+      if (c === active.c) th.classList.add('active-col');
+      hrow.appendChild(th);
+    }
+    thead.appendChild(hrow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    for (let r = 0; r < ROWS; r++) {
+      const tr = document.createElement('tr');
+      if (r === active.r) tr.classList.add('active-row');
+
+      const rh = document.createElement('td');
+      rh.className = "rowhdr";
+      rh.textContent = r + 1;
+      tr.appendChild(rh);
+
+      for (let c = 0; c < COLS; c++) {
+        const td = document.createElement('td');
+        const div = document.createElement('div');
+        div.className = "cell";
+        div.contentEditable = "true";
+        div.spellcheck = false;
+        div.dataset.r = r;
+        div.dataset.c = c;
+        div.textContent = grid[r]?.[c] ?? "";
+        if (r === active.r && c === active.c) setTimeout(() => div.focus(), 0);
+
+        div.addEventListener('input', (e) => {
+          grid[r][c] = div.textContent;
+        });
+
+        div.addEventListener('focus', () => {
+          active = {r, c};
+          highlightHeaders();
+        });
+
+        div.addEventListener('keydown', (e) => onKey(e, r, c, div));
+        div.addEventListener('mousedown', (e) => onMouseDownSelect(e, r, c, div));
+        div.addEventListener('paste', (e) => onPaste(e, r, c));
+
+        td.appendChild(div);
+        tr.appendChild(td);
+      }
+      tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+    sheet.appendChild(table);
+    highlightHeaders();
+    applySelectionHighlight();
+  }
+
+  function highlightHeaders() {
+    // Re-render header highlights only (cheap way: toggle classes)
+    const ths = sheet.querySelectorAll('thead th.colhdr');
+    ths.forEach((th, idx) => th.classList.toggle('active-col', idx === active.c));
+    const rowsEls = sheet.querySelectorAll('tbody tr');
+    rowsEls.forEach((tr, idx) => tr.classList.toggle('active-row', idx === active.r));
+  }
+
+  function moveFocus(r, c) {
+    active.r = clamp(r, 0, ROWS - 1);
+    active.c = clamp(c, 0, COLS - 1);
+    const target = sheet.querySelector(`.cell[data-r="${active.r}"][data-c="${active.c}"]`);
+    if (target) {
+      target.focus();
+      placeCaretEnd(target);
+    }
+    highlightHeaders();
+  }
+  function placeCaretEnd(el) {
+    const sel = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    range.collapse(false);
+    sel.removeAllRanges(); sel.addRange(range);
+  }
+
+  function onKey(e, r, c, div) {
+    if (e.key === "Enter") { e.preventDefault(); moveFocus(r+1, c); return; }
+    if (e.key === "Tab") {
+      e.preventDefault();
+      moveFocus(r, c + (e.shiftKey ? -1 : +1));
+      return;
+    }
+    if (e.key === "ArrowUp")   { e.preventDefault(); moveFocus(r-1, c); return; }
+    if (e.key === "ArrowDown") { e.preventDefault(); moveFocus(r+1, c); return; }
+    if (e.key === "ArrowLeft" && getCaretPos(div) === 0)  { moveFocus(r, c-1); }
+    if (e.key === "ArrowRight" && getCaretPos(div) === div.textContent.length) { moveFocus(r, c+1); }
+  }
+  function getCaretPos(el) {
+    const sel = window.getSelection();
+    if (!sel.rangeCount) return 0;
+    const range = sel.getRangeAt(0);
+    return range.endOffset;
+  }
+
+  function onPaste(e, r0, c0) {
+    const text = (e.clipboardData || window.clipboardData).getData('text');
+    if (!text) return;
+    // If a selection exists and the pasted text is a single value, fill all selected cells
+    if (!text.includes('\n') && !text.includes('\t')) {
+      const b = getSelectionBounds();
+      if (b) {
+        e.preventDefault();
+        for (let r = b.r1; r <= b.r2; r++) {
+          for (let c = b.c1; c <= b.c2; c++) {
+            grid[r][c] = text;
+            const cell = sheet.querySelector(`.cell[data-r="${r}"][data-c="${c}"]`);
+            if (cell) cell.textContent = text;
+          }
+        }
+        moveFocus(b.r1, b.c1);
+        return;
+      }
+      return; // let default paste into the active cell
+    }
+    e.preventDefault();
+
+    const rowsIn = text.replace(/\r/g, '').split('\n');
+    rowsIn.forEach((line, ri) => {
+      const colsIn = line.split('\t');
+      colsIn.forEach((val, ci) => {
+        const r = r0 + ri, c = c0 + ci;
+        if (r < ROWS && c < COLS) {
+          grid[r][c] = val;
+          const cell = sheet.querySelector(`.cell[data-r="${r}"][data-c="${c}"]`);
+          if (cell) cell.textContent = val;
+        }
+      });
+    });
+    moveFocus(r0, c0);
+  }
+
+  // --- Multi-cell selection (mouse drag) ---
+  function onMouseDownSelect(e, r, c, div) {
+    e.preventDefault();
+    isDragging = true;
+    selection = { start: { r, c }, end: { r, c } };
+    active = { r, c };
+    applySelectionHighlight();
+    highlightHeaders();
+    sheet.classList.add('dragging');
+    document.addEventListener('mousemove', onDocMouseMove);
+    document.addEventListener('mouseup', onDocMouseUp, { once: true });
+  }
+  function onDocMouseMove(e) {
+    if (!isDragging) return;
+    const target = e.target && e.target.closest ? e.target.closest('.cell') : null;
+    if (!target) return;
+    const r = parseInt(target.dataset.r || '0', 10);
+    const c = parseInt(target.dataset.c || '0', 10);
+    if (Number.isNaN(r) || Number.isNaN(c)) return;
+    selection.end = { r, c };
+    applySelectionHighlight();
+  }
+  function onDocMouseUp() {
+    isDragging = false;
+    sheet.classList.remove('dragging');
+    document.removeEventListener('mousemove', onDocMouseMove);
+    const b = getSelectionBounds();
+    if (b) moveFocus(b.r1, b.c1);
+  }
+
+  function forEachSelectedCell(fn) {
+    const b = getSelectionBounds();
+    if (!b) return;
+    for (let r = b.r1; r <= b.r2; r++) {
+      for (let c = b.c1; c <= b.c2; c++) fn(r, c);
+    }
+  }
+
+  function clearSelectedCells() {
+    if (!selection) return;
+    forEachSelectedCell((r, c) => {
+      grid[r][c] = "";
+      const cell = sheet.querySelector(`.cell[data-r="${r}"][data-c="${c}"]`);
+      if (cell) cell.textContent = "";
+    });
+  }
+
+  // Clipboard handlers for selection
+  document.addEventListener('copy', (e) => {
+    if (isTextAreaFocused()) return; // let textarea handle copy
+    if (!selection) return;
+    const b = getSelectionBounds();
+    const lines = [];
+    for (let r = b.r1; r <= b.r2; r++) {
+      const row = [];
+      for (let c = b.c1; c <= b.c2; c++) row.push(grid[r][c] ?? "");
+      lines.push(row.join('\t'));
+    }
+    const text = lines.join('\n');
+    e.clipboardData.setData('text/plain', text);
+    e.preventDefault();
+  });
+  document.addEventListener('cut', (e) => {
+    if (isTextAreaFocused()) return; // let textarea handle cut
+    if (!selection) return;
+    const b = getSelectionBounds();
+    const lines = [];
+    for (let r = b.r1; r <= b.r2; r++) {
+      const row = [];
+      for (let c = b.c1; c <= b.c2; c++) row.push(grid[r][c] ?? "");
+      lines.push(row.join('\t'));
+    }
+    const text = lines.join('\n');
+    e.clipboardData.setData('text/plain', text);
+    e.preventDefault();
+    clearSelectedCells();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (isTextAreaFocused()) return; // let textarea handle editing keys
+    if (!selection) return;
+    if (e.key === 'Backspace' || e.key === 'Delete') {
+      e.preventDefault();
+      clearSelectedCells();
+    }
+  });
+
+  function trimBounds(mat) {
+    const R = mat.length;
+    const C = Math.max(...mat.map(r => r.length));
+    let rMin = 0, rMax = R - 1, cMin = 0, cMax = C - 1;
+
+    // top
+    while (rMin <= rMax && mat[rMin].every(v => !v)) rMin++;
+    // bottom
+    while (rMax >= rMin && mat[rMax].every(v => !v)) rMax--;
+    // left
+    const allEmptyCol = (c) => mat.every(row => (!row[c] || row[c] === ""));
+    while (cMin <= cMax && allEmptyCol(cMin)) cMin++;
+    // right
+    while (cMax >= cMin && allEmptyCol(cMax)) cMax--;
+
+    if (rMin > rMax || cMin > cMax) return [[]];
+    return mat.slice(rMin, rMax+1).map(row => row.slice(cMin, cMax+1));
+  }
+
+  function exportRecto({trim=true} = {}) {
+    const mat = grid.map(r => r.slice()); // copy
+    const out = trim ? trimBounds(mat) : mat;
+    const lines = out.map(r => r.join('\t'));
+    return lines.join('\n');
+  }
+
+  function importRecto(text) {
+    const lines = text.replace(/\r/g, '').split('\n');
+    const incoming = lines.map(line => {
+      return line.split('\t');
+    });
+    const R = incoming.length;
+    const C = Math.max(...incoming.map(r => r.length));
+    rows = Math.max(ROWS, R)
+    cols = Math.max(COLS, C)
+    grid = makeGrid(rows, cols);
+    for (let r = 0; r < R; r++) {
+      for (let c = 0; c < incoming[r].length; c++) {
+        grid[r][c] = incoming[r][c];
+      }
+    }
+    render();
+    moveFocus(0, 0);
+  }
+
+  // --- Toolbar actions ---
+  document.getElementById('exportBtn').addEventListener('click', async () => {
+    const txt = exportRecto();
+    const escaped = escapeBackslashes(txt);
+    await navigator.clipboard.writeText(escaped).catch(()=>{});
+    ioBox.value = escaped;
+    status.textContent = "Copied to clipboard";
+    setTimeout(() => status.textContent = "", 1000);
+  });
+
+  
+
+  document.getElementById('importBtn').addEventListener('click', () => {
+    const raw = ioBox.value || "";
+    const unescaped = unescapeBackslashes(raw);
+    importRecto(unescaped);
+  });
+
+  document.getElementById('shareBtn').addEventListener('click', () => {
+    const trimmed = trimBounds(grid.map(r => r.slice()));
+    const encoded = btoa(encodeURIComponent(JSON.stringify(trimmed)));
+    const url = location.origin + location.pathname + "#code=" + encoded;
+    navigator.clipboard.writeText(url).catch(()=>{});
+    status.textContent = "Share link copied";
+    setTimeout(() => status.textContent = "", 1200);
+    history.replaceState(null, "", "#code=" + encoded);
+  });
+
+  document.getElementById('clearBtn').addEventListener('click', () => {
+    grid = makeGrid(ROWS, COLS);
+    render();
+  });
+
+  
+
+  function setCellValue(r, c, value) {
+    if (r < 0 || r >= ROWS || c < 0 || c >= COLS) return;
+    grid[r][c] = value;
+    const cell = sheet.querySelector(`.cell[data-r="${r}"][data-c="${c}"]`);
+    if (cell) cell.textContent = value;
+  }
+
+  function drawCorners() {
+    const b = getSelectionBounds() || { r1: active.r, r2: active.r, c1: active.c, c2: active.c };
+    setCellValue(b.r1, b.c1, "/-");
+    setCellValue(b.r1, b.c2, "-\\");
+    setCellValue(b.r2, b.c1, "\\-");
+    setCellValue(b.r2, b.c2, "-/");
+    applySelectionHighlight();
+  }
+
+  function drawRowEnds() {
+    const b = getSelectionBounds() || { r1: active.r, r2: active.r, c1: active.c, c2: active.c };
+    const r = b.r1;
+    setCellValue(r, b.c1, "|-");
+    setCellValue(r, b.c2, "-|");
+    applySelectionHighlight();
+  }
+
+  function drawColEnds() {
+    const b = getSelectionBounds() || { r1: active.r, r2: active.r, c1: active.c, c2: active.c };
+    const c = b.c1;
+    setCellValue(b.r1, c, "^-");
+    setCellValue(b.r2, c, "v-");
+    applySelectionHighlight();
+  }
+
+  function drawDict() {
+    const b = getSelectionBounds() || { r1: active.r, r2: active.r, c1: active.c, c2: active.c };
+
+    inner_height = b.r2 - b.r1 - 1;
+    inner_width = b.c2 - b.c1 - 1;
+
+    if (inner_width >= 2 && inner_height >= 1) {
+      for (let r = 1; r <= inner_height; r++) {
+        setCellValue(b.r1+r, b.c1+1, "key" + r);
+        setCellValue(b.r1+r, b.c1+2, "value" + r);
+      }
+    }
+    setCellValue(b.r1, b.c1, "/-d");
+    setCellValue(b.r1, b.c2, "-\\");
+    setCellValue(b.r2, b.c1, "\\-");
+    setCellValue(b.r2, b.c2, "-/");
+    applySelectionHighlight();
+  }
+
+  function drawSet() {
+    const b = getSelectionBounds() || { r1: active.r, r2: active.r, c1: active.c, c2: active.c };
+
+    inner_height = b.r2 - b.r1 - 1;
+    inner_width = b.c2 - b.c1 - 1;
+
+    n = 1;
+    if (inner_width >= 1 && inner_height >= 1) {
+      for (let r = 1; r <= inner_height; r++) {
+        for (let c = 1; c <= inner_width; c++) {
+          setCellValue(b.r1+r, b.c1+c, "elem" + n);
+          n++;
+        }
+      }
+    }
+    setCellValue(b.r1, b.c1, "/-s");
+    setCellValue(b.r1, b.c2, "-\\");
+    setCellValue(b.r2, b.c1, "\\-");
+    setCellValue(b.r2, b.c2, "-/");
+    applySelectionHighlight();
+  }
+
+  function drawMatrix() {
+    const b = getSelectionBounds() || { r1: active.r, r2: active.r, c1: active.c, c2: active.c };
+
+    inner_height = b.r2 - b.r1 - 1;
+    inner_width = b.c2 - b.c1 - 1;
+
+    if (inner_width >= 1 && inner_height >= 1) {
+      for (let r = 1; r <= inner_height; r++) {
+        for (let c = 1; c <= inner_width; c++) {
+          setCellValue(b.r1+r, b.c1+c, "a" + r + "" + c);
+        }
+      }
+    }
+    setCellValue(b.r1, b.c1, "/-m");
+    setCellValue(b.r1, b.c2, "-\\");
+    setCellValue(b.r2, b.c1, "\\-");
+    setCellValue(b.r2, b.c2, "-/");
+    applySelectionHighlight();
+  }
+
+  function drawLabeledRect(labels) {
+    const b = getSelectionBounds() || { r1: active.r, r2: active.r, c1: active.c, c2: active.c };
+    let labelIdx = 0;
+    const startC = b.c1 + 1; // start from (b.r1, b.c1+1)
+    const endC = b.c2 - 1;
+    const startR = b.r1; // include top border row for labels
+    const endR = b.r2 - 1;
+    if (startC <= endC && startR <= endR) {
+      for (let r = startR; r <= endR && labelIdx < labels.length; r++) {
+        for (let c = startC; c <= endC && labelIdx < labels.length; c++) {
+          setCellValue(r, c, labels[labelIdx++]);
+        }
+      }
+    }
+    setCellValue(b.r1, b.c1, "/-");
+    setCellValue(b.r1, b.c2, "-\\");
+    setCellValue(b.r2, b.c1, "\\-");
+    setCellValue(b.r2, b.c2, "-/");
+    applySelectionHighlight();
+  }
+
+  function drawFn() {
+    drawLabeledRect(["fn", "name", "params", "body"]);
+  }
+  function drawIf() {
+    drawLabeledRect(["if", "cond", "then", "else"]);
+  }
+  function drawFor() {
+    drawLabeledRect(["for", "var", "range", "body"]);
+  }
+
+  const drawCornersBtn = document.getElementById('drawCornersBtn');
+  const drawRowBtn = document.getElementById('drawRowBtn');
+  const drawColBtn = document.getElementById('drawColBtn');
+  const drawDictBtn = document.getElementById('drawDictBtn');
+  const drawSetBtn = document.getElementById('drawSetBtn');
+  const drawMatrixBtn = document.getElementById('drawMatrixBtn');
+  const drawFnBtn = document.getElementById('drawFnBtn');
+  const drawIfBtn = document.getElementById('drawIfBtn');
+  const drawForBtn = document.getElementById('drawForBtn');
+  if (drawCornersBtn) drawCornersBtn.addEventListener('click', drawCorners);
+  if (drawRowBtn) drawRowBtn.addEventListener('click', drawRowEnds);
+  if (drawColBtn) drawColBtn.addEventListener('click', drawColEnds);
+  if (drawDictBtn) drawDictBtn.addEventListener('click', drawDict);
+  if (drawSetBtn) drawSetBtn.addEventListener('click', drawSet);
+  if (drawMatrixBtn) drawMatrixBtn.addEventListener('click', drawMatrix);
+  if (drawFnBtn) drawFnBtn.addEventListener('click', drawFn);
+  if (drawIfBtn) drawIfBtn.addEventListener('click', drawIf);
+  if (drawForBtn) drawForBtn.addEventListener('click', drawFor);
+
+  document.getElementById('sample1Btn').addEventListener('click', () => {
+    const sample = String.raw`/-								-\
+	^-							
+	print							
+			|-	print		"Recto"	-|	
+	"Hello"							
+	v-							
+\-								-/`;
+    ioBox.value = escapeBackslashes(sample);
+    importRecto(sample);
+  });
+  document.getElementById('sample2Btn').addEventListener('click', () => {
+    const sample = String.raw`/-	==											-\
+	/-	*							-\			
+		/-m				-\		^-m			^-m	
+			1		2			5			17	
+			3		4			6			39	
+		\-				-/		v-			v-	
+	\-								-/			
+\-												-/`;
+    ioBox.value = escapeBackslashes(sample);
+    importRecto(sample);
+  });
+  document.getElementById('sample3Btn').addEventListener('click', () => {
+    const sample = String.raw`/-	for	n	|-	range	1	21	-|													-\
+	/-	print																	-\	
+		/-	if			|-	==	|-	%	n	15	-|	0	-|	"FizzBuzz"			-\		
+			/-	if		|-	==	|-	%	n	3	-|	0	-|	"Fizz"		-\			
+				/-	if	|-	==	|-	%	n	5	-|	0	-|	"Buzz"	-\				
+					n															
+				\-												-/				
+			\-														-/			
+		\-																-/		
+	\-																		-/	
+\-																				-/`;
+    ioBox.value = escapeBackslashes(sample);
+    importRecto(sample);
+  });
+})();
+</script>
+</body>
+</html>

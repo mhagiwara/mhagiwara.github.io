@@ -125,7 +125,8 @@ SentencePiece achieves this by training a unigram language model on a large corp
 Here’s an example of how the model tokenizes the sentence "NeuralMorse is a method for encoding natural language text as sequences of eight tonal alphabets" (“▁” indicates whitespace):
 
 ```
-ne ur al mor se ▁ is ▁ a ▁ method ▁ for ▁ en co ding ▁ natural ▁ language ▁ text ▁ as ▁ s equ ence s ▁ of ▁ eight ▁ to n al ▁ al ph ab et s
+ne ur al mor se ▁ is ▁ a ▁ method ▁ for ▁ en co ding ▁ natural ▁ language ▁ text
+▁ as ▁ s equ ence s ▁ of ▁ eight ▁ to n al ▁ al ph ab et s
 ```
 
 You’ll notice that words like “is,” “method,” and “language” are assigned as individual tokens, while words like “neural” and “sequence” are broken down into subwords like “ne/ur/al” and “s/equ/ence.” The vocabulary includes all single letters (a–z), digits (0–9), and various punctuation marks (. , ! ? etc.), so the model can always fall back on character-level encoding for unknown or rare words.
