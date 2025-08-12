@@ -112,7 +112,7 @@ There are also esoteric programming languages like **[Befunge](https://en.wikipe
   </tr>
 </table>
 
-A more conceptual example is **[Heptapod B](https://en.wikipedia.org/wiki/Heptapod_languages)**, the fictional alien language from Arrival (based on Ted Chiang’s *Story of Your Life*), which is composed of intricate circular logograms—each representing an entire idea or sentence. Unlike linear spoken or written languages, Heptapod B is non-sequential: the whole message is laid out at once, requiring the writer to know the full content in advance.
+A more conceptual example is **[Heptapod B](https://en.wikipedia.org/wiki/Heptapod_languages)**, the fictional alien language from *[Arrival](https://en.wikipedia.org/wiki/Arrival_(film))* (based on Ted Chiang’s *[Story of Your Life](https://en.wikipedia.org/wiki/Story_of_Your_Life)*), which is composed of intricate circular logograms—each representing an entire idea or sentence. Unlike linear spoken or written languages, Heptapod B is non-sequential: the whole message is laid out at once, requiring the writer to know the full content in advance.
 
 Visual environments like **[Pure Data](https://en.wikipedia.org/wiki/Pure_Data)**, **[Max/MSP](https://en.wikipedia.org/wiki/Max_(software))**, and **[LabVIEW](https://en.wikipedia.org/wiki/LabVIEW)** use blocks and patch cables to build logic visually. While they resemble languages, these systems are often hard to read/write as languages, and lack deeper linguistic properties like structure and recursion. 
 
