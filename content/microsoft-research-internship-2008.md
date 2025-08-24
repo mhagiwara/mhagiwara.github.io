@@ -381,22 +381,20 @@ MSRのインターンで集まってランチ食べない？的なお誘いがML
 
 以下、セリフ訳してみました。
 
-```
-nano？本物のプログラマはemacsを使うんだよ。
-おい、本物のプログラマはvimを使うんだ。
-おっと、本物のプログラマはedを使うんじゃないか。
-いやいや、本物のプログラマはcatを使うんだよ。
-本当のプログラマは、磁気を帯びた針と器用な手を使うのだよ。
-悪いけど、本当のプログラマは蝶を使うのさ。
-手のひらを広げて、繊細な羽をひとはばたきさせるだろ。
-するとその空気の撹乱が次第に波及していき、上空の大気渦の流れを変えるんだ。
-これが引き金になって、空気の高密度領域が一時的に形成されて、
-それがレンズの働きをして、地球に降り注ぐ宇宙線を屈折させる。
-最後にそいつがディスクのプラッタ上に焦点を結び、狙ったビットを反転させるのさ。
-ナイス。もちろんemacsにはそれをやるコマンドがあるんだけどな。
-そうそう！C-x M-c M-butterflyコマンド、懐かしいな。
+nano？本物のプログラマはemacsを使うんだよ。<br/>
+おい、本物のプログラマはvimを使うんだ。<br/>
+おっと、本物のプログラマはedを使うんじゃないか。<br/>
+いやいや、本物のプログラマはcatを使うんだよ。<br/>
+本当のプログラマは、磁気を帯びた針と器用な手を使うのだよ。<br/>
+悪いけど、本当のプログラマは蝶を使うのさ。<br/>
+手のひらを広げて、繊細な羽をひとはばたきさせるだろ。<br/>
+するとその空気の撹乱が次第に波及していき、上空の大気渦の流れを変えるんだ。<br/>
+これが引き金になって、空気の高密度領域が一時的に形成されて、<br/>
+それがレンズの働きをして、地球に降り注ぐ宇宙線を屈折させる。<br/>
+最後にそいつがディスクのプラッタ上に焦点を結び、狙ったビットを反転させるのさ。<br/>
+ナイス。もちろんemacsにはそれをやるコマンドがあるんだけどな。<br/>
+そうそう！C-x M-c M-butterflyコマンド、懐かしいな。<br/>
 くそっ、Emacsめ。
-```
 
 そういえば前に見た[Butterfly Effect](https://web.archive.org/web/20080626180507/http://www.imdb.com/title/tt0289879/)、けっこう面白かった。ちょっと悲しい話だけど見終わった後の感じもなんかさわやか。もう一度見たい。
 
@@ -484,13 +482,7 @@ Microsoft Researchのインターンは平均年齢が高めで、中には既�
 
 そういえば今年のEMNLP08ではauthor responseというのがあるらしくて、始めての体験なので勝手が分からず戸惑っていたのだけど(AAAI, ICML, NIPSなどの学会では普通にあるそうだ)、そういえばグループのchris-qがArea Chairだったので聞いてみる。以下のページに書いてあるように、
 
-```
-“The author responses seem useful for clearing up misunderstandings;
-for addressing reviewers’ questions or confusions (indeed, reviewers
-can even pose explicit questions for the author response to answer);
-and for keeping reviewers honest (because they know that the author
-will flame a shoddy review).”
-```
+“The author responses seem useful for clearing up misunderstandings; for addressing reviewers’ questions or confusions (indeed, reviewers can even pose explicit questions for the author response to answer); and for keeping reviewers honest (because they know that the author will flame a shoddy review).”
 
 [Jason Eisner - How to Serve as Program Chair of a Conference](http://www.cs.jhu.edu/~jason/advice/how-to-chair-a-conference.html)
 
