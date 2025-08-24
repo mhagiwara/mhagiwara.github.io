@@ -315,6 +315,7 @@ You can find my resume [here](/files/resume_masato_hagiwara.pdf).
 
 ### In Japanese
 
+- [博士課程の挑戦 ― Microsoft Research インターン回想記（2008）](microsoft-research-internship-2008.html)
 - [ステート・オブ・AI ガイド — 英語で読み解く人工知能(AI)・機械学習(ML)の最新動向](https://ja.stateofaiguides.com/)
 - [あなたはなぜ英語ができないのか — プロジェクトベース英語学習法のススメ](project-based-english-learning.html)
 - [巻き舌クリニック - みんなで巻き舌を克服するサイト](blog/makijita.html)
