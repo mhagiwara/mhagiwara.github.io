@@ -8,9 +8,19 @@
 
 <p style="height: 24px;"></p>
 
-Personal Update (January 2024): I was diagnosed with late-stage lung cancer in March 2023. Since then, I have been undergoing treatment, and my overall health conditions are currently stable. However, it's important to note that stage IV lung cancer typically carries a poor prognosis. I am currently raising funds for my family, which includes my wonderful wife and two lovely daughters, as well as for my medical expenses.
+Personal Update (March 2026):
 
-I would greatly appreciate it if you could consider making a donation through [this GoFundMe link](https://www.gofundme.com/f/support-masato-and-his-family). I am also providing regular updates on [my CaringBridge page](https://www.caringbridge.org/visit/mhagiwara).
+Over the past few months, the cancer has progressed significantly, and the most recent chemotherapy didn’t work. After talking with my doctors and my family, I’ve decided to move to hospice care.
+
+Hospice care is end-of-life care that focuses on comfort and quality of life rather than continuing aggressive treatments. This means I’ll be prioritizing time with my family and taking care of my health.
+
+I also want to take a moment to thank everyone who has supported me and my family over the past three years. Your messages, encouragement, and simply staying in touch have meant a lot to us along the way.
+
+If you’d like to reach out, please don’t hesitate. I’m always happy to hear from friends.
+
+Also, I would greatly appreciate it if you could consider making a donation through [this GoFundMe link](https://www.gofundme.com/f/support-masato-and-his-family). I am also providing regular updates on [my CaringBridge page](https://www.caringbridge.org/visit/mhagiwara).
+
+Personal Update (January 2024): I was diagnosed with late-stage lung cancer in March 2023. Since then, I have been undergoing treatment, and my overall health conditions are currently stable. However, it's important to note that stage IV lung cancer typically carries a poor prognosis. I am currently raising funds for my family, which includes my wonderful wife and two lovely daughters, as well as for my medical expenses.
 
 Thank you for your kindness and support during this challenging time.
 
