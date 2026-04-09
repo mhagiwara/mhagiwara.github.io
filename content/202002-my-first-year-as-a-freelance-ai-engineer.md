@@ -2,6 +2,8 @@
 
 # My First Year as a Freelance AI Engineer
 
+[Masato Hagiwara, Feb 2020](/)
+
 <figure>
   <img src="img/wework.jpg" alt="WeWork Labs in Seattle">
   <figcaption>WeWork Labs in Seattle</figcaption>

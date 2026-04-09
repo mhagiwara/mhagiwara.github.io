@@ -6,7 +6,7 @@
 
 # Recto — a truly 2D language
 
-[Masato Hagiwara](/)
+[Masato Hagiwara, Aug 2025](/)
 
 <p style="text-align:center">
   <img src="img/recto-cover.png"
